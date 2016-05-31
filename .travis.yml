@@ -1,0 +1,41 @@
+language: node_js
+node_js:
+- '4.1'
+sudo: false
+cache:
+  bundler: true
+  directories:
+  - node_modules
+  - vendor
+before_install:
+- rvm install `cat .ruby-version`
+install:
+- npm install
+script:
+- npm run-script build
+after_success:
+- npm run-script deploy
+env:
+- CXX=g++-4.8 AWS_S3_BUCKET=s3.fightforthefuture.org
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+branches:
+  only:
+  - production
+deploy:
+  provider: s3
+  access_key_id: AKIAI467SJF233XDFZZA
+  secret_access_key:
+    secure: "mORRN+sfylJ/gmY2eZLDKfHyi61MRE+dC8v1GaT+ympEo+QrB6La4K8Me37/r9FjXnuMtSmtaxWzbXZ4fS0jQwzyVY7b9lFEREqCxLv63wGejEw3A0tAUChGbd9Urm+sQx7/gE5fn7ez7pXVqSlQ7t9F2VmdR9qkZ6AjW1ZQiEzizKBg/wv5aGKdozOWkVMTIA1pCoKZ4ht39vv8luJkZOD1U8aoQNKUxFu/2hFgIKO5ERs/e6LXX58nFGMoOfUtmyOiurK3KhJzdQnEgDq/x1ZtToBgbZC0Sep+oMqmUS7HESjlvwaPKzzKtUp1Y75bJ7JnHcdabUNWSOVq9EpNvLkBKYvlc+wFfGtHUpyBSxbC95DpyLq2hJePSPr14Z+07ZEP2LyQRfjq9GqjrdAVx+HX73PJ/Vlxqrtk23rV63SCU6EL1bcRgBtQvEPfRDDLq4MM9fh+Row7vLxR5c+/5WOixVJh3ks6d3+IYjIEi6cTDpRDYdkibKVsiWMG7QCxJhBX8j9cgCW0uBe67zPYU58kTa5d/9UbLS8ANPDqOtcAsSygU6r6/SBT0tCzrWDkM8h8aD9kIcRqj0AXRY0eqQBIl8omtf2NFHILyXqZ+9jm74ntUIlYYRh9JDd9GcXV8rfcnwEx9lqMaK2WmrNAVBR8RkdEYleYcAyh45ee7sI="
+  bucket: s3.fightforthefuture.org
+  local-dir: assets
+  upload-dir: rockagainstthetpp
+  skip_cleanup: true
+  acl: public_read
+  on:
+    repo: fightforthefuture/rockagainstthetpp
+    branch: production

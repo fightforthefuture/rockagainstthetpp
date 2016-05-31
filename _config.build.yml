@@ -1,0 +1,13 @@
+######################
+# Config: Production #
+######################
+
+mothership: https://mothership-js.herokuapp.com
+
+#############
+# Authoring #
+#############
+
+future: false
+show_drafts: false
+production: true

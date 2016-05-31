@@ -1,3 +1,5 @@
-_site/
-.sass-cache/
+assets/
+node_modules/
+public/
+.env
 .jekyll-metadata
