@@ -1,0 +1,27 @@
+.petition-form {
+  background: @white;
+  border-radius: 0.5rem;
+  margin: 3rem auto;
+  position: relative;
+
+  label.visually-hidden {
+    position: absolute;
+  }
+}
+
+.name, .email, .zip {
+  border: none;
+  border-bottom: solid lightgray 1px;
+  padding: 0.5rem;
+  width: 100%;
+
+  @media screen and (min-width: @large-phone) {
+    border-bottom: none;
+  border-right: solid lightgray 1px;
+
+  }
+
+  &::placeholder {
+    font-weight: 200;
+  }
+}

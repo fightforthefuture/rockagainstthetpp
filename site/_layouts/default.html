@@ -4,19 +4,36 @@
   {% include meta.html %}
 </head>
 <body>
+
 <header>
-  {% capture header %}{% include header.md page=page.page %}{% endcapture %}
-  {{ header | markdownify }}
+  <h1{% unless include.page == 'home' %} class="subpage"{% endunless %}>
+    Rock Against
+    <span>
+      the TPP
+    </span>
+  </h1>
+  <p>
+    <strong>A nationwide tour to stop the biggest corporate power grab in
+      history: the Trans-Pacific Partnership. Organized by Fight for the Future
+      and Rage Against the Machine guitarist Tom Morello’s new label, Firebrand
+      Records.</strong>
+  </p>
+
 </header>
+
 <nav>
   {% capture navigation %}{% include navigation.md %}{% endcapture %}
   {{ navigation | markdownify }}
 </nav>
-<main>
-{{ content }}
-</main>
+
+<div class="bg">
+  <main>
+  {{ content }}
+  </main>
+</div>
 
 {% include footer.html %}
 {% include scripts.html %}
+
 </body>
 </html>

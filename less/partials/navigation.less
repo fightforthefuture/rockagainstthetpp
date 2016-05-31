@@ -1,0 +1,77 @@
+body > nav {
+  font-family: @heading-font;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: @small-phone) {
+    font-size: 1.4rem;
+  }
+
+  @media screen and (min-width: @large-phone) {
+    font-size: 1.7rem;
+  }
+
+  ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (min-width: @small-phone) {
+      justify-content: center;
+    }
+  }
+
+  li {
+    position: relative;
+    width: 33%;
+
+    @media screen and (min-width: @small-phone) {
+      width: 16rem;
+    }
+
+    @media screen and (min-width: @large-phone) {
+      width: 20rem;
+    }
+
+    &::before {
+      content: '|';
+      position: absolute;
+      top: 2.9rem;
+      left: 0;
+    }
+
+    &:first-child {
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  a {
+    display: block;
+    padding: 3rem 0;
+
+    &:link, &:visited,
+    &:hover, &:active, &:focus {
+      color: @black;
+    }
+
+    &:link, &:visited {
+      text-decoration: none;
+    }
+
+    &:hover, &:active, &:focus {
+      background-color: fade(@pageBorder, 5%);
+      text-decoration: underline;
+    }
+  }
+}

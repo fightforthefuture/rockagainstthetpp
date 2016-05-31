@@ -1,0 +1,63 @@
+body > header {
+  background: center bottom url('/images/header.png') no-repeat;
+  background-size: auto 100%;
+  border-top: 3px solid @pageBorder;
+  padding: 7rem 1rem 20rem;
+  position: relative;
+
+  @media screen and (min-width: @large-phone) {
+    padding-bottom: 21rem;
+  }
+
+  @media screen and (min-width: @small-tablet) {
+    padding: ~'0 1rem calc(7vw + 17rem)';
+  }
+
+  @media screen and (min-width: @medium-laptop) {
+    background-size: 100% auto;
+  }
+
+  @media screen and (min-width: @large-desktop) {
+    padding-bottom: ~'calc(20vw - 4rem)';
+  }
+
+  p {
+    font-size: 1.6rem;
+    margin: 0 auto;
+    max-width: 62ch;
+    padding: 0 1rem;
+
+    @media screen and (min-width: @large-phone) {
+      font-size: 2rem;
+    }
+  }
+}
+
+h1 {
+  font-family: 'Futura Condensed ExtraBold', 'Futura-CondensedExtraBold', @heading-font;
+  font-size: 14.7vw;
+  line-height: 0.8;
+  text-align: justify;
+  text-align-last: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: @small-tablet) {
+    font-size: 12rem;
+    text-align: center;
+  }
+
+  span {
+    font-size: 27.7vw;
+
+    @media screen and (min-width: @small-tablet) {
+      font-size: 23rem;
+      text-align: center;
+    }
+
+    &::before {
+      content: ' ';
+      display: block;
+    }
+  }
+}
+

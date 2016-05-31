@@ -1,0 +1,33 @@
+main {
+  margin: 0 auto;
+  max-width: @large-tablet + 80px;
+}
+
+.bg {
+  background-image: url('/images/body.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: @white;
+  padding: 5rem 2rem;
+  text-align: center;
+
+  @media screen and (min-width: @small-phone) {
+    padding: 5.5rem 2rem;
+  }
+
+  @media screen and (min-width: @large-phone) {
+    padding: 6rem 2.5rem;
+  }
+
+  @media screen and (min-width: @small-tablet) {
+    padding: 7rem 3rem;
+  }
+
+  @media screen and (min-width: @large-tablet) {
+    padding: 8rem 3.5rem;
+  }
+
+  @media screen and (min-width: @small-desktop) {
+    padding: 9rem 4rem;
+  }
+}

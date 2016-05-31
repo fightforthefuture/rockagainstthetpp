@@ -13,29 +13,23 @@ body {
   position: relative;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: @heading-font;
-}
-
-h1 {
-  font-size: 26vw;
-  line-height: 0.8;
-
-  @media screen and (min-width: @small-phone) {
-    font-size: 10.56rem;
-    line-height: 0.82;
-  }
-
+h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  line-height: 0.85;
 }
 
 h2 {
-  font-size: 17vw;
-  @media screen and (min-width: @small-phone) {
-    font-size: 8rem;
-  }
+  font-size: 4rem;
+  margin-bottom: 0.75em;
 }
 
 img {
   height: auto;
   max-width: 100%;
+}
+
+.visually-hidden {
+  color: transparent;
+  height: 0;
+  visibility: hidden;
 }
