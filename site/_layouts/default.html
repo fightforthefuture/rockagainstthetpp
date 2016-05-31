@@ -1,16 +1,22 @@
 <!doctype html>
 <html>
 <head>
-    {% include meta.html %}
-    {% include apple-touch-icons.html %}
+  {% include meta.html %}
 </head>
 <body>
+<header>
+  {% capture header %}{% include header.md page=page.page %}{% endcapture %}
+  {{ header | markdownify }}
+</header>
+<nav>
+  {% capture navigation %}{% include navigation.md %}{% endcapture %}
+  {{ navigation | markdownify }}
+</nav>
+<main>
+{{ content }}
+</main>
 
-    {{ content }}
-
-    <!-- delete one of these footers -->
-    {% include fftf-footer.html %}
-    {% include fftfef-footer.html %}
+{% include footer.html %}
 {% include scripts.html %}
 </body>
 </html>

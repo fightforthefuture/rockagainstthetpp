@@ -1,0 +1,32 @@
+<!-- TODO: update attributes to submit to proper AN petition -->
+<form id="petition-form" class="petition-form" accept-charset="UTF-8" action="{{ page.action_network_url }}/signatures" method="post" data-petition-id="{{ site.petition_identifiers[page.action_network_url] | default: 'undefined' }}">
+  <label class="visually-hidden" for="form-first_name">Name (optional):</label>
+  <input type="text" id="form-first_name" class="name" name="signature[first_name]" placeholder="Name (optional)" />
+
+  <label class="visually-hidden" for="form-email">Email:</label>
+  <input type="email" id="form-email" name="signature[email]" class="email" placeholder="Email" required/>
+
+  <label class="visually-hidden" for="form-zip_code">ZIP code:</label>
+  <input type="text" id="form-zip_code" name="signature[zip_code]" class="zip" placeholder="ZIP code" required/>
+
+  <label for="select-country">
+    Not in the United States?
+  </label>
+
+  <select id="select-country">
+    {% for country in site.data.countries %}
+    <option value="{{ country[0] }}" {% if country[0] == 'US' %} selected{% endif %}>
+      {{ country[1] }}
+    </option>
+    {% endfor %}
+  </select>
+
+  <input type="hidden" value="US" id="hidden-country"/>
+  <input type="hidden" name="utf8" value="✓">
+  <input type="hidden" name="authenticity_token" value="0T4Obtb0NSc88GcP+W4S67iTV1B9UhTVWbk6UjKj7+o="/>
+  <input type="hidden" name="subscription[sub_group_id]" value="13162">
+  <input type="hidden" name="subscription[http_referer]" value="{{ site.url }}{{ page.url | remove: 'index.html' }}"/>
+  <input type="hidden" name="subscription[source]" value="rockagainstthetpp"/>
+  <input type="hidden" name="subscription[tag_list]" value='{{ tags }}'/>
+  <input type="submit" name="commit" value="{{ page.action_text | default: 'Take action' }}"/>
+</form>

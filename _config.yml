@@ -44,8 +44,9 @@ defaults:
 
 keep_files: ['images', 'css', 'js']
 
-markdown: kramdown
 highlighter: rouge
+
+markdown: kramdown
 kramdown:
   input: GFM
   smart_quotes: ["apos", "apos", "quot", "quot"]
