@@ -1,0 +1,54 @@
+body > footer {
+  background-color: rgba(0, 0, 0, 0.67);
+  color: fade(@white, 75%);
+  padding: 3rem 0;
+
+  .title {
+    font-variant: small-caps;
+    text-transform: uppercase;
+  }
+
+  p, title {
+    text-align: center;
+  }
+
+  dl {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+    @media screen and (min-width: @small-phone) {
+      display: flex;
+    }
+  }
+
+  dt, dd {
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: @small-phone) {
+      margin: 1rem;
+      width: 40%;
+    }
+  }
+
+  dt {
+    @media screen and (min-width: @small-phone) {
+      text-align: right;
+    }
+  }
+
+  dd {
+    @media screen and (min-width: @small-phone) {
+      text-align: left;
+    }
+  }
+
+  ul {
+    text-align: center;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+}

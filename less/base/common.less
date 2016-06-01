@@ -4,10 +4,12 @@
 
 html, body {
   font-size: 62.5%;
-  height: 100%;
 }
 
 body {
+  background-image: url(/images/body.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   font-size: 1.6rem;
   font-family: @body-font;
   position: relative;
@@ -15,7 +17,7 @@ body {
 
 h2, h3, h4, h5, h6 {
   font-weight: bold;
-  line-height: 0.85;
+  line-height: 1.1;
 }
 
 h2 {
@@ -28,8 +30,17 @@ img {
   max-width: 100%;
 }
 
+p {
+  margin: 0 auto 1.25em;
+  max-width: 67ch;
+}
+
 .visually-hidden {
   color: transparent;
   height: 0;
   visibility: hidden;
+}
+
+.hidden {
+  display: none;
 }

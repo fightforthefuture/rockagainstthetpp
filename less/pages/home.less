@@ -1,0 +1,148 @@
+.artists {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: @heading-font;
+  margin: 0 auto;
+  max-width: 88rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: @large-phone) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.artist, .featured-artist {
+  background-repeat: no-repeat;
+  display: table;
+  height: 32rem;
+
+  span {
+    display: table-cell;
+  }
+}
+
+.featured-artist {
+  background-position: 77% center;
+  box-shadow: -3px 3px 0 0 @grey-200;
+  font-size: 3rem;
+  margin: 2rem;
+  max-width: 88rem;
+  width: ~'calc(100% - 4rem)';
+
+  span {
+    vertical-align: middle;
+  }
+}
+
+.artist {
+  background-position: center center;
+  background-size: 101% auto;
+  font-size: 1.8rem;
+  margin: 2rem 0 5rem;
+  max-width: 27rem;
+  width: 75%;
+
+  @media screen and (min-width: @large-phone) {
+    width: 44%;
+  }
+
+  @media screen and (min-width: @small-tablet) {
+    width: 30%;
+  }
+
+  span {
+    position: relative;
+    bottom: -3rem;
+    vertical-align: bottom;
+  }
+}
+
+.morello {
+ background-image: url('/images/artists/morello.jpg');
+}
+
+.lilly {
+ background-image: url('/images/artists/lilly.jpg');
+}
+
+.flobots {
+ background-image: url('/images/artists/flobots.jpg');
+}
+
+.anti-flag {
+ background-image: url('/images/artists/anti-flag.jpg');
+
+}
+
+.downtown-boys {
+ background-image: url('/images/artists/downtown-boys.jpg');
+
+}
+
+.harvey {
+ background-image: url('/images/artists/harvey.jpg');
+}
+
+.greer {
+ background-image: url('/images/artists/greer.jpg');
+}
+
+.dates {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: ~'calc(4vw + 3px)';
+  justify-content: space-around;
+
+  @media screen and (min-width: @large-phone) {
+    font-size: 3rem;
+  }
+
+  dd, dt {
+    width: 49%;
+  }
+
+  dt {
+    color: @pageBorder;
+    text-align: right;
+
+    &::after {
+      content: ': ';
+    }
+  }
+
+  dd {
+    text-align: left;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.org-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.logo {
+  background-color: @white;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  color: transparent;
+  height: 8rem;
+  margin: 2rem;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  width: 20rem;
+}
+
+.tumblr {
+  background-image: url('/images/endorsements/tumblr.png');
+}

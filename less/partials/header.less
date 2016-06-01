@@ -6,11 +6,11 @@ body > header {
   position: relative;
 
   @media screen and (min-width: @large-phone) {
-    padding-bottom: 21rem;
+    padding-bottom: 22rem;
   }
 
   @media screen and (min-width: @small-tablet) {
-    padding: ~'0 1rem calc(7vw + 17rem)';
+    padding: ~'0 1rem calc(7vw + 20rem)';
   }
 
   @media screen and (min-width: @medium-laptop) {
@@ -23,6 +23,7 @@ body > header {
 
   p {
     font-size: 1.6rem;
+    line-height: 1.2;
     margin: 0 auto;
     max-width: 62ch;
     padding: 0 1rem;
@@ -35,8 +36,10 @@ body > header {
 
 h1 {
   font-family: 'Futura Condensed ExtraBold', 'Futura-CondensedExtraBold', @heading-font;
-  font-size: 14.7vw;
+  font-size: 15.5vw;
+  letter-spacing: -2px;
   line-height: 0.8;
+  margin-bottom: 3rem;
   text-align: justify;
   text-align-last: center;
   text-transform: uppercase;
@@ -47,7 +50,7 @@ h1 {
   }
 
   span {
-    font-size: 27.7vw;
+    font-size: 29vw;
 
     @media screen and (min-width: @small-tablet) {
       font-size: 23rem;
