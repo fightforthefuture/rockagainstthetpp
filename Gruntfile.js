@@ -15,12 +15,8 @@ module.exports = function (grunt) {
   require('jit-grunt')(grunt, {});
 
   grunt.initConfig({
-    meta :{
-      project: 'rockagainstthetpp',
-      port: '9292'
-    },
-
     site: {
+      port: '9292',
       app: 'site',
       assets: 'assets',
       dist: 'public',
@@ -187,7 +183,7 @@ module.exports = function (grunt) {
             var
               stamp = Date.now();
             if (url[0] === '/') {
-              return 'https://' + env.get('aws_s3_bucket') + '<%= meta.project %>' + url + '?' + stamp;
+              return 'https://' + env.get('aws_s3_bucket') + '/rockagainstthetpp' + url + '?' + stamp;
             } else {
               return url;
             }
@@ -236,7 +232,7 @@ module.exports = function (grunt) {
       options: {
         open: true,
         hostname: '0.0.0.0',
-        port: '<%= meta.port %>',
+        port: '<%= site.port %>',
         middleware: function (connect, options, middlewares) {
           middlewares.unshift(function (request, response, next) {
             response.setHeader('Access-Control-Allow-Origin', '*');
