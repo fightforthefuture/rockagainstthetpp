@@ -2,7 +2,7 @@ body > header {
   background: center bottom url('/images/header.png') no-repeat;
   background-size: auto 100%;
   border-top: 3px solid @pageBorder;
-  padding: 7rem 1rem 20rem;
+  padding: 4rem 1rem 20rem;
   position: relative;
 
   @media screen and (min-width: @large-phone) {
@@ -14,7 +14,7 @@ body > header {
   }
 
   @media screen and (min-width: @medium-laptop) {
-    background-size: 100% auto;
+    background-size: 100% 100%;
   }
 
   @media screen and (min-width: @large-desktop) {
@@ -30,6 +30,33 @@ body > header {
 
     @media screen and (min-width: @large-phone) {
       font-size: 2rem;
+    }
+  }
+
+  &.subpage {
+    background-position: top center;
+    background-size: 100% auto;
+    padding-top: 7rem;
+    padding-bottom: 1rem;
+
+    h1 {
+      font-size: 10vw;
+
+      @media screen and (min-width: @large-tablet) {
+        font-size: 9.6rem;
+      }
+
+      span {
+        font-size: inherit;
+
+        &::before {
+          content: none;
+        }
+      }
+    }
+
+    p {
+      display: none;
     }
   }
 }

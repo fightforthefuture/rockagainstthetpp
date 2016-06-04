@@ -1,10 +1,6 @@
-body > nav {
+body > nav, main > nav {
   font-family: @heading-font;
   font-size: 1.2rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
   text-align: center;
   text-transform: uppercase;
 
@@ -43,9 +39,10 @@ body > nav {
     }
 
     &::before {
+      color: @black;
       content: '|';
       position: absolute;
-      top: 2.9rem;
+      top: 1.9rem;
       left: 0;
     }
 
@@ -58,7 +55,8 @@ body > nav {
 
   a {
     display: block;
-    padding: 3rem 0;
+    margin: 0 0 0 3px;
+    padding: 2rem 0;
 
     &:link, &:visited,
     &:hover, &:active, &:focus {
@@ -74,4 +72,17 @@ body > nav {
       text-decoration: underline;
     }
   }
+}
+
+main > nav {
+  background: center top url('/images/header.png') no-repeat;
+  background-size: 100% auto;
+}
+
+body > nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
 }

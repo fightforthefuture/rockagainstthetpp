@@ -9,39 +9,42 @@ page: home
 
 {% include form.html %}
 
-<section>
-  <h2 id="lineup">
-    The following artists are supporting<br>
-    Rock Against the TPP:
-  </h2>
-
-  <ul class="artists">
-    <li class="featured-artist morello"><span>Tom Morello</span></li>
-    <li class="artist lilly"><span>Evangeline Lilly</span></li>
-    <li class="artist flobots"><span>Flobots</span></li>
-    <li class="artist anti-flag"><span>Anti-Flag</span></li>
-    <li class="artist downtown-boys"><span>Downtown Boys</span></li>
-    <li class="artist harvey"><span>Ryan Harvey</span></li>
-    <li class="artist greer"><span>Evan Greer</span></li>
-  </ul>
-</section>
+<nav>
+  {% capture navigation %}{% include navigation.md %}{% endcapture %}
+  {{ navigation | markdownify }}
+</nav>
 
 <section>
+  <h2 id="whats-going-on">What&rsquo;s going on?</h2>
+  <p>
+    Congress is about to decide the fate of the Trans-Pacific Partnership (TPP),
+    an anti-democratic deal between 12 countries that was drafted in complete
+    secrecy by government officials and hundreds of corporate lobbyists. If it
+    passes, the TPP would be the largest deal of its kind in history, and it
+    poses a grave threat to good-paying jobs, the environment, access to
+    medicine, food safety, the Internet, and the future of freedom of
+    expression.
+  </p>
+
   <h2 id="what-can-we-do">What can we do about it?</h2>
-  <p>The TPP text has already been finalized, but before it becomes law, the
-    U.S. Congress must approve it. It&rsquo;s such a bad deal for average people
-    that voters from across the political spectrum overwhelmingly oppose it, and
-    more and more lawmakers are against it too. Even all the leading
-    presidential candidates oppose it! The more people learn about the TPP, the
-    less they like it. Rock Against the TPP is a massive effort to get out the
-    truth about this dangerous agreement. Through a series of large-scale
-    cultural events, protest, and trainings we&rsquo;ll reach thousands of
-    people who haven&rsquo;t heard about the TPP yet, and build a movement to
-    stop it in its tracks.</p>
+  <p>
+    The TPP text has already been finalized, but before it becomes law, the U.S.
+    Congress must approve it. It&rsquo;s such a bad deal for average people that
+    voters from across the political spectrum overwhelmingly oppose it, and more
+    and more lawmakers are against it too. Even all the leading presidential
+    candidates oppose it! The more people learn about the TPP, the less they
+    like it. Rock Against the TPP is a massive effort to get out the truth about
+    this dangerous agreement. Through a series of large-scale cultural events,
+    protests, and trainings, we&rsquo;ll reach thousands of people who
+    haven&rsquo;t heard about the TPP yet, and build a movement to stop it in
+    its tracks.
+  </p>
 </section>
 
 <section>
-    <h2 id="schedule">Tour schedule</h2>
+  <h2 id="what-is-rock-against-the-tpp">What is Rock Against the TPP?</h2>
+
+  <h3 id="schedule">Tour schedule</h3>
     <p>Performers and speakers will vary at each event. Click on the date to get
       specific details for each roadshow stop. Check back for updates!</p>
 
@@ -63,21 +66,45 @@ page: home
     <dt><time datetime="2016-09-24">September 24-25</time></dt>
     <dd>Boston, MA</dd>
   </dl>
+
+  <section>
+    <h3 id="lineup">
+      Artists supporting Rock Against the TPP:
+    </h3>
+
+    <ul class="artists">
+      <li class="featured-artist morello"><span>Tom Morello</span></li>
+      <li class="artist lilly"><span>Evangeline Lilly</span></li>
+      <li class="artist flobots"><span>Flobots</span></li>
+      <li class="artist anti-flag"><span>Anti-Flag</span></li>
+      <li class="artist downtown-boys"><span>Downtown Boys</span></li>
+      <li class="artist harvey"><span>Ryan Harvey</span></li>
+      <li class="artist greer"><span>Evan Greer</span></li>
+    </ul>
+
+    <h3 id="support-orgs">
+      Organizations supporting Rock Against the TPP:
+    </h3>
+
+    <ul class="org-logos">
+      {% for org in site.data.affiliated_orgs.support %}
+      <li class="logo" style="background-image: url('/images/endorsements/{{ org | slugify }}.png');">{{ org }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3 id="endorsed-orgs">
+      Organizations endorsing Rock Against the TPP:
+    </h3>
+
+    <ul class="org-logos">
+      {% for org in site.data.affiliated_orgs.endorse %}
+      <li class="logo" style="background-image: url('/images/endorsements/{{ org | slugify }}.png');">{{ org }}</li>
+      {% endfor %}
+    </ul>
+  </section>
 </section>
 
 <section>
   <h2 id="endorsements">
-    The following organizations have endorsed<br>
-    Rock Against the TPP:</h2>
 
-  <ul class="org-logos">
-    <li class="logo tumblr">Tumblr</li>
-    <li class="logo tumblr">Tumblr</li>
-    <li class="logo tumblr">Tumblr</li>
-    <li class="logo tumblr">Tumblr</li>
-    <li class="logo tumblr">Tumblr</li>
-    <li class="logo tumblr">Tumblr</li>
-    <li class="logo tumblr">Tumblr</li>
-    <li class="logo tumblr">Tumblr</li>
-  </ul>
 </section>
