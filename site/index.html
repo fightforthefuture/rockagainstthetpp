@@ -68,6 +68,19 @@ page: home
   </dl>
 
   <section>
+    <style type="text/css" scoped>
+      {% for org in site.data.affiliated_orgs.support %}
+      .{{ org | slugify }} {
+        background-image: url('/images/endorsements/{{ org | slugify }}.png');
+      }
+      {% endfor %}
+      {% for org in site.data.affiliated_orgs.endorse %}
+      .{{ org | slugify }} {
+        background-image: url('/images/endorsements/{{ org | slugify }}.png');
+      }
+      {% endfor %}
+    </style>
+
     <h3 id="lineup">
       Artists supporting Rock Against the TPP:
     </h3>
@@ -88,7 +101,7 @@ page: home
 
     <ul class="org-logos">
       {% for org in site.data.affiliated_orgs.support %}
-      <li class="logo" style="background-image: url('/images/endorsements/{{ org | slugify }}.png');">{{ org }}</li>
+      <li class="logo {{ org | slugify }}">{{ org }}</li>
       {% endfor %}
     </ul>
 
@@ -98,7 +111,7 @@ page: home
 
     <ul class="org-logos">
       {% for org in site.data.affiliated_orgs.endorse %}
-      <li class="logo" style="background-image: url('/images/endorsements/{{ org | slugify }}.png');">{{ org }}</li>
+      <li class="logo {{ org | slugify }}">{{ org }}</li>
       {% endfor %}
     </ul>
   </section>
