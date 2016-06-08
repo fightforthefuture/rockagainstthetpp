@@ -7,9 +7,10 @@ html, body {
 }
 
 body {
-  background-image: url('/images/body.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-image: url('/images/bg-body.jpg');
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  border-top: 3px solid @red-800;
   font-size: 1.6rem;
   font-family: @body-font;
   position: relative;
@@ -27,6 +28,19 @@ h2 {
 
 h3 {
   font-size: 3.2rem;
+}
+
+a {
+  color: @white;
+  font-family: @heading-font-bold;
+
+  &:link, &:visited {
+    text-decoration: none;
+  }
+
+  &:hover, &:active, &:focus {
+    text-decoration: underline;
+  }
 }
 
 img {

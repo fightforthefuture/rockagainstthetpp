@@ -5,12 +5,6 @@
 </head>
 <body>
 
-{% unless page.page == 'home' %}
-<nav>
-  {% capture navigation %}{% include navigation.md %}{% endcapture %}
-  {{ navigation | markdownify }}
-</nav>{% endunless %}
-
 <header{% unless page.page == 'home' %} class="subpage"{% endunless %}>
   <h1>
     Rock Against
@@ -20,11 +14,21 @@
   </h1>
 
   <p>
-    A nationwide tour to stop the biggest corporate power grab in history: the
-    Trans-Pacific Partnership. Organized by Fight for the Future and Rage
-    Against the Machine guitarist Tom Morello’s new label, Firebrand Records.
+    A nationwide uprising and concert tour to stop the biggest corporate power
+    grab in history: the Trans-Pacific Partnership. Organized by Fight for the
+    Future, Rage Against the Machine guitarist Tom Morello, and his new label,
+    Firebrand Records.
   </p>
 </header>
+
+<nav>
+  <ul>
+    <li><a href="/#schedule">Schedule</a></li>
+    <li><a href="/#lineup">Line up</a></li>
+    <li><a href="#">Learn more</a></li>
+    <li><a href="#">Donate</a></li>
+  </ul>
+</nav>
 
 <main>
   {{ content }}

@@ -1,27 +1,13 @@
 body > header {
-  background: center bottom url('/images/header.png') no-repeat;
-  background-size: auto 100%;
-  border-top: 3px solid @pageBorder;
-  padding: 4rem 1rem 20rem;
+  background: center bottom url('/images/bg-header.jpg') no-repeat;
+  background-size: cover;
+  margin-bottom: 6rem;
+  padding-top: 4rem;
   position: relative;
-
-  @media screen and (min-width: @large-phone) {
-    padding-bottom: 22rem;
-  }
-
-  @media screen and (min-width: @small-tablet) {
-    padding: ~'0 1rem calc(7vw + 20rem)';
-  }
-
-  @media screen and (min-width: @medium-laptop) {
-    background-size: 100% 100%;
-  }
-
-  @media screen and (min-width: @large-desktop) {
-    padding-bottom: ~'calc(20vw - 4rem)';
-  }
+  text-align: center;
 
   p {
+    color: @white;
     font-size: 1.6rem;
     line-height: 1.2;
     margin: 0 auto;
@@ -30,6 +16,7 @@ body > header {
 
     @media screen and (min-width: @large-phone) {
       font-size: 2rem;
+      line-height: 1.5;
     }
   }
 
@@ -62,26 +49,33 @@ body > header {
 }
 
 h1 {
-  font-family: 'Futura Condensed ExtraBold', 'Futura-CondensedExtraBold', @heading-font;
-  font-size: 15.5vw;
-  letter-spacing: -2px;
-  line-height: 0.8;
+  background-image: url('/images/header.png');
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  color: @black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: @heading-font-bold;
+  font-size: 11.75vw;
+  letter-spacing: -3px;
+  line-height: 0.75;
   margin-bottom: 3rem;
+  padding: 4rem 1rem;
   text-align: justify;
   text-align-last: center;
   text-transform: uppercase;
 
   @media screen and (min-width: @small-tablet) {
-    font-size: 12rem;
+    font-size: 9.8rem;
+    letter-spacing: -6px;
     text-align: center;
   }
 
   span {
-    font-size: 29vw;
+    font-size: 20.5vw;
 
     @media screen and (min-width: @small-tablet) {
-      font-size: 23rem;
-      text-align: center;
+      font-size: 16.9rem;
     }
 
     &::before {

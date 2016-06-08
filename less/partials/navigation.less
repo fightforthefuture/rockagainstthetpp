@@ -1,16 +1,24 @@
-body > nav, main > nav {
+body > nav {
   font-family: @heading-font;
   font-size: 1.2rem;
+  font-weight: 100;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
   text-align: center;
   text-transform: uppercase;
+  z-index: 10;
 
   @media screen and (min-width: @small-phone) {
     font-size: 1.4rem;
   }
 
+  /*
   @media screen and (min-width: @large-phone) {
     font-size: 1.7rem;
   }
+  */
 
   ul, li {
     margin: 0;
@@ -18,28 +26,26 @@ body > nav, main > nav {
   }
 
   ul {
+    align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
-    @media screen and (min-width: @small-phone) {
+    @media screen and (min-width: @large-phone) {
       justify-content: center;
     }
   }
 
   li {
     position: relative;
-    width: 33%;
-
-    @media screen and (min-width: @small-phone) {
-      width: 16rem;
-    }
+    width: 25%;
 
     @media screen and (min-width: @large-phone) {
-      width: 20rem;
+      padding: 0 4rem;
+      width: auto;
     }
 
     &::before {
-      color: @black;
+      color: @grey-450;
       content: '|';
       position: absolute;
       top: 1.9rem;
@@ -51,38 +57,41 @@ body > nav, main > nav {
         content: none;
       }
     }
+
+    &:last-child {
+      @media screen and (min-width: @large-phone) {
+        border: #fff solid 1px;
+        border-radius: 2rem;
+        height: 4rem;
+        line-height: 0;
+        padding: 0 2rem;
+      }
+
+      &::before {
+        @media screen and (min-width: @large-phone) {
+          content: none;
+        }
+      }
+    }
   }
 
   a {
     display: block;
     margin: 0 0 0 3px;
     padding: 2rem 0;
+    text-decoration: none;
 
     &:link, &:visited,
     &:hover, &:active, &:focus {
-      color: @black;
+      color: @white;
     }
 
     &:link, &:visited {
-      text-decoration: none;
     }
 
     &:hover, &:active, &:focus {
-      background-color: fade(@pageBorder, 5%);
-      text-decoration: underline;
+      transform: scale(1.05);
+      transition: transform 200ms;
     }
   }
-}
-
-main > nav {
-  background: center top url('/images/header.png') no-repeat;
-  background-size: 100% auto;
-}
-
-body > nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 10;
 }

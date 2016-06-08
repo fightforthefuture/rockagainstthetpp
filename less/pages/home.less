@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-family: @heading-font;
+  font-family: @heading-font-bold;
   margin: 0 auto;
   max-width: 88rem;
   text-align: center;
@@ -63,6 +63,64 @@
   }
 }
 
+.featured-date {
+  border: solid 1px fade(@white, 47%);
+  border-radius: 1rem;
+  color: @white;
+  overflow: hidden;
+
+  .meta {
+    align-items: center;
+    background-color: fade(@white, 10%);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 4.7rem;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+
+  time {
+    color: @red-800;
+    margin: 0 1rem;
+
+    &::after {
+      content: ': ';
+    }
+  }
+
+  .location {
+    margin: 0 1rem;
+  }
+
+  a {
+    background-color: @red-800;
+    border-radius: 2.5rem;
+    font-size: 1.6rem;
+    height: 4.5rem;
+    margin: 0 1rem;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .acts {
+    background-color: fade(@white, 5%);
+    font-size: 2rem;
+    margin: 0;
+    max-width: 100%;
+    padding: 2rem;
+    width: 100%;
+
+    &::before {
+      color: lighten(@black, 48%);
+      content: 'Featuring:'
+    }
+  }
+}
+
 .morello {
  background-image: url('/images/artists/morello.jpg');
 }
@@ -106,7 +164,7 @@
   }
 
   dt {
-    color: @pageBorder;
+    color: @red-800;
     text-align: right;
 
     &::after {
@@ -120,6 +178,42 @@
 
   a {
     color: inherit;
+  }
+}
+
+.organized-by {
+  align-items: center;
+  color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media screen and (min-width: @large-phone) {
+    flex-direction: row;
+  }
+
+  li {
+    background: center center no-repeat;
+    background-size: contain;
+    margin: 1rem;
+    max-width: 100%;
+  }
+
+  .fight-for-the-future {
+    background-image: url('/images/fight-for-the-future.png');
+    height: 3.3rem;
+    width: 25.6rem;
+
+    @media screen and (min-width: @small-phone) {
+      height: 4.4rem;
+      width: 34.2rem;
+    }
+  }
+
+  .firebrand-records {
+    background-image: url('/images/firebrand-records.png');
+    height: 16rem;
+    width: 16rem;
   }
 }
 

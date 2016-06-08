@@ -1,3 +1,0 @@
-- [Line-up](/#lineup)
-- [Dates](/#schedule)
-- [Learn more]()
