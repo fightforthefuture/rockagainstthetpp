@@ -20,21 +20,14 @@
   display: table;
   height: 29.1rem;
 
-  img {
-    border: none;
-    display: block;
-    max-width: none;
-    position: absolute;
-    left: -1px;
-    right: -1px;
-    width: 101%;
+  a {
+    color: @white;
   }
 
-  .artist-name {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 10;
+  img {
+    border: none;
+    max-width: none;
+    width: 101%;
   }
 }
 
@@ -49,6 +42,8 @@
   width: ~'calc(100% - 4rem)';
 
   img {
+    display: block;
+    position: absolute;
     height: 30rem;
     left: auto;
     right: -25%;
@@ -67,9 +62,12 @@
   .artist-name {
     line-height: 1;
     bottom: 0;
-    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
     text-shadow: 0 0 1rem black;
     vertical-align: middle;
+    z-index: 10;
 
     @media screen and (min-width: @small-phone) {
       bottom: 1rem;
@@ -88,6 +86,10 @@
     }
   }
 
+  .artist-photo {
+    height: 30rem;
+  }
+
   .artist-bio {
     display: flex;
     flex-direction: column;
@@ -96,26 +98,46 @@
 }
 
 .artist {
-  font-size: 1.8rem;
-  height: calc(47.5vw + 9.2rem);
   margin: 2rem 0 5rem;
   max-width: 27rem;
   overflow: hidden;
-  position: relative;
   width: 63vw;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  height: ~'calc(51.875vw + 14.8rem)';
+  line-height: 1;
+  font-size: 1.7rem;
+
+  @media screen and (min-width: @small-phone) {
+    height: 38rem;
+  }
+
   @media screen and (min-width: @large-phone) {
-    height: 32rem;
+    font-size: 1.8rem;
     width: 44%;
   }
 
   @media screen and (min-width: @small-tablet) {
     width: 30%;
   }
+
+  img {
+    position: relative;
+    left: -1px;
+    right: -1px;
+    width: 101%;
+  }
+
+  .artist-name {
+    margin-top: 0.5rem;
+  }
 }
 
-.artist-name {
-  bottom: 3px;
+.artist-photo {
+  position: relative;
 }
 
 .artist-bio {
@@ -140,10 +162,25 @@
   }
 }
 
+.artist-name {
+  text-align: left;
+}
+
+.artist-website {
+  font-variant: small-caps;
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  text-decoration: underline;
+}
+
 .featured-date {
+  align-items: center;
   border: solid 1px fade(@white, 47%);
   border-radius: 1rem;
   color: @white;
+  display: flex;
+  flex-wrap: wrap;
   overflow: hidden;
 
   .meta {
@@ -154,6 +191,7 @@
     font-size: 4.7rem;
     justify-content: center;
     padding: 2rem 0;
+    width: 100%;
   }
 
   time {
@@ -172,6 +210,7 @@
   a {
     background-color: @red-800;
     border-radius: 2.5rem;
+    color: @white;
     font-size: 1.6rem;
     height: 4.5rem;
     margin: 0 1rem;
@@ -180,6 +219,14 @@
 
     &:hover, &:active, &:focus {
       text-decoration: none;
+    }
+  }
+
+  p {
+    margin: 1.25rem auto;
+
+    @media screen and (min-width: @small-phone) {
+      max-width: 50%;
     }
   }
 
@@ -202,13 +249,17 @@
   display: flex;
   flex-wrap: wrap;
   font-size: ~'calc(4vw + 3px)';
-  justify-content: space-around;
+  justify-content: center;
 
   @media screen and (min-width: @large-phone) {
     font-size: 3rem;
+    margin: 0 auto;
+    max-width: 50rem;
   }
 
   dd, dt {
+    border-top: solid 1px fade(@white, 20%);
+    padding: 1rem;
     width: 49%;
   }
 

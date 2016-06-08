@@ -31,8 +31,7 @@ h3 {
 }
 
 a {
-  color: @white;
-  font-family: @heading-font-bold;
+  color: lighten(@red-800, 10%);
 
   &:link, &:visited {
     text-decoration: none;
@@ -51,6 +50,10 @@ img {
 p {
   margin: 0 auto 1.25em;
   max-width: 67ch;
+}
+
+strong {
+  font-family: @heading-font-bold;
 }
 
 .visually-hidden {

@@ -2,7 +2,7 @@
   margin: 3rem 1.5rem 0;
   max-width: @large-tablet + 80px;
   overflow: hidden;
-  padding: 0;
+  padding: 0 0 2px;
   position: relative;
 
   @media screen and (min-width: @small-tablet) {
@@ -62,6 +62,8 @@
 }
 
 .email {
+  border-radius: 0;
+
   @media screen and (min-width: @small-tablet) {
     border-right: solid 1px @grey-500;
     padding-left: 2rem;
@@ -80,20 +82,31 @@
 }
 
 .submit {
+  appearance: none;
   background: @red-800;
   border-radius: 0.5rem;
   border: none;
-  color: white;
+  color: @white;
   font-size: 2.5rem;
   font-weight: bold;
   margin-top: 2rem;
   padding: 1.5rem;
+  position: relative;
   text-transform: uppercase;
+  transition: top 150ms;
   width: 100%;
 
   @media screen and (min-width: @small-tablet) {
     margin-top: 0;
     width: 29%;
+  }
+
+  &:active, &:focus {
+    outline: none;
+    top: 1px;
+  }
+
+  &:focus {
   }
 }
 

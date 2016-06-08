@@ -10,9 +10,8 @@ body > header {
     color: @white;
     font-size: 1.6rem;
     line-height: 1.2;
-    margin: 0 auto;
     max-width: 62ch;
-    padding: 0 1rem;
+    padding: 0 1rem 3rem;
 
     @media screen and (min-width: @large-phone) {
       font-size: 2rem;
@@ -53,17 +52,11 @@ body > header {
 }
 
 h1 {
-  background-image: url('/images/header.png');
-  background-repeat: repeat-y;
-  background-size: 100% auto;
-  color: @black;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: @white;
   font-family: @heading-font-bold;
   font-size: 11.75vw;
   letter-spacing: -3px;
   line-height: 0.75;
-  margin-bottom: 3rem;
   padding: 4rem 1rem;
   text-align: justify;
   text-align-last: center;
@@ -72,6 +65,7 @@ h1 {
   @media screen and (min-width: @small-tablet) {
     font-size: 9.8rem;
     letter-spacing: -6px;
+    margin-bottom: 3rem;
     text-align: center;
   }
 

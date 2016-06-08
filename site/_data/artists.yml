@@ -11,7 +11,7 @@ lilly:
 flobots:
   filename: flobots.jpg
   name: Jonny 5 and Brer Rabbit of Flobots
-  bio: MCs of the crowd-rocking Denver-based hip-hop/rock outfit Flobots
+  bio: Denver, Colorado’s revolutionary hip-hop act Flobots bring it on real with their signature anthems dedicated to creating a better world.
   url: http://flobots.com/
 anti-flag:
   filename: anti-flag.jpg
@@ -39,12 +39,12 @@ harvey:
   bio: Baltimore-based activist folksinger and co-founder of Firebrand Records.
   url: http://ryanharveymusic.com/
 son-of-nun:
-  filename: null
+  filename: son-of-nun.jpg
   name: Son of Nun
   bio: Activist, organizer, and hip hop MC who doesn’t just entertain, he empowers. “More than relevant” according to Chuck D of Public Enemy.
   url: http://sonofnun.net/
 rose:
-  filename: null
+  filename: rose.jpg
   name: Lia Rose
   bio: Of critically acclaimed Bay Area electro-indie-rock act Built for the Sea
   url: http://www.liarose.com/

@@ -1,8 +1,8 @@
 ---
 page: home
 location: Denver, CO
-share_image: /images/share/home.png
-share_image_dims: 1234 x 1234
+share_image: /images/share/home.jpg
+share_image_dims: 1200 x 630
 social_title: 'Rock Against the TPP!'
 social_description: 'Your favorite artists are teaming up to stop the corporate takeover known as the Trans-Pacific Partnership.'
 twittertext: Your favorite artists are teaming up to #RockAgainstTheTPP! Stop the #TPP corporate takeover RockAgainstTheTPP.org
@@ -107,17 +107,15 @@ twittertext: Your favorite artists are teaming up to #RockAgainstTheTPP! Stop th
 
   <dl class="dates">
     <dt><time datetime="2016-07-29">July 29-30</time></dt>
-    <dd>San Diego, CA</dd>
+    <dd>???</dd>
     <dt><time datetime="2016-08-05">August 5-6</time></dt>
-    <dd>Los Angeles, CA</dd>
+    <dd>???</dd>
     <dt><time datetime="2016-08-12">August 12-13</time></dt>
-    <dd>San Francisco, CA</dd>
+    <dd>???</dd>
     <dt><time datetime="2016-08-18">August 18-19</time></dt>
-    <dd>Seattle, WA</dd>
+    <dd>???</dd>
     <dt><time datetime="2016-08-20">August 20-12</time></dt>
-    <dd>Portland, OR</dd>
-    <dt><time datetime="2016-09-24">September 24-25</time></dt>
-    <dd>Boston, MA</dd>
+    <dd>???</dd>
   </dl>
 </section>
 
@@ -151,27 +149,9 @@ twittertext: Your favorite artists are teaming up to #RockAgainstTheTPP! Stop th
 </section>
 
 <section>
-  <h3 id="endorsed-orgs">
-    Organizations endorsing Rock Against the TPP:
-  </h3>
-
   <p>
     Full list of endorsing organizations coming soon.
     <a href="mailto:team@fightforthefuture.org">Email us</a> to get involved in
     Rock Against the TPP!
   </p>
-
-  <style type="text/css" scoped>
-    {% for org in site.data.affiliated_orgs.endorse %}
-    .{{ org | slugify }} {
-      background-image: url('/images/endorsements/{{ org | slugify }}.png');
-    }
-    {% endfor %}
-  </style>
-
-  <ul class="org-logos">
-    {% for org in site.data.affiliated_orgs.endorse %}
-    <li class="logo {{ org | slugify }}">{{ org }}</li>
-    {% endfor %}
-  </ul>
 </section>

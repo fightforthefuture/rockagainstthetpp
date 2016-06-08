@@ -1,7 +1,7 @@
 body > footer {
   background-color: rgba(0, 0, 0, 0.67);
   color: fade(@white, 75%);
-  padding: 3rem 0;
+  padding: 3rem 2rem;
 
   .title {
     font-variant: small-caps;
@@ -13,8 +13,11 @@ body > footer {
   }
 
   dl {
+    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 40rem;
+    margin: 0 auto 1rem;
     text-align: center;
 
     @media screen and (min-width: @small-phone) {
@@ -27,7 +30,6 @@ body > footer {
 
     @media screen and (min-width: @small-phone) {
       margin: 1rem;
-      width: 40%;
     }
   }
 

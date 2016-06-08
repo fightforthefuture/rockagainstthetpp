@@ -1,0 +1,13 @@
+<style type="text/css" scoped>
+  {% for org in site.data.affiliated_orgs.endorse %}
+  .{{ org | slugify }} {
+    background-image: url('/images/endorsements/{{ org | slugify }}.png');
+  }
+  {% endfor %}
+</style>
+
+<ul class="org-logos">
+  {% for org in site.data.affiliated_orgs.endorse %}
+  <li class="logo {{ org | slugify }}">{{ org }}</li>
+  {% endfor %}
+</ul>

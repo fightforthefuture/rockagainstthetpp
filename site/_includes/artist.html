@@ -1,5 +1,12 @@
 <li class="{% if include.featured %}featured-{% endif %}artist">
-  <img src="/images/artists/{{ include.artist.filename }}" alt="{{ include.artist.name }}" />
-  <span class="artist-name"><a target="_blank" href="{{ include.artist.url }}">{{ include.artist.name }}</a></span>
-  <span class="artist-bio">{{ include.artist.bio }}</span>
+  <div class="artist-photo">
+    <img src="/images/artists/{{ include.artist.filename }}" alt="{{ include.artist.name }}" />
+    <div class="artist-bio">
+      {{ include.artist.bio }}
+      <span class="artist-website">
+        <a target="_blank" href="{{ include.artist.url }}">website</a>
+      </span>
+    </div>
+  </div>
+  <div class="artist-name">{{ include.artist.name }}</div>
 </li>
