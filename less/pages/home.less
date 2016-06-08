@@ -18,10 +18,23 @@
 .artist, .featured-artist {
   background-repeat: no-repeat;
   display: table;
-  height: 32rem;
+  height: 29.1rem;
 
-  span {
-    display: table-cell;
+  img {
+    border: none;
+    display: block;
+    max-width: none;
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    width: 101%;
+  }
+
+  .artist-name {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
   }
 }
 
@@ -31,20 +44,64 @@
   font-size: 3rem;
   margin: 2rem;
   max-width: 88rem;
+  overflow: hidden;
+  position: relative;
   width: ~'calc(100% - 4rem)';
 
-  span {
+  img {
+    height: 30rem;
+    left: auto;
+    right: -25%;
+    width: auto;
+
+    @media screen and (min-width: @small-phone) {
+      right: 0;
+    }
+
+    @media screen and (min-width: @small-tablet) {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  .artist-name {
+    line-height: 1;
+    bottom: 0;
+    text-align: center;
+    text-shadow: 0 0 1rem black;
     vertical-align: middle;
+
+    @media screen and (min-width: @small-phone) {
+      bottom: 1rem;
+    }
+
+    @media screen and (min-width: @large-phone) {
+      top: 50%;
+      right: auto;
+      bottom: auto;
+      left: 2vw;
+    }
+
+    @media screen and (min-width: @small-tablet) {
+      top: 14.5rem;
+      left: 8rem;
+    }
+  }
+
+  .artist-bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 }
 
 .artist {
-  background-position: center center;
-  background-size: 101% auto;
   font-size: 1.8rem;
   height: calc(47.5vw + 9.2rem);
   margin: 2rem 0 5rem;
   max-width: 27rem;
+  overflow: hidden;
+  position: relative;
   width: 63vw;
 
   @media screen and (min-width: @large-phone) {
@@ -55,11 +112,31 @@
   @media screen and (min-width: @small-tablet) {
     width: 30%;
   }
+}
 
-  span {
-    position: relative;
-    bottom: -3rem;
-    vertical-align: bottom;
+.artist-name {
+  bottom: 3px;
+}
+
+.artist-bio {
+  background: fade(@black, 60%);
+  font-family: @body-font;
+  font-size: 1.8rem;
+  opacity: 0;
+  padding: 3rem 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  text-transform: initial;
+  transition: opacity 200ms;
+
+  &:hover {
+    @media screen and (min-width: @large-phone) {
+      opacity: 1;
+    }
   }
 }
 
@@ -119,34 +196,6 @@
       content: 'Featuring:'
     }
   }
-}
-
-.morello {
- background-image: url('/images/artists/morello.jpg');
-}
-
-.lilly {
- background-image: url('/images/artists/lilly.jpg');
-}
-
-.flobots {
- background-image: url('/images/artists/flobots.jpg');
-}
-
-.anti-flag {
- background-image: url('/images/artists/anti-flag.jpg');
-}
-
-.downtown-boys {
- background-image: url('/images/artists/downtown-boys.jpg');
-}
-
-.harvey {
- background-image: url('/images/artists/harvey.jpg');
-}
-
-.greer {
- background-image: url('/images/artists/greer.jpg');
 }
 
 .dates {

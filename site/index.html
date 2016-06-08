@@ -1,24 +1,30 @@
 ---
 page: home
+location: Denver, CO
+share_image: /images/share/home.png
+share_image_dims: 1234 x 1234
+social_title: 'Rock Against the TPP!'
+social_description: 'Your favorite artists are teaming up to stop the corporate takeover known as the Trans-Pacific Partnership.'
+twittertext: Your favorite artists are teaming up to #RockAgainstTheTPP! Stop the #TPP corporate takeover RockAgainstTheTPP.org
 ---
 
 {% include form.html %}
 
 <section>
-  <h3 id="lineup">
+  <h2 id="lineup">
     BREAKING: Line-up announced for Rock Against the TPP kick-off in Denver July
     23rd!
-  </h3>
+  </h2>
 
+  {% for post in site.posts %}
+  {% if post.location == page.location %}
   <ul class="artists">
-    <li class="featured-artist morello"><span>Tom Morello</span></li>
-    <li class="artist lilly"><span>Evangeline Lilly</span></li>
-    <li class="artist flobots"><span>Flobots</span></li>
-    <li class="artist anti-flag"><span>Anti-Flag</span></li>
-    <li class="artist downtown-boys"><span>Downtown Boys</span></li>
-    <li class="artist harvey"><span>Ryan Harvey</span></li>
-    <li class="artist greer"><span>Evan Greer</span></li>
+    {% assign artist=site.data.artists[post.headliner] %}
+    {% include artist.html artist=artist featured=true %}
+    {% for performer in post.performers %}{% assign artist=site.data.artists[performer] %}
+    {% include artist.html artist=artist %}{% endfor %}
   </ul>
+  {% endif %}{% endfor %}
 </section>
 
 <section>

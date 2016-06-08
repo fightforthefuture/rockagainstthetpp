@@ -1,5 +1,5 @@
 body > header {
-  background: center bottom url('/images/bg-header.jpg') no-repeat;
+  background: 50% url('/images/bg-header.jpg') no-repeat;
   background-size: cover;
   margin-bottom: 6rem;
   padding-top: 4rem;
@@ -21,20 +21,24 @@ body > header {
   }
 
   &.subpage {
-    background-position: top center;
-    background-size: 100% auto;
-    padding-top: 7rem;
+    padding-top: 3rem;
     padding-bottom: 1rem;
 
     h1 {
-      font-size: 10vw;
+      padding-bottom: 0;
+
+      @media screen and (min-width: @small-phone) {
+        font-size: 7.5vw;
+      }
 
       @media screen and (min-width: @large-tablet) {
         font-size: 9.6rem;
       }
 
       span {
-        font-size: inherit;
+        @media screen and (min-width: @small-phone) {
+          font-size: inherit;
+        }
 
         &::before {
           content: none;
