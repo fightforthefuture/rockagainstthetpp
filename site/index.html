@@ -2,28 +2,28 @@
 page: home
 ---
 
-<section>
-  <h2>Take action now to stop the TPP:</h2>
-  <p>We&rsquo;ll add your signature to the petition telling Congress to &ldquo;Vote no on the TPP&rdquo; and send you updates about the Rock Against the TPP tour!</p>
-</section>
-
 {% include form.html %}
 
-<nav>
-  {% capture navigation %}{% include navigation.md %}{% endcapture %}
-  {{ navigation | markdownify }}
-</nav>
+<section>
+  <h3 id="lineup">
+    Artists supporting Rock Against the TPP:
+  </h3>
+
+  <ul class="artists">
+    <li class="featured-artist morello"><span>Tom Morello</span></li>
+    <li class="artist lilly"><span>Evangeline Lilly</span></li>
+    <li class="artist flobots"><span>Flobots</span></li>
+    <li class="artist anti-flag"><span>Anti-Flag</span></li>
+    <li class="artist downtown-boys"><span>Downtown Boys</span></li>
+    <li class="artist harvey"><span>Ryan Harvey</span></li>
+    <li class="artist greer"><span>Evan Greer</span></li>
+  </ul>
+</section>
 
 <section>
   <h2 id="whats-going-on">What&rsquo;s going on?</h2>
   <p>
-    Congress is about to decide the fate of the Trans-Pacific Partnership (TPP),
-    an anti-democratic deal between 12 countries that was drafted in complete
-    secrecy by government officials and hundreds of corporate lobbyists. If it
-    passes, the TPP would be the largest deal of its kind in history, and it
-    poses a grave threat to good-paying jobs, the environment, access to
-    medicine, food safety, the Internet, and the future of freedom of
-    expression.
+    Congress is about to decide the fate of the Trans-Pacific Partnership (TPP), an anti-democratic deal between 12 countries that was negotiated in complete secrecy by government officials and hundreds of corporate lobbyists. If it becomes law, the TPP would be the largest deal of its kind in history, and it poses a grave threat to good-paying jobs, internet freedom, the environment, access to medicine, food safety, and the future of freedom of expression.
   </p>
 
   <h2 id="what-can-we-do">What can we do about it?</h2>
@@ -39,6 +39,41 @@ page: home
     haven&rsquo;t heard about the TPP yet, and build a movement to stop it in
     its tracks.
   </p>
+</section>
+
+<section>
+  <style type="text/css" scoped>
+    {% for org in site.data.affiliated_orgs.support %}
+    .{{ org | slugify }} {
+      background-image: url('/images/endorsements/{{ org | slugify }}.png');
+    }
+    {% endfor %}
+    {% for org in site.data.affiliated_orgs.endorse %}
+    .{{ org | slugify }} {
+      background-image: url('/images/endorsements/{{ org | slugify }}.png');
+    }
+    {% endfor %}
+  </style>
+
+  <h3 id="support-orgs">
+    Organizations supporting Rock Against the TPP:
+  </h3>
+
+  <ul class="org-logos">
+    {% for org in site.data.affiliated_orgs.support %}
+    <li class="logo {{ org | slugify }}">{{ org }}</li>
+    {% endfor %}
+  </ul>
+
+  <h3 id="endorsed-orgs">
+    Organizations endorsing Rock Against the TPP:
+  </h3>
+
+  <ul class="org-logos">
+    {% for org in site.data.affiliated_orgs.endorse %}
+    <li class="logo {{ org | slugify }}">{{ org }}</li>
+    {% endfor %}
+  </ul>
 </section>
 
 <section>
@@ -66,57 +101,7 @@ page: home
     <dt><time datetime="2016-09-24">September 24-25</time></dt>
     <dd>Boston, MA</dd>
   </dl>
-
-  <section>
-    <style type="text/css" scoped>
-      {% for org in site.data.affiliated_orgs.support %}
-      .{{ org | slugify }} {
-        background-image: url('/images/endorsements/{{ org | slugify }}.png');
-      }
-      {% endfor %}
-      {% for org in site.data.affiliated_orgs.endorse %}
-      .{{ org | slugify }} {
-        background-image: url('/images/endorsements/{{ org | slugify }}.png');
-      }
-      {% endfor %}
-    </style>
-
-    <h3 id="lineup">
-      Artists supporting Rock Against the TPP:
-    </h3>
-
-    <ul class="artists">
-      <li class="featured-artist morello"><span>Tom Morello</span></li>
-      <li class="artist lilly"><span>Evangeline Lilly</span></li>
-      <li class="artist flobots"><span>Flobots</span></li>
-      <li class="artist anti-flag"><span>Anti-Flag</span></li>
-      <li class="artist downtown-boys"><span>Downtown Boys</span></li>
-      <li class="artist harvey"><span>Ryan Harvey</span></li>
-      <li class="artist greer"><span>Evan Greer</span></li>
-    </ul>
-
-    <h3 id="support-orgs">
-      Organizations supporting Rock Against the TPP:
-    </h3>
-
-    <ul class="org-logos">
-      {% for org in site.data.affiliated_orgs.support %}
-      <li class="logo {{ org | slugify }}">{{ org }}</li>
-      {% endfor %}
-    </ul>
-
-    <h3 id="endorsed-orgs">
-      Organizations endorsing Rock Against the TPP:
-    </h3>
-
-    <ul class="org-logos">
-      {% for org in site.data.affiliated_orgs.endorse %}
-      <li class="logo {{ org | slugify }}">{{ org }}</li>
-      {% endfor %}
-    </ul>
   </section>
-</section>
-
 <section>
   <h2 id="endorsements">
 
