@@ -105,9 +105,6 @@
     outline: none;
     top: 1px;
   }
-
-  &:focus {
-  }
 }
 
 [for="select-country"] {
@@ -117,8 +114,16 @@
 }
 
 .country {
+  cursor: pointer;
   height: 2.1rem;
   margin: 1rem auto;
 
+  &:not(.hidden) {
+    display: block;
+  }
+
+  &:hover, &:active, &:focus {
+    text-decoration: underline;
+  }
 }
 
