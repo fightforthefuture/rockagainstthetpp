@@ -4,8 +4,12 @@ main {
 
   section {
     margin: 4rem auto 1rem;
-    padding: 0 2rem;
+    padding: 0 1rem;
     max-width: @large-tablet + 80px;
+
+    @media screen and (min-width: @small-phone) {
+      padding: 0 2rem;
+    }
 
     @media screen and (min-width: @large-phone) {
       margin-bottom: 2rem;
