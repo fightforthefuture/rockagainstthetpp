@@ -34,3 +34,61 @@ main {
     }
   }
 }
+
+.share-this {
+  display: none;
+  position: fixed;
+  top: 40%;
+
+  @media screen and (min-width: @small-laptop) {
+    display: block;
+  }
+
+  p {
+    margin: 0 0 0.7rem;
+  }
+
+  a {
+    background-color: darken(@white, 12%);
+    border: solid 1px @white;
+    color: @black;
+    display: block;
+    font-size: 1.1rem;
+    font-variant: small-caps;
+    padding: 0.7rem 1.5rem;
+    position: relative;
+    text-transform: uppercase;
+    transition: background-color 200ms;
+
+    &:hover, &:active, &:focus {
+      background-color: @white;
+      text-decoration: none;
+    }
+
+    &::after {
+      background-image: url('/images/share/share-icons.png');
+      background-repeat: no-repeat;
+      background-size: 155%;
+      border: solid 1px @white;
+      border-left: none;
+      border-radius: 0 0.5rem 0.5rem 0;
+      content: ' ';
+      display: block;
+      height: 3rem;
+      position: absolute;
+      top: -1px;
+      right: -3rem;
+      width: 3rem;
+    }
+
+    &.twitter::after {
+      background-color: @twitter-blue;
+      background-position: 6px center;
+    }
+
+    &.facebook::after {
+      background-color: @facebook-blue;
+      background-position: -20px center;
+    }
+  }
+}
