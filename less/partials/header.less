@@ -23,23 +23,20 @@ body > header {
     padding-top: 3rem;
     padding-bottom: 1rem;
 
+    a {
+      color: @white;
+      text-decoration: none;
+    }
+
     h1 {
+      margin-bottom: 0;
+
       @media screen and (min-width: @small-phone) {
         font-size: 7.5vw;
       }
 
       @media screen and (min-width: @large-tablet) {
         font-size: 7.7rem;
-      }
-
-      span {
-        @media screen and (min-width: @small-phone) {
-          font-size: inherit;
-        }
-
-        &::before {
-          content: none;
-        }
       }
     }
 
