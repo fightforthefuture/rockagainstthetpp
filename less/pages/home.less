@@ -36,10 +36,14 @@
   box-shadow: -3px 3px 0 0 @grey-200;
   font-size: 3rem;
   margin: 2rem;
+  margin-bottom: 6rem;
   max-width: 88rem;
-  overflow: hidden;
   position: relative;
   width: ~'calc(100% - 4rem)';
+
+  @media screen and (min-width: @large-phone) {
+    margin-bottom: auto;
+  }
 
   img {
     display: block;
@@ -61,23 +65,19 @@
 
   .artist-name {
     line-height: 1;
-    bottom: 0;
+    margin: 0;
     position: absolute;
-    left: 0;
     right: 0;
+    bottom: -4rem;
+    left: 0;
     text-shadow: 0 0 1rem black;
     vertical-align: middle;
     z-index: 10;
 
-    @media screen and (min-width: @small-phone) {
-      bottom: 1rem;
-    }
-
     @media screen and (min-width: @large-phone) {
+      height: 0;
       top: 50%;
-      right: auto;
-      bottom: auto;
-      left: 2vw;
+      left: 2px;
     }
 
     @media screen and (min-width: @small-tablet) {
@@ -88,6 +88,7 @@
 
   .artist-photo {
     height: 30rem;
+    overflow: hidden;
   }
 
   .artist-bio {
@@ -132,7 +133,7 @@
   }
 
   .artist-name {
-    margin-top: 0.5rem;
+    margin: 1rem 0 0;
   }
 }
 
