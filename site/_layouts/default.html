@@ -13,12 +13,31 @@
   <h1><a href="/">Rock Against the TPP</a></h1>
   {% endif %}
 
-  <p>
-    A nationwide uprising and concert tour to stop the biggest corporate power
-    grab in history: the Trans-Pacific Partnership. Organized by Fight for the
-    Future, Rage Against the Machine guitarist Tom Morello, and his new label,
-    Firebrand Records.
-  </p>
+  {% if page.layout == 'event' %}
+  <section>
+    <div class="show-page-header">
+      <h2>
+        Tour Kick-Off!
+      </h2>
+      <time datetime="{{ page.event-date }}">
+        {{ page.event_date | date: "%B %d" }}-{{ page.event_date | date: '%-d' | plus: '1'}}
+      </time>
+      <p class="city">{{ page.location }}</p>
+
+      <div class="details">
+        {{ page.address | markdownify }}
+        <p>
+          {{ page.time }}<br>
+          <strong>
+            All ages. Free!
+          </strong>
+        </p>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {{ page.header_content }}
 </header>
 
 <nav>

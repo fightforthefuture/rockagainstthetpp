@@ -1,0 +1,136 @@
+.feature-boxes() {
+  background-color: fade(@white, 5%);
+  border-radius: 4px;
+  color: @white;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  overflow: hidden;
+
+  time {
+    color: @red-800;
+
+    &::after {
+      content: ': ';
+      margin-right: 1rem;
+    }
+  }
+
+  a {
+    background-color: @red-800;
+    border-radius: 2.5rem;
+    color: @white;
+    font-size: 1.6rem;
+    height: 4.5rem;
+    margin: 0 1rem;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.info-feature {
+  .feature-boxes();
+  align-items: center;
+  border: solid 1px fade(@white, 47%);
+
+  h2, h3 {
+    flex-basis: 100%;
+    margin: 0;
+  }
+}
+
+.promotion {
+  align-items: center;
+  background-color: fade(@white, 5%);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 4.7rem;
+  justify-content: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.details {
+  font-size: 2rem;
+  margin: 0;
+  max-width: 100%;
+  padding: 2rem;
+  width: 100%;
+}
+
+.location {
+  margin: 0 1rem;
+}
+
+.featuring {
+  color: lighten(@black, 48%);
+}
+
+.show-page-header {
+  .feature-boxes();
+  align-items: flex-start;
+  justify-content: center;
+  margin: 2rem;
+  max-width: @large-tablet + 80px;
+  padding: 2rem;
+
+  @media screen and (min-width: @small-phone) {
+    margin: 3rem;
+  }
+
+  h2 {
+    font-family: @heading-font;
+    width: 100%;
+  }
+
+  time {
+    margin: 0 auto;
+  }
+
+  .city {
+    margin: 0 auto 1.25em;
+    padding: 0;
+  }
+
+  time, .city {
+    font-size: 3rem;
+
+    @media screen and (min-width: @small-phone) {
+      font-size: 5rem;
+      margin: 0 0 2.5rem;
+    }
+  }
+
+  .details {
+    align-items: flex-start;
+    flex-basis: 100%;
+    padding: 0;
+
+    @media screen and (min-width: @small-phone) {
+      display: flex;
+    }
+
+    p {
+      flex-basis: 50%;
+      padding: 0 1.25rem;
+
+      &:first-child {
+        @media screen and (min-width: @small-phone) {
+          border-right: solid @white 1px;
+          text-align: right;
+        }
+      }
+
+      &:last-child {
+        @media screen and (min-width: @small-phone) {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
