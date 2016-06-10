@@ -140,7 +140,7 @@
       win.modals.generateModal({contents: errorMessageContainer});
     }
 
-    function loadHelperResponse(submission) {
+    function loadHelperResponse() {
       /**
        * Does the thing after we get a response from the API server
        * */
