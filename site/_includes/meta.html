@@ -10,6 +10,8 @@
 
 {% assign dims = page.share_image_dims | split: " × " %}
 
+{% capture share_url %}{{ site.url }}{{ page.url }}{% endcapture %}
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -19,7 +21,7 @@
 
 <!-- *** social meta *** -->
 <!-- facebook -->
-<meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+<meta property="og:url" content="{{ page.share_url | default: share_url | cgi_escape }}"/>
 <meta property="og:type" content="website"/>
 <meta property="og:image" content="{{ share_img }}"/>
 <meta property="og:image:width" content="{{ dims[0] }}"/>
@@ -49,8 +51,8 @@
 <link rel="publisher" href="https://plus.google.com/{{ site.author.googleid }}">
 
 <link rel="icon" type="image/png" href="{{ site.url }}{{ site.favicon }}"/>
-<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<link rel="canonical" href="{{ page.share_url | default: share_url | cgi_escape }}">
 
-<link rel="stylesheet" href="{{ site.pathlead }}css/core.css">
+<link rel="stylesheet" href="/css/core.css">
 
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+<!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">-->

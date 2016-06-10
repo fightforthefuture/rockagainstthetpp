@@ -1,7 +1,6 @@
 .petition-form {
   margin: 3rem 1.5rem 0;
   max-width: @large-tablet + 80px;
-  overflow: hidden;
   padding: 0 0 2px;
   position: relative;
 
@@ -13,9 +12,18 @@
   label.visually-hidden {
     position: absolute;
   }
+
+  &.submitting {
+    .input-row {
+      &::after {
+        content: 'Submitting…';
+      }
+    }
+  }
 }
 
 .input-row {
+  position: relative;
   @media screen and (min-width: @small-tablet) {
     display: flex;
     flex-wrap: wrap;
@@ -23,6 +31,22 @@
     padding: 1rem;
     background-color: @white;
     border-radius: 0.5rem;
+  }
+
+  &::after {
+    align-items: center;
+    background-color: fade(@black, 70%);
+    border-radius: 7px;
+    display: flex;
+    font-family: @heading-font;
+    font-size: 2rem;
+    justify-content: center;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -2rem;
+    bottom: -2rem;
   }
 }
 
@@ -127,3 +151,16 @@
   }
 }
 
+.submitted::after {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  content: 'Thanks for signing up!';
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -3.5rem;
+  left: 0;
+}

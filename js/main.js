@@ -2,6 +2,7 @@
   "use strict";
 
   var
+    form = doc.getElementById('petition-form'),
     countryLabel = doc.querySelector('[for="select-country"]'),
     countrySelect = doc.getElementById('select-country'),
     tweetButton = doc.getElementById('tweet-button'),
@@ -10,7 +11,8 @@
   countryLabel.addEventListener('click', function (e) {
     countryLabel.classList.add('hidden');
     countrySelect.classList.remove('hidden');
-    countrySelect.setAttribute('name', 'signature[country]');
+    countrySelect.setAttribute('name', doc.getElementById('hidden-country').getAttribute('name'));
+    doc.getElementById('hidden-country').setAttribute('name', '');
   });
 
   tweetButton.addEventListener('click', function (e) {

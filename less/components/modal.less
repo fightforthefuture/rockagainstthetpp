@@ -1,0 +1,95 @@
+.overlay {
+  background: fade(@black, 50%);
+  opacity: 0;
+  overflow: auto;
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: opacity 400ms ease-in-out;
+  z-index: 9001;
+
+  @media screen and (min-width: @small-phone) {
+    padding: 2rem 3rem;
+  }
+
+  @media screen and (min-width: @large-phone) {
+    padding: 2rem;
+  }
+
+  &.visible {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background: @white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 2rem fade(@black, 30%);
+  color: @black;
+  display: block;
+  margin: 0 auto;
+  max-width: 60rem;
+  padding: 2rem;
+  position: relative;
+  text-align: center;
+
+  @media screen and (min-width: @large-phone) {
+    margin: 5rem auto 0;
+  }
+
+  h3 {
+    font-size: 4.5rem;
+    line-height: 1.4;
+    text-align: center;
+    color: @grey-450;
+    font-weight: 600;
+
+    @media screen and (min-width: @large-phone) {
+      font-size: 5rem;
+    }
+  }
+
+  p {
+    line-height: 1.375;
+    margin-bottom: 1.5rem;
+  }
+
+  .share-this {
+    display: block;
+    position: static;
+    width: ~'calc(100% - 4rem)';
+
+    a {
+      border-radius: 0.5rem;
+
+      &::after {
+        height: 2.9rem;
+        right: -2.7rem;
+      }
+
+      &:hover, &:active, &:focus {
+        background-color: darken(@white, 12%);
+      }
+    }
+  }
+
+  .share-this-button-links {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.close-modal {
+  background: transparent;
+  border: none;
+  color: @black;
+  cursor: pointer;
+  font-size: 2.5rem;
+  opacity: 0.4;
+  position: absolute;
+  right: 0.5rem;
+  text-decoration: none;
+  top: 0;
+}

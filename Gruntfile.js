@@ -22,6 +22,8 @@ module.exports = function (grunt) {
       dist: 'public',
       javascript: [
         'js/LICENSE',
+        'js/components/modals.js',
+        'js/components/petition.js',
         'js/main.js'
       ]
     },

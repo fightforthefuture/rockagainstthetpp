@@ -4,6 +4,7 @@
   {% include meta.html %}
 </head>
 <body>
+{% capture share_url %}{{ site.url }}{{ page.url }}{% endcapture %}
 
 <header{% unless page.page == 'home' %} class="subpage"{% endunless %}>
   {% if page.page == 'home' %}
@@ -36,8 +37,8 @@
 {% include footer.html %}
 
 <div class="share-this">
-  <p><a id="share-button" href="https://facebook.com/sharer.php?u={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}" class="facebook">Share this</a></p>
-  <p><a id="tweet-button" href="https://twitter.com/intent/tweet?text={{ page.twittertext | cgi_escape }}" class="twitter">Tweet this</a></p>
+  <p><a id="share-button" href="https://facebook.com/sharer.php?u={{ page.share_url | default: share_url | cgi_escape }}" class="facebook">Share this</a></p>
+  <p><a id="tweet-button" href="https://twitter.com/intent/tweet?text={{ page.twittertext | default: site.tweet | cgi_escape }}" class="twitter">Tweet this</a></p>
 </div>
 
 {% include scripts.html %}

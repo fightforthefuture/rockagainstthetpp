@@ -13,8 +13,6 @@ description: "A nationwide tour to stop the biggest corporate power grab in hist
 url: "https://www.rockagainstthetpp.org"
 tweet: "Coming soon: a nationwide tour to stop the biggest corporate power grab in history: the Trans-Pacific Partnership."
 favicon: '/favicon.ico'
-pathlead: '/'
-mothership: 'https://mothership-js.herokuapp.com'
 
 timezone: America/New_York
 googleanalytics: UA-26576645-30
