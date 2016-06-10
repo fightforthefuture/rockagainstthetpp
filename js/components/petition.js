@@ -57,41 +57,6 @@
     return formData;
   }
 
-  function compilePayloadRSVP() {
-    /**
-     * Compiles JSON payload for Ajax submission directly to Action Network
-     * @return {object}
-     * */
-
-    return {
-      identifiers: [
-        'action_network:' + actionNetworkForm.dataset.petitionId
-      ],
-      'action_network:referrer_data': {
-        referrer: 'fight-for-the-future',
-        source: 'www',
-        website: 'https://www.rockagainstthetpp.org/'
-      },
-      person: {
-        given_name: actionNetworkForm['rsvp[first_name]'],
-        postal_addresses: [{
-          postal_code: actionNetworkForm['rsvp[zip_code]'],
-          country: actionNetworkForm['rsvp[country]']
-        }],
-        email_addresses: [{
-          address: actionNetworkForm['rsvp[email]'],
-          status: 'subscribed'
-        }]
-      },
-      add_tags: actionNetworkForm['subscription[tag_list]'],
-      triggers: {
-        autoresponse: {
-          enabled: true
-        }
-      }
-    };
-  }
-
   function submitForm(event) {
     /**
      * Submits the form to ActionNetwork or Mothership-Queue
@@ -176,17 +141,10 @@
       }
     }
 
+    submission.open('POST', 'https://queue.fightforthefuture.org/action', true);
     submission.addEventListener('error', handleHelperError);
     submission.addEventListener('load', loadHelperResponse);
-
-    if (actionNetworkForm.dataset.type === 'signature') {
-      submission.open('POST', 'https://queue.fightforthefuture.org/action', true);
-      submission.send(compilePayloadPetition());
-    } else if (actionNetworkForm.dataset.type === 'rsvp') {
-      submission.open('POST', 'https://actionnetwork.org/api/v2/events/' + actionNetworkForm.dataset.petitionId + '/attendances', true);
-      submission.setRequestHeader('content-type', 'application/json');
-      submission.send(JSON.stringify(compilePayloadRSVP()));
-    }
+    submission.send(compilePayloadPetition());
   }
 
   actionNetworkForm.addEventListener('submit', submitForm);
