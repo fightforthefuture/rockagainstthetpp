@@ -1,5 +1,4 @@
 .feature-boxes() {
-  background-color: fade(@white, 5%);
   border-radius: 4px;
   color: @white;
   display: flex;
@@ -35,6 +34,7 @@
 .info-feature {
   .feature-boxes();
   align-items: center;
+  background-color: fade(@white, 5%);
   border: solid 1px fade(@white, 47%);
 
   h2, h3 {
@@ -73,6 +73,7 @@
 .show-page-header {
   .feature-boxes();
   align-items: flex-start;
+  background-color: fade(black, 40%);
   justify-content: center;
   margin: 2rem;
   max-width: @large-tablet + 80px;
