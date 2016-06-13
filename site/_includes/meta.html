@@ -1,15 +1,4 @@
-{% if page.share_image %}
-  {% if page.share_image contains 'http' %}
-    {% assign share_img = page.share_image | uri_escape %}
-  {% else %}
-    {% capture share_img %}{{ site.url }}{{ page.share_image | uri_escape }}{% endcapture %}
-  {% endif %}
-{% else %}
-  {% capture share_img %}{{ site.url }}/img/share/fftf-share.jpg{% endcapture %}
-{% endif %}
-
-{% assign dims = page.share_image_dims | split: " × " %}
-
+{% assign dims = page.share_image_dims | default: '1200 x 630' | split: ' x ' %}
 {% capture share_url %}{{ site.url }}{{ page.url }}{% endcapture %}
 
 <meta charset="utf-8">
@@ -23,7 +12,7 @@
 <!-- facebook -->
 <meta property="og:url" content="{{ page.share_url | default: share_url | cgi_escape }}"/>
 <meta property="og:type" content="website"/>
-<meta property="og:image" content="{{ share_img }}"/>
+<meta property="og:image" content="https://s3.fightforthefuture.org/rockagainstthetpp/images/share/{{ page.share_image | default: 'home.png' }}"/>
 <meta property="og:image:width" content="{{ dims[0] }}"/>
 <meta property="og:image:height" content="{{ dims[1] }}"/>
 <meta property="og:site_name" content="{{ site.name }}"/>
@@ -40,12 +29,12 @@
 <meta name="twitter:domain" content="{{ site.url | remove:'http://' | remove:'https://' }}">
 <meta name="twitter:account_id" content="{{ site.author.twitterid }}"/>
 <meta name="twitter:text" content="{{ page.twittertext | default: site.tweet }}" />
-<meta name="twitter:image" content="{{ share_img }}">
+<meta name="twitter:image" content="https://s3.fightforthefuture.org/rockagainstthetpp/images/share/{{ page.share_image | default: 'home.png' }}">
 
 <!-- google+ -->
 <meta itemprop="name" content="{{ page.social_title | default: page.title }}">
 <meta itemprop="description" content="{{ page.social_description | default: page.description | default: site.description }}">
-<meta itemprop="image" content="{{ share_img }}">
+<meta itemprop="image" content="https://s3.fightforthefuture.org/rockagainstthetpp/images/share/{{ page.share_image | default: 'home.png' }}">
 <!-- /*** social meta *** -->
 
 <link rel="publisher" href="https://plus.google.com/{{ site.author.googleid }}">
