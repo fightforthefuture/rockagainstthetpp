@@ -10,7 +10,7 @@
 
 <!-- *** social meta *** -->
 <!-- facebook -->
-<meta property="og:url" content="{{ page.share_url | default: share_url | cgi_escape }}"/>
+<meta property="og:url" content="{{ page.share_url | default: share_url }}"/>
 <meta property="og:type" content="website"/>
 <meta property="og:image" content="https://s3.fightforthefuture.org/rockagainstthetpp/images/share/{{ page.share_image | default: 'home.png' }}"/>
 <meta property="og:image:width" content="{{ dims[0] }}"/>
@@ -39,9 +39,9 @@
 
 <link rel="publisher" href="https://plus.google.com/{{ site.author.googleid }}">
 
-<link rel="icon" type="image/png" href="{{ site.url }}{{ site.favicon }}"/>
-<link rel="canonical" href="{{ page.share_url | default: share_url | cgi_escape }}">
+<link rel="icon" type="image/png" href="https://www.rockagainstthetpp.org/favicon.ico"/>
+<link rel="canonical" href="{{ page.share_url | default: share_url }}">
 
 <link rel="stylesheet" href="/css/core.css">
 
-<!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">-->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
