@@ -180,17 +180,21 @@
   flex-wrap: wrap;
   font-size: ~'calc(4vw + 3px)';
   justify-content: center;
+  margin: 0 auto;
+  max-width: 22.5rem;
+
+  @media screen and (min-width: @small-phone) {
+    max-width: 30rem;
+  }
 
   @media screen and (min-width: @large-phone) {
     font-size: 3rem;
-    margin: 0 auto;
-    max-width: 50rem;
+    max-width: 35rem;
   }
 
   dd, dt {
     border-top: solid 1px fade(@white, 20%);
     padding: 1rem;
-    width: 49%;
   }
 
   dt {
