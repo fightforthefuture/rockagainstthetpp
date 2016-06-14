@@ -259,15 +259,19 @@
 
 .logo {
   background-color: @white;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 90% auto;
   border-radius: 4px;
   color: transparent;
   height: 8rem;
   margin: 2rem;
   overflow: hidden;
+  position: relative;
   text-indent: 100%;
   white-space: nowrap;
   width: 20rem;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }

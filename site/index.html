@@ -149,17 +149,12 @@ header_content: >
     The Following organizations are supporting Rock Against the TPP:
   </h2>
 
-  <style type="text/css" scoped>
-    {% for org in site.data.affiliated_orgs.support %}
-    .{{ org | slugify }} {
-      background-image: url('/images/endorsements/{{ org | slugify }}.png');
-    }
-    {% endfor %}
-  </style>
-
   <ul class="org-logos">
     {% for org in site.data.affiliated_orgs.support %}
-    <li class="logo {{ org | slugify }}">{{ org }}</li>
+    <li class="logo {{ org | slugify }}">
+      {{ org }}
+      <img src="/images/endorsements/{{ org | slugify }}.png" alt="{{ org }}">
+    </li>
     {% endfor %}
   </ul>
 </section>
