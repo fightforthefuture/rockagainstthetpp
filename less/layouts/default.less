@@ -55,40 +55,50 @@ main {
 
   a {
     background-color: darken(@white, 12%);
-    border: solid 1px @white;
-    color: @black;
+    border: 0px;
+    color: @white;
+    font-weight: 600;
     display: block;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    height: 3rem;
     font-variant: small-caps;
     padding: 0.7rem 1.5rem;
     position: relative;
     text-transform: uppercase;
     transition: background-color 200ms;
+    margin-bottom: 15px;
+
+    &.twitter {
+      background-color: @twitter-blue;
+    }
+
+    &.facebook {
+      background-color: @facebook-blue;
+    }
 
     &:hover, &:active, &:focus {
-      background-color: @white;
-      text-decoration: none;
+      text-decoration: underline;
     }
 
     &::after {
       background-image: url('/images/share/share-icons.png');
       background-repeat: no-repeat;
       background-size: 155%;
-      border: solid 1px @white;
+      border: 0px;
       border-left: none;
       border-radius: 0 0.5rem 0.5rem 0;
       content: ' ';
       display: block;
       height: 3rem;
       position: absolute;
-      top: -1px;
-      right: -3rem;
-      width: 3rem;
+      top: -0px;
+      right: -2.8rem;
+      width: 2.8rem;
     }
 
     &.twitter::after {
       background-color: @twitter-blue;
-      background-position: 6px center;
+      background-position: 5px center;
     }
 
     &.facebook::after {

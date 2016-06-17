@@ -11,25 +11,39 @@ share_image_dims: 1200 x 630
 social_title: 'Rock Against the TPP!'
 social_description: 'Your favorite artists are teaming up to stop the corporate takeover known as the Trans-Pacific Partnership.'
 twittertext: "Your favorite artists are teaming up to #RockAgainstTheTPP! Stop the #TPP corporate takeover RockAgainstTheTPP.org"
+signup_button_text: SIGN UP!
 tags:
   - tpp
   - tpp-rockagainst
   - tpp-rockagainst-denver
 time: 6pm - midnight
 address: |+
-  Summit Music Hall  
-  1902 Blake Street  
+  Summit Music Hall
+  1902 Blake Street
   Denver, CO
 ---
 
 <section>
-  <h2>
-    Tickets available soon!<br />
-    Sign the petition now to reserve yours.
-  </h2>
+    <div class="show-page-header">
+      <h2>
+        Tour Kick-Off!
+      </h2>
+      <time datetime="{{ page.event_date }}">
+        {{ page.event_date | date: "%B %d" }}
+      </time>
+      <p class="city">{{ page.location }}</p>
 
-  {% include form.html action='https://actionnetwork.org/petitions/rock-against-the-tpp-tour-kick-off/signatures' %}
-</section>
+      <div class="details">
+        {{ page.address | markdownify }}
+        <p>
+          {{ page.time }}<br>
+          <strong>
+            All ages. Free!
+          </strong>
+        </p>
+      </div>
+    </div>
+  </section>
 
 <section>
   <h2>Additional events in Denver:</h2>

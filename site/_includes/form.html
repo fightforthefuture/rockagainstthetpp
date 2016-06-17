@@ -11,7 +11,7 @@
     <label class="visually-hidden" for="form-zip_code">ZIP code:</label>
     <input type="text" id="form-zip_code" name="signature[zip_code]" class="zip" placeholder="ZIP code" required/>
 
-    <input type="submit" name="commit" value="Sign up!" class="submit"/>
+    <input type="submit" name="commit" value="{% if page.signup_button_text %}{{ page.signup_button_text }}{% else %}Sign up!{% endif %}" class="submit"/>
   </div>
 
   <input type="hidden" name="utf8" value="✓">

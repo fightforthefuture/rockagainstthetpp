@@ -4,9 +4,15 @@ body > header {
   padding: 2rem 0 1px;
   position: relative;
   text-align: center;
+  box-shadow: 0px 0px 40px black;
 
   @media screen and (min-width: @large-phone) {
     padding-top: 4rem;
+  }
+
+  h2 {
+    color: white;
+    line-height: 1.2em;
   }
 
   p {
@@ -15,6 +21,23 @@ body > header {
     line-height: 1.2;
     max-width: 62ch;
     padding: 0 1rem 3rem;
+
+    &.no-pad {
+      padding-bottom: 0px;
+    }
+
+    &.disclaimer {
+      font-size: 1.4rem;
+      color: rgba(255, 255, 255, .6);
+      max-width: 85ch;
+
+      a {
+        color: white;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
 
     @media screen and (min-width: @large-phone) {
       font-size: 2rem;
