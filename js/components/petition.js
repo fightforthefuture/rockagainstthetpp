@@ -69,6 +69,11 @@
     var
       submission = new XMLHttpRequest();
 
+    if (actionNetworkForm['signature[zip_code]'].value === '') {
+      // Since iOS Safari doesn’t do its goddamn job.
+      return;
+    }
+
     preSubmit();
 
     function handleHelperError(e) {
