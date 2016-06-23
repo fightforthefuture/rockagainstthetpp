@@ -58,18 +58,18 @@ main {
 
   a {
     background-color: darken(@white, 12%);
-    border: 0px;
+    border: 0;
     color: @white;
     font-weight: 600;
     display: block;
     font-size: 1.2rem;
     height: 3rem;
     font-variant: small-caps;
+    margin-bottom: 1.5rem;
     padding: 0.7rem 1.5rem;
     position: relative;
     text-transform: uppercase;
     transition: background-color 200ms;
-    margin-bottom: 15px;
 
     &.twitter {
       background-color: @twitter-blue;
@@ -87,14 +87,14 @@ main {
       background-image: url('/images/share/share-icons.png');
       background-repeat: no-repeat;
       background-size: 155%;
-      border: 0px;
+      border: 0;
       border-left: none;
       border-radius: 0 0.5rem 0.5rem 0;
       content: ' ';
       display: block;
       height: 3rem;
       position: absolute;
-      top: -0px;
+      top: -0;
       right: -2.8rem;
       width: 2.8rem;
     }
@@ -106,7 +106,7 @@ main {
 
     &.facebook::after {
       background-color: @facebook-blue;
-      background-position: -20px center;
+      background-position: -2rem center;
     }
   }
 }
