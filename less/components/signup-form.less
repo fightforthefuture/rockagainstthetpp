@@ -1,16 +1,16 @@
-.disclaimer {
-  font-size: 1.4rem;
-  color: rgba(255, 255, 255, .6);
+.disclaimer() {
+  color: fade(@white, 60%);
+  font-size: 1.2rem;
   max-width: 85ch;
 
   a {
-    color: white;
+    color: @white;
     &:hover {
       text-decoration: underline;
     }
   }
-
 }
+
 .petition-form {
   margin: 3rem 1.5rem 0;
   max-width: @large-tablet + 80px;
