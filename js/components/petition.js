@@ -52,7 +52,7 @@
     formData.append('member[first_name]', actionNetworkForm['signature[first_name]'].value);
     formData.append('member[email]', actionNetworkForm['signature[email]'].value);
     formData.append('member[postcode]', actionNetworkForm['signature[zip_code]'].value);
-    formData.append('member[country]', actionNetworkForm['signature[country]'].value);
+    formData.append('member[country]', 'US');
 
     return formData;
   }

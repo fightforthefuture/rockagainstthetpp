@@ -22,15 +22,3 @@
   <input type="hidden" name="subscription[source]" value="rockagainstthetpp"/>
   <input type="hidden" name="signature[tag_list]" value='{{ tags }}'/>
 </form>
-
-<label for="select-country" class="country">
-  Not in the United States? Click here.
-</label>
-
-<select id="select-country" class="hidden country" form="petition-form">
-  {% for country in site.data.countries %}
-  <option value="{{ country[0] }}" {% if country[0] == 'US' %} selected{% endif %}>
-    {{ country[1] }}
-  </option>
-  {% endfor %}
-</select>
