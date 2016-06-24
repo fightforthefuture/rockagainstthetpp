@@ -1,10 +1,10 @@
 body > header {
   background: 50% url('/images/bg-header.jpg') no-repeat;
   background-size: cover;
+  box-shadow: 0 0 4rem black;
   padding: 2rem 0 1px;
   position: relative;
   text-align: center;
-  box-shadow: 0px 0px 40px black;
 
   @media screen and (min-width: @large-phone) {
     padding-top: 4rem;
@@ -23,7 +23,7 @@ body > header {
     padding: 0 1rem 3rem;
 
     &.no-pad {
-      padding-bottom: 0px;
+      padding-bottom: 0;
     }
 
     &.disclaimer {
@@ -55,6 +55,15 @@ body > header {
 
       @media screen and (min-width: @large-tablet) {
         font-size: 7.7rem;
+      }
+
+      & + p {
+        font-size: 2rem;
+        padding-bottom: 0;
+
+        @media screen and (min-width: @large-phone) {
+          font-size: 3rem;
+        }
       }
     }
   }

@@ -13,15 +13,10 @@
   <h1><a href="/">Rock Against the TPP</a></h1>
   {% endif %}
 
+  {{ page.header_content | default: '' | markdownify }}
+
   {% if page.layout == 'event' %}
     <section>
-      <h2>
-        Tour Kick-Off at Summit Music Hall in Denver, Saturday, July 23. Get your free ticket!
-      </h2>
-      <p class="no-pad">
-        Sign the petition telling Congress to "Vote no on the TPP" and we'll email you a ticket for entry and send you campaign updates.
-      </p>
-
       {% include form.html action='https://actionnetwork.org/petitions/rock-against-the-tpp-tour-kick-off/signatures' %}
       <p class="disclaimer no-pad">
         You are signing <a href="https://actionnetwork.org/petitions/rock-against-the-tpp-tour-kick-off">this petition</a> telling Congress to stop the TPP.
@@ -31,8 +26,6 @@
       </p>
     </section>
   {% endif %}
-
-  {{ page.header_content }}
 </header>
 
 <nav>
