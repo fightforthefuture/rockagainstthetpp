@@ -1,3 +1,15 @@
+.fine-print() {
+  color: fade(@white, 60%);
+  font-size: 1.2rem;
+
+  a {
+    color: @white;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 main {
   color: @white;
   margin-top: 4rem;
@@ -109,4 +121,13 @@ main {
       background-position: -2rem center;
     }
   }
+}
+
+.highlighted {
+  color: @red-800;
+}
+
+.volunteer {
+  .fine-print();
+  font-style: italic;
 }

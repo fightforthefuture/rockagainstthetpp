@@ -5,19 +5,6 @@
   flex-wrap: wrap;
   margin-bottom: 3rem;
   overflow: hidden;
-
-  time {
-    color: @red-800;
-
-    &::after {
-      content: ': ';
-      margin-right: 1rem;
-    }
-  }
-
-  a {
-    .button
-  }
 }
 
 .info-feature {
@@ -26,9 +13,22 @@
   background-color: fade(@white, 5%);
   border: solid 1px fade(@white, 47%);
 
+  a {
+    .button
+  }
+
   h2, h3 {
     flex-basis: 100%;
     margin: 0;
+  }
+
+  time {
+    color: @red-800;
+
+    &::after {
+      content: ': ';
+      margin-right: 1rem;
+    }
   }
 }
 
@@ -61,67 +61,26 @@
 
 .show-page-header {
   .feature-boxes();
-  align-items: flex-start;
   background-color: fade(black, 44%);
-  font-size: 4.2rem;
+  flex-direction: column;
   justify-content: center;
   margin: 2rem;
-  max-width: @large-tablet + 80px;
+  max-width: @small-tablet - 20px;
   padding: 2rem;
+  text-align: left;
 
   @media screen and (min-width: @small-phone) {
     margin: 3rem;
   }
 
+  @media screen and (min-width: @small-tablet) {
+    margin: 3rem auto;
+  }
+
   h2 {
     font-family: @heading-font;
+    text-align: center;
     width: 100%;
-  }
-
-  time {
-    margin: 0 auto;
-  }
-
-  .city {
-    margin: 0 auto 1.25em;
-    padding: 0;
-  }
-
-  time, .city {
-    font-size: 3rem;
-
-    @media screen and (min-width: @small-phone) {
-      font-size: 5rem;
-      margin: 0 0 2.5rem;
-    }
-  }
-
-  .details {
-    align-items: flex-start;
-    flex-basis: 100%;
-    padding: 0;
-
-    @media screen and (min-width: @small-phone) {
-      display: flex;
-    }
-
-    p {
-      flex-basis: 50%;
-      padding: 0 1.25rem;
-
-      &:first-child {
-        @media screen and (min-width: @small-phone) {
-          border-right: solid @white 1px;
-          text-align: right;
-        }
-      }
-
-      &:last-child {
-        @media screen and (min-width: @small-phone) {
-          text-align: left;
-        }
-      }
-    }
   }
 }
 
