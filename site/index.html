@@ -137,35 +137,3 @@ signup_button_text: "Sign now!"
     <dd>???</dd>
   </dl>
 </section>
-
-<section>
-  <h2 id="organized-by">Rock Against the TPP is organized by:</h2>
-
-  <ul class="organized-by">
-    <li class="fight-for-the-future">Fight for the Future</li>
-    <li class="firebrand-records">Firebrand Records</li>
-  </ul>
-</section>
-
-<section>
-  <h2 id="support-orgs">
-    The Following organizations are supporting Rock Against the TPP:
-  </h2>
-
-  <ul class="org-logos">
-    {% for org in site.data.affiliated_orgs.support %}
-    <li class="logo {{ org | slugify }}">
-      {{ org }}
-      <img src="/images/endorsements/{{ org | slugify }}.png" alt="{{ org }}">
-    </li>
-    {% endfor %}
-  </ul>
-</section>
-
-<section>
-  <p>
-    Full list of endorsing organizations coming soon.
-    <a href="mailto:team@fightforthefuture.org">Email us</a> to get involved in
-    Rock Against the TPP!
-  </p>
-</section>
