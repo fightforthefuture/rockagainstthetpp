@@ -27,7 +27,7 @@
       disableOverlayClick: true
     });
 
-    actionNetworkForm.classList.add('submitted');
+    // actionNetworkForm.classList.add('submitted');
     actionNetworkForm.commit.setAttribute('disabled', true);
   }
 
@@ -104,7 +104,6 @@
       errorMessageContainer.appendChild(errorMessage);
       errorMessageContainer.appendChild(errorMessageInfo);
 
-      actionNetworkForm.classList.remove('submitted');
       actionNetworkForm.commit.removeAttribute('disabled');
 
       win.modals.generateModal({contents: errorMessageContainer});
@@ -122,24 +121,34 @@
           shareHeadline = doc.createElement('h3'),
           shareCopy = doc.createElement('p'),
           shareThis = doc.createElement('div'),
-          donateCopy = doc.createElement('p');
+          donateCopy = doc.createElement('p'),
+          thankYou = doc.createElement('p');
 
         win.modals.dismissModal();
 
-        shareHeadline.textContent = 'Thanks for signing';
-        shareCopy.textContent = 'Now, share this page to spread the word.';
+        shareHeadline.textContent = 'Nice! We’re sending you your ticket.';
+        shareCopy.textContent = 'Now can you help spread the word?';
 
         shareThis.classList.add('share-this-button-links');
-        shareThis.appendChild(doc.querySelector('.share-this'));
+        shareThis.appendChild(doc.getElementById('tweet-button').cloneNode());
+        shareThis.appendChild(doc.getElementById('share-button').cloneNode());
 
         donateCopy.innerHTML = '&hellip;or, <a href="https://donate.fightforthefuture.org/campaigns/rock-against-tpp/?amount=5&frequency=just-once">chip in $5</a> to help us spread the message.';
+
+        thankYou.textContent = 'Thanks for signing!';
+        thankYou.classList.add('thanks');
 
         shareContent.appendChild(shareHeadline);
         shareContent.appendChild(shareCopy);
         shareContent.appendChild(shareThis);
         shareContent.appendChild(donateCopy);
 
+        actionNetworkForm.reset();
+        actionNetworkForm.commit.removeAttribute('disabled');
+
         win.modals.generateModal({contents: shareContent});
+
+        actionNetworkForm.parentNode.insertBefore(thankYou, actionNetworkForm);
 
       } else {
         handleHelperError(submission);
@@ -155,3 +164,31 @@
   actionNetworkForm.addEventListener('submit', submitForm);
 
 })(document, window);
+
+
+
+var foo = {
+  "embed_standard_default_styles": "<link href='https://actionnetwork.org/css/style-embed.css' rel='stylesheet' type='text/css' /><script src='https://actionnetwork.org/includes/js/yepnope154-min.js' type='text/javascript'></script><script src='https://actionnetwork.org/widgets/v2/petition/rock-against-the-tpp-tour-kick-off?format=js&source=widget'></script><div id='can-petition-area-rock-against-the-tpp-tour-kick-off' style='width: 100%'><!-- this div is the target for our HTML insertion --></div>",
+  "embed_standard_layout_only_styles": "<link href='https://actionnetwork.org/css/style-embed-whitelabel.css' rel='stylesheet' type='text/css' /><script src='https://actionnetwork.org/includes/js/yepnope154-min.js' type='text/javascript'></script><script src='https://actionnetwork.org/widgets/v2/petition/rock-against-the-tpp-tour-kick-off?format=js&source=widget'></script><div id='can-petition-area-rock-against-the-tpp-tour-kick-off' style='width: 100%'><!-- this div is the target for our HTML insertion --></div>",
+  "embed_standard_no_styles": "<script src='https://actionnetwork.org/includes/js/yepnope154-min.js' type='text/javascript'></script><script src='https://actionnetwork.org/widgets/v2/petition/rock-against-the-tpp-tour-kick-off?format=js&source=widget'></script><div id='can-petition-area-rock-against-the-tpp-tour-kick-off' style='width: 100%'><!-- this div is the target for our HTML insertion --></div>",
+  "embed_full_default_styles": "<link href='https://actionnetwork.org/css/style-embed.css' rel='stylesheet' type='text/css' /><script src='https://actionnetwork.org/includes/js/yepnope154-min.js' type='text/javascript'></script><script src='https://actionnetwork.org/widgets/v2/petition/rock-against-the-tpp-tour-kick-off?format=js&source=widget&style=full'></script><div id='can-petition-area-rock-against-the-tpp-tour-kick-off' style='width: 100%'><!-- this div is the target for our HTML insertion --></div>",
+  "embed_full_layout_only_styles": "<link href='https://actionnetwork.org/css/style-embed-whitelabel.css' rel='stylesheet' type='text/css' /><script src='https://actionnetwork.org/includes/js/yepnope154-min.js' type='text/javascript'></script><script src='https://actionnetwork.org/widgets/v2/petition/rock-against-the-tpp-tour-kick-off?format=js&source=widget&style=full'></script><div id='can-petition-area-rock-against-the-tpp-tour-kick-off' style='width: 100%'><!-- this div is the target for our HTML insertion --></div>",
+  "embed_full_no_styles": "<script src='https://actionnetwork.org/includes/js/yepnope154-min.js' type='text/javascript'></script><script src='https://actionnetwork.org/widgets/v2/petition/rock-against-the-tpp-tour-kick-off?format=js&source=widget&style=full'></script><div id='can-petition-area-rock-against-the-tpp-tour-kick-off' style='width: 100%'><!-- this div is the target for our HTML insertion --></div>",
+  "_links": {
+    "self": {
+      "href": "https://actionnetwork.org/api/v2/petitions/c358df87-1157-40e4-b550-210107aaf901/embed"
+    },
+    "curies": [
+      {
+        "name": "osdi",
+        "href": "https://actionnetwork.org/docs/v2/{rel}",
+        "templated": true
+      },
+      {
+        "name": "action_network",
+        "href": "https://actionnetwork.org/docs/v2/{rel}",
+        "templated": true
+      }
+    ]
+  }
+};

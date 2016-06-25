@@ -33,11 +33,21 @@
   margin: 0 auto;
   max-width: 60rem;
   padding: 2rem;
-  position: relative;
+  position: absolute;
+  top: 5rem;
+  right: 5%;
+  left: 5%;
   text-align: center;
+  transition: opacity 400ms ease-in-out;
+  width: 90%;
+  z-index: 9002;
 
   @media screen and (min-width: @large-phone) {
     margin: 5rem auto 0;
+  }
+
+  &.visible {
+    opacity: 1;
   }
 
   h3 {

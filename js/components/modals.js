@@ -9,15 +9,19 @@
      * */
 
     var
-      modal = doc.getElementsByClassName('overlay')[0];
+      overlay = doc.getElementsByClassName('overlay')[0],
+      modal = doc.getElementsByClassName('modal-content')[0];
 
+    overlay.classList.remove('visible');
     modal.classList.remove('visible');
 
     win.setTimeout(function () {
       while (modal.firstChild) {
         modal.removeChild(modal.firstChild);
       }
+
       modal.remove();
+      overlay.remove();
     }, 420);
   }
 
@@ -49,7 +53,7 @@
     }
 
     overlay.classList.add('overlay');
-    modal.classList.add('modal-content');
+    modal.classList.add('modal-content', 'visible');
 
     if (!options.disableOverlayClick) {
       closeModal = doc.createElement('button');
@@ -64,8 +68,8 @@
       modal.appendChild(contents[i]);
     }
 
-    overlay.appendChild(modal);
     body.appendChild(overlay);
+    body.appendChild(modal);
 
     win.setTimeout(function () {
       overlay.classList.add('visible');
