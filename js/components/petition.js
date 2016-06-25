@@ -122,16 +122,21 @@
           shareCopy = doc.createElement('p'),
           shareThis = doc.createElement('div'),
           donateCopy = doc.createElement('p'),
-          thankYou = doc.createElement('p');
+          thankYou = doc.createElement('p'),
+          tweetButton = doc.getElementById('tweet-button').cloneNode(),
+          shareButton = doc.getElementById('share-button').cloneNode();
 
         win.modals.dismissModal();
+
+        tweetButton.classList.add('share-icon');
+        shareButton.classList.add('share-icon');
 
         shareHeadline.textContent = 'Nice! We’re sending you your ticket.';
         shareCopy.textContent = 'Now can you help spread the word?';
 
-        shareThis.classList.add('share-this-button-links');
-        shareThis.appendChild(doc.getElementById('tweet-button').cloneNode());
-        shareThis.appendChild(doc.getElementById('share-button').cloneNode());
+        shareThis.classList.add('share-icons');
+        shareThis.appendChild(tweetButton);
+        shareThis.appendChild(shareButton);
 
         donateCopy.innerHTML = '&hellip;or, <a href="https://donate.fightforthefuture.org/campaigns/rock-against-tpp/?amount=5&frequency=just-once">chip in $5</a> to help us spread the message.';
 

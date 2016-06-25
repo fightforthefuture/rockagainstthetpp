@@ -2,7 +2,7 @@
   background-position: @x @y;
   width: @dim;
   height: @dim;
-  background-image: url('../images/share-icons.png');
+  background-image: url('/images/share/share-icons.png');
   background-repeat: no-repeat;
   background-size: @bgw @bgh;
 }
@@ -12,16 +12,34 @@
 }
 
 .renderFacebook(@dim: 6rem; @bgw: 120px; @bgh: 60px) {
-  .renderShareIcon(-50%; 0; @dim; @bgw; @bgh);
+  .renderShareIcon(100%; 0; @dim; @bgw; @bgh);
+}
+
+.share-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 25rem; // change to 40-ish when email is added
+  margin: 0 auto 1.5rem;
 }
 
 .share-icon {
+  display: block;
+
   &.twitter {
     .renderTwitter();
+    background-color: @twitter-blue;
   }
 
   &.facebook {
     .renderFacebook();
+    background-color: @facebook-blue;
+  }
+
+  &.email {
+    background-color: darken(@white, 10%);
+    background-image: url('/images/share/email.png');
+    background-position: center;
   }
 }
 
