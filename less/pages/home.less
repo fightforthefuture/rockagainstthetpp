@@ -231,23 +231,48 @@
     background-size: contain;
     margin: 1rem;
     max-width: 100%;
+    width: 30rem;
+
+    @media screen and (min-width: @large-tablet) {
+      margin: 2rem;
+      width: 40rem;
+    }
+
+    @media screen and (min-width: @large-laptop) {
+      width: 51.2rem;
+    }
   }
 
   .fight-for-the-future {
     background-image: url('/images/fight-for-the-future.png');
-    height: 3.3rem;
-    width: 25.6rem;
+    height: 3.9rem;
 
-    @media screen and (min-width: @small-phone) {
-      height: 4.4rem;
-      width: 34.2rem;
+    @media screen and (min-width: @large-phone) {
+      bottom: -1.7rem;
+      position: relative;
+    }
+
+    @media screen and (min-width: @large-tablet) {
+      bottom: -2.3rem;
+      height: 5.2rem;
+    }
+
+    @media screen and (min-width: @large-laptop) {
+      height: 6.6rem;
     }
   }
 
   .firebrand-records {
     background-image: url('/images/firebrand-records.png');
-    height: 16rem;
-    width: 16rem;
+    height: 11rem;
+
+    @media screen and (min-width: @large-tablet) {
+      height: 14.3rem;
+    }
+
+    @media screen and (min-width: @large-laptop) {
+      height: 18.3rem;
+    }
   }
 }
 
