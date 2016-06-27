@@ -77,8 +77,25 @@
 </section>
 
 <section>
+  {% assign sorted_orgs = site.data.affiliated_orgs.endorse %}
+  {% for org in site.data.affiliated_orgs.support %}
+  {% assign sorted_orgs = sorted_orgs | push: org %}
+  {% endfor %}
+  {% assign sorted_orgs = sorted_orgs | sort %}
+
   <p>
-    Full list of endorsing organizations coming soon.
+    Rock Against the TPP is endorsed by {{ sorted_orgs | size }} organizations.
+    <button id="toggle-list" class="link-style-button">Click here to see the
+      full list.</button>
+  </p>
+
+  <ul id="endorsements" class="two-column-list hidden">
+    {% for org in sorted_orgs %}
+    <li>{{ org }}</li>
+    {% endfor %}
+  </ul>
+
+  <p>
     <a href="mailto:team@fightforthefuture.org">Email us</a> to get involved in
     Rock Against the TPP!
   </p>

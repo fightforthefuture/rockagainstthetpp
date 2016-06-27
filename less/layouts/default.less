@@ -131,3 +131,26 @@ p {
 #modal-share {
   display: none;
 }
+
+.link-style-button {
+  background: inherit;
+  border: inherit;
+  display: inline;
+  color: inherit;
+  font-size: inherit;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.two-column-list {
+  list-style-position: inside;
+  list-style-type: disc;
+  margin: 0 auto 1rem;
+  text-align: left;
+  width: 30rem;
+
+  @media screen and (min-width: @large-phone) {
+    column-count: 2;
+    width: 60rem;
+  }
+}
