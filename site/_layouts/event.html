@@ -10,10 +10,11 @@ layout: default
   </h2>
 
   <ul class="artists">
-    {% assign artist=site.data.artists[page.headliner] %}
-    {% include artist.html artist=artist featured=true %}
-    {% for performer in page.performers %}{% assign artist=site.data.artists[performer] %}
-    {% include artist.html artist=artist %}{% endfor %}
+    {% for performer in site.data.artists %}
+    {% if page.performers contains performer.name %}
+    {% include artist.html artist=performer %}
+    {% endif %}
+    {% endfor %}
   </ul>
 </section>
 {% include twitter-signup.html %}

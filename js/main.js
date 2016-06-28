@@ -2,9 +2,12 @@
   "use strict";
 
   var
+    i,
     form = doc.getElementById('petition-form'),
     tweetButton = doc.getElementById('tweet-button'),
-    shareButton = doc.getElementById('share-button');
+    shareButton = doc.getElementById('share-button'),
+    concealedArtists = doc.getElementsByClassName('concealed'),
+    artistsToggle = doc.getElementById('see-full-list');
   // ,
   //   endorsements = doc.getElementById('endorsements'),
   //   endorsementToggle = doc.getElementById('toggle-list');
@@ -19,6 +22,18 @@
     e.preventDefault();
 
     // win.open(shareButton.getAttribute('href'), 'Share this', 'width=581,height=614,resizable=1')
+  });
+
+  artistsToggle.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    i = concealedArtists.length;
+
+    while (i--) {
+      concealedArtists[i].classList.remove('concealed');
+    }
+
+    artistsToggle.remove();
   });
 
   // endorsementToggle.addEventListener('click', function (e) {

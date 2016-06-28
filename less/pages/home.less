@@ -16,8 +16,6 @@
 }
 
 .artist, .featured-artist {
-  background-repeat: no-repeat;
-  display: table;
   height: 29.1rem;
 
   a {
@@ -27,17 +25,16 @@
   img {
     border: none;
     max-width: none;
-    width: 101%;
   }
 }
 
 .featured-artist {
-  background-position: 77% center;
   box-shadow: -3px 3px 0 0 @grey-200;
   font-size: 3rem;
   margin: 2rem;
   margin-bottom: 6rem;
   max-width: 88rem;
+  order: 1;
   position: relative;
   width: ~'calc(100% - 4rem)';
 
@@ -46,20 +43,19 @@
   }
 
   img {
-    display: block;
-    position: absolute;
-    height: 30rem;
-    left: auto;
-    right: -25%;
-    width: auto;
+    position: relative;
+    left: ~'calc(52.5vw - 28rem)';
+    width: 49rem;
 
     @media screen and (min-width: @small-phone) {
-      right: 0;
+      left: ~'calc(52.5vw - 38rem)';
+      width: 65rem;
     }
 
-    @media screen and (min-width: @small-tablet) {
-      height: auto;
-      width: 100%;
+    @media screen and (min-width: @large-phone) {
+      max-width: 100%;
+      position: static;
+      width: auto;
     }
   }
 
@@ -86,11 +82,6 @@
     }
   }
 
-  .artist-photo {
-    height: 30rem;
-    overflow: hidden;
-  }
-
   .artist-bio {
     display: flex;
     flex-direction: column;
@@ -99,18 +90,18 @@
 }
 
 .artist {
-  margin: 2rem 0 5rem;
-  max-width: 27rem;
-  overflow: hidden;
-  width: 63vw;
-
   display: flex;
   flex-direction: column;
+  font-size: 1.7rem;
   justify-content: flex-start;
-  margin-bottom: 2rem;
   height: ~'calc(51.875vw + 14.8rem)';
   line-height: 1;
-  font-size: 1.7rem;
+  margin: 2rem 0 2rem;
+  max-width: 27rem;
+  order: 2;
+  overflow: hidden;
+  transition: max-height 800ms;
+  width: 63vw;
 
   @media screen and (min-width: @small-phone) {
     height: 38rem;
@@ -135,9 +126,21 @@
   .artist-name {
     margin: 1rem 0 0;
   }
+
+  &.end {
+    max-height: 100rem;
+    order: 3;
+  }
+
+  &.concealed {
+    margin: 0;
+    max-height: 0;
+  }
 }
 
 .artist-photo {
+  max-height: 100%;
+  overflow: hidden;
   position: relative;
 }
 
@@ -179,21 +182,17 @@
   display: flex;
   flex-wrap: wrap;
   font-size: ~'calc(4vw + 3px)';
-  justify-content: center;
   margin: 0 auto;
-  max-width: 22.5rem;
-
-  @media screen and (min-width: @small-phone) {
-    max-width: 30rem;
-  }
+  max-width: 60rem;
+  min-width: 30rem;
 
   @media screen and (min-width: @large-phone) {
     font-size: 3rem;
-    max-width: 35rem;
   }
 
   dd, dt {
     border-top: solid 1px fade(@white, 20%);
+    width: 50%;
     padding: 1rem;
   }
 
@@ -298,5 +297,23 @@
     position: absolute;
     top: 0;
     left: 0;
+  }
+}
+
+#see-full-list {
+  background-color: @red-800;
+  border: none;
+  border-radius: 5rem;
+  color: @white;
+  cursor: pointer;
+  font-size: 3rem;
+  font-variant: small-caps;
+  margin-bottom: 4rem;
+  padding: 1rem 2.6rem 1.5rem;
+  text-transform: lowercase;
+  transition: background-color 250ms;
+
+  &:hover, &:active {
+    background-color: darken(@red-800, 10%);
   }
 }
