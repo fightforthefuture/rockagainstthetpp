@@ -28,4 +28,45 @@
   //   endorsementToggle.remove();
   // });
 
+  var util = {
+
+    parseQueryString: function () {
+      var
+        i,
+        pairs,
+        queryObject = {},
+        queryString = window.location.search;
+
+      if (queryString[0] === '?') {
+        queryString = queryString.substr(1);
+      }
+
+      pairs = queryString.split('&');
+      i = pairs.length;
+
+      while (i--) {
+        queryObject[pairs[i].split('=')[0]] = pairs[i].split('=')[1];
+      }
+
+      return queryObject;
+    }
+  };
+
+  var ref = util.parseQueryString();
+
+  if (ref.ref) {
+    var tagList = doc.getElementById('action-network-form')['signature[tag_list]'].value;
+    if (tagList) {
+      tagList = JSON.parse(tagList);
+      tagList.push('from-'+ref.ref);
+      doc.getElementById('action-network-form')['signature[tag_list]'].value = JSON.stringify(tagList);
+    }
+
+
+
+  }
+
+
+
+
 })(document, window);
