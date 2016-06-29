@@ -10,6 +10,13 @@
 name: Rock Against the TPP!
 description: "A nationwide tour to stop the biggest corporate power grab in history: the Trans-Pacific Partnership. Organized by Fight for the Future and Rage Against the Machine guitarist Tom Morello’s new label, Firebrand Records."
 
+social_title: 'Rock Against the TPP!'
+social_description: 'Your favorite artists are teaming up to stop the corporate takeover known as the Trans-Pacific Partnership.'
+share_image: home.png
+share_image_dims: 1200 x 630
+twittertext: "Your favorite artists are teaming up to #RockAgainstTheTPP! Stop the #TPP corporate takeover RockAgainstTheTPP.org https://pic.twitter.com/WBcVsTO9yv"
+signup_button_text: Sign now!
+
 url: "https://www.rockagainstthetpp.org"
 tweet: "Coming soon: a nationwide tour to stop the biggest corporate power grab in history: the Trans-Pacific Partnership."
 favicon: '/favicon.ico'
