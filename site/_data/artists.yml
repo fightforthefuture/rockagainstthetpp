@@ -3,60 +3,62 @@
   bio: Incendiary rock guitarist, troubadour, and activist. Guitarist of Rage Against the Machine, Audioslave, Prophets of Rage.
   url: http://nightwatchmanmusic.com/
   landscape: morello.jpg
+  portrait: morello-portrait.jpg
 - name: Talib Kweli
   bio: Internationally acclaimed hip hop emcee known as one of the world’s most accomplished lyricists, has collaborated with Kanye West, Pharell Williams, J Dilla, and more.
   url: http://www.talibkweli.com/
   landscape: kweli.jpg
-- portrait: lilly.jpg
-  name: Evangeline Lilly
+  portrait: kweli-portrait.jpg
+- name: Evangeline Lilly
+  portrait: lilly.jpg
   bio: Writer, activist, and Golden Globe nominated actress known for her roles in Lost, The Hobbit, The Hurt Locker, and Ant-Man.
   url: https://twitter.com/EvangelineLilly
-- portrait: anti-flag.jpg
-  name: Anti-Flag (acoustic)
+- name: Anti-Flag (acoustic)
+  portrait: anti-flag.jpg
   bio: Legendary political punk band serving high-energy, fist pumping sing-along anthems. Equal parts circle pit and picket line.
   url: http://www.anti-flag.com/
-- portrait: holland.jpg
-  name: Jolie Holland
+- name: Jolie Holland
+  portrait: holland.jpg
   bio: Beloved style-blending singer/songwriter on ANTI Records.
   url: http://joliehollandmusic.com/
-- portrait: flobots.jpg
-  name: Jonny 5 and Brer Rabbit of Flobots
+- name: Jonny 5 and Brer Rabbit of Flobots
+  portrait: flobots.jpg
   bio: Denver, Colorado’s revolutionary hip-hop act Flobots bring it on real with their signature anthems dedicated to creating a better world.
   url: http://flobots.com/
-- portrait: las-cafeteras-portrait.jpg
+- name: Las Cafeteras
+  portrait: las-cafeteras-portrait.jpg
   landscape: las-cafeteras-landscape.jpg
-  name: Las Cafeteras
   bio: LA Weekly’s “Best Latin Alternative Band” Las Cafeteras seamlessly fuse traditional Afro-Mexican music from Veracruz, Mexico with modern rhythms and lyrically rich storytelling to create a fresh Urban Folk​ sound from the streets of East Los Angeles.
   url: http://lascafeteras.com/
-- portrait: downtown-boys.jpg
-  name: Downtown Boys
+- name: Downtown Boys
+  portrait: downtown-boys.jpg
   bio: Bilingual saxophone fueled radical dance party from Providence. “America’s most exciting punk band,” according to Rolling Stone.
   url: https://downtownboys.bandcamp.com/
-- portrait: greer.jpg
-  name: Evan Greer
+- name: Evan Greer
+  portrait: greer.jpg
   bio: Campaign director of Fight for the Future and internationally touring queer riot-folk singer/songwriter.
   url: http://evangreer.org/
-- portrait: asili.jpg
-  name: Taina Asili
+- name: Taina Asili
+  portrait: asili.jpg
   bio: Internationally known Puerto Rican vocalist and leader of social justice infused Afro-Latin reggae rock troupe La Banda Rebelde.
   url: http://tainaasili.com/
-- portrait: harvey.jpg
-  name: Ryan Harvey
+- name: Ryan Harvey
+  portrait: harvey.jpg
   bio: Baltimore-based activist folksinger and co-founder of Firebrand Records.
   url: http://ryanharveymusic.com/
-- portrait: son-of-nun.jpg
-  name: Son of Nun
+- name: Son of Nun
+  portrait: son-of-nun.jpg
   bio: Activist, organizer, and hip hop MC who doesn’t just entertain, he empowers. “More than relevant” according to Chuck D of Public Enemy.
   url: http://sonofnun.net/
-- portrait: rose.jpg
-  name: Lia Rose
+- name: Lia Rose
+  portrait: rose.jpg
   bio: Of critically acclaimed Bay Area electro-indie-rock act Built for the Sea
   url: http://www.liarose.com/
-- portrait: madigan.jpg
-  name: Bonfire Madigan
+- name: Bonfire Madigan
+  portrait: madigan.jpg
   bio: Legendary riot-grrrrl singing cellist with albums out on Kill Rockstars and K Records.
   url: http://bonfiremadigan.com/
-- portrait: roar.jpg
-  name: bell’s roar
+- name: bell’s roar
+  portrait: roar.jpg
   bio: NY-based Firebrand Records multi-instrumentalist and producer blending synth-pop, rock, and soul.
   url: http://bellsroarmusic.com/

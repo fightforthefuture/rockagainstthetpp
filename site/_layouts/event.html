@@ -17,4 +17,26 @@ layout: default
     {% endfor %}
   </ul>
 </section>
+
 {% include twitter-signup.html %}
+
+<section>
+  <h2>
+    Artists performing in other cities include:
+  </h2>
+
+  <ul class="artists">
+    {% assign counter = 0 %}
+{% for performer in site.data.artists %}
+  {% unless page.performers contains performer.name %}
+    {% if counter < 6 %}
+      {% include artist.html artist=performer %}
+    {% else %}
+      {% include artist.html artist=performer concealed=true %}
+    {% endif %}
+    {% assign counter = counter | plus: '1' %}
+  {% endunless %}
+{% endfor %}
+  </ul>
+  <button id="see-full-list" class="button">See full list</button>
+</section>

@@ -16,15 +16,12 @@
 }
 
 .artist, .featured-artist {
-  height: 29.1rem;
-
   a {
     text-decoration: none;
   }
 
   img {
     border: none;
-    max-width: none;
   }
 }
 
@@ -39,16 +36,14 @@
   width: ~'calc(100% - 4rem)';
 
   @media screen and (min-width: @large-phone) {
+    height: 29.1rem;
     margin-bottom: auto;
   }
 
   img {
-    position: relative;
-    left: ~'calc(52.5vw - 28rem)';
-    width: 49rem;
+    display: block;
 
     @media screen and (min-width: @small-phone) {
-      left: ~'calc(52.5vw - 38rem)';
       width: 65rem;
     }
 
@@ -120,6 +115,7 @@
     position: relative;
     left: -1px;
     right: -1px;
+    max-width: none;
     width: 101%;
   }
 

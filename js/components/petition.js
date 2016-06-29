@@ -48,7 +48,7 @@
     formData.append('tag', 'tpp');
     formData.append('an_tags', JSON.stringify(tags));
     formData.append('an_url', win.location.href);
-    formData.append('an_petition', actionNetworkForm.action.replace('/signatures', ''));
+    formData.append('an_petition', actionNetworkForm.action.replace(/\/signatures\/?/, ''));
     formData.append('member[first_name]', actionNetworkForm['signature[first_name]'].value);
     formData.append('member[email]', actionNetworkForm['signature[email]'].value);
     formData.append('member[postcode]', actionNetworkForm['signature[zip_code]'].value);
