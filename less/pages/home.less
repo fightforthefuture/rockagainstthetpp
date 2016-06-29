@@ -212,6 +212,10 @@
   a {
     color: inherit;
   }
+
+  .button {
+    margin: 0;
+  }
 }
 
 .organized-by {
@@ -297,23 +301,5 @@
     position: absolute;
     top: 0;
     left: 0;
-  }
-}
-
-#see-full-list {
-  background-color: @red-800;
-  border: none;
-  border-radius: 5rem;
-  color: @white;
-  cursor: pointer;
-  font-size: 3rem;
-  font-variant: small-caps;
-  margin-bottom: 4rem;
-  padding: 1rem 2.6rem 1.5rem;
-  text-transform: lowercase;
-  transition: background-color 250ms;
-
-  &:hover, &:active {
-    background-color: darken(@red-800, 10%);
   }
 }
