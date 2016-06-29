@@ -10,6 +10,18 @@ layout: default
   </h2>
 
   <ul class="artists">
+
+    {% unless page.headliners %}
+    <li class="featured-artist">
+      <div class="artist-photo">
+        <img src="/images/artists/no-headliner.jpg" alt="" />
+      </div>
+      <p class="artist-name">
+        Headliners announced soon
+      </p>
+    </li>
+    {% endunless %}
+
     {% for performer in site.data.artists %}
     {% if page.performers contains performer.name %}
     {% include artist.html artist=performer %}
