@@ -210,7 +210,19 @@
   }
 
   .button {
+    font-size: 1.1rem;
     margin: 0;
+    padding: 0.3rem 0.6rem;
+
+    @media screen and (min-width: @small-phone) {
+      font-size: 1.4rem;
+      padding: 0.7rem 1.2rem;
+    }
+
+    @media screen and (min-width: @large-phone) {
+      font-size: 1.6rem;
+      padding: 1rem 2rem;
+    }
   }
 }
 
