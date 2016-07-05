@@ -1,12 +1,28 @@
-.button {
+button, .button {
   background-color: @red-800;
+  border: none;
   border-radius: 2.5rem;
   color: @white;
+  cursor: pointer;
   font-size: 1.6rem;
+  font-weight: bold;
   height: 4.5rem;
   margin: 0 1rem;
   padding: 1rem 2rem;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: bold;
+  transition: background-color 250ms;
+
+  &:hover, &:active {
+    background-color: darken(@red-800, 10%);
+  }
+}
+
+.link-style-button {
+  background: inherit;
+  display: inline;
+  color: inherit;
+  font-size: inherit;
+  padding: 0;
+  text-decoration: underline;
 }

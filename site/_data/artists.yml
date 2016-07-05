@@ -1,50 +1,63 @@
-morello:
-  filename: morello.jpg
-  name: Tom Morello
+- name: Tom Morello
   bio: Incendiary rock guitarist, troubadour, and activist. Guitarist of Rage Against the Machine, Audioslave, Prophets of Rage.
   url: http://nightwatchmanmusic.com/
-lilly:
-  filename: lilly.jpg
-  name: Evangeline Lilly
+  landscape: morello.jpg
+  portrait: morello-portrait.jpg
+- name: Talib Kweli
+  bio: Internationally acclaimed hip hop emcee known as one of the world’s most accomplished lyricists, has collaborated with Kanye West, Pharell Williams, J Dilla, and more.
+  url: http://www.talibkweli.com/
+  landscape: kweli.jpg
+  portrait: kweli-portrait.jpg
+- name: Evangeline Lilly
+  portrait: lilly.jpg
   bio: Writer, activist, and Golden Globe nominated actress known for her roles in Lost, The Hobbit, The Hurt Locker, and Ant-Man.
   url: https://twitter.com/EvangelineLilly
-flobots:
-  filename: flobots.jpg
-  name: Jonny 5 and Brer Rabbit of Flobots
-  bio: Denver, Colorado’s revolutionary hip-hop act Flobots bring it on real with their signature anthems dedicated to creating a better world.
-  url: http://flobots.com/
-anti-flag:
-  filename: anti-flag.jpg
-  name: Anti-Flag (acoustic)
+- name: Anti-Flag (acoustic)
+  portrait: anti-flag.jpg
   bio: Legendary political punk band serving high-energy, fist pumping sing-along anthems. Equal parts circle pit and picket line.
   url: http://www.anti-flag.com/
-downtown-boys:
-  filename: downtown-boys.jpg
-  name: Downtown Boys
+- name: Jolie Holland
+  portrait: holland.jpg
+  bio: Beloved style-blending singer/songwriter on ANTI Records.
+  url: http://joliehollandmusic.com/
+- name: Jonny 5 and Brer Rabbit of Flobots
+  portrait: flobots.jpg
+  bio: Denver, Colorado’s revolutionary hip-hop act Flobots bring it on real with their signature anthems dedicated to creating a better world.
+  url: http://flobots.com/
+- name: Las Cafeteras
+  portrait: las-cafeteras-portrait.jpg
+  landscape: las-cafeteras-landscape.jpg
+  bio: LA Weekly’s “Best Latin Alternative Band” Las Cafeteras seamlessly fuse traditional Afro-Mexican music from Veracruz, Mexico with modern rhythms and lyrically rich storytelling to create a fresh Urban Folk​ sound from the streets of East Los Angeles.
+  url: http://lascafeteras.com/
+- name: Downtown Boys
+  portrait: downtown-boys.jpg
   bio: Bilingual saxophone fueled radical dance party from Providence. “America’s most exciting punk band,” according to Rolling Stone.
   url: https://downtownboys.bandcamp.com/
-greer:
-  filename: greer.jpg
-  name: Evan Greer
+- name: Evan Greer
+  portrait: greer.jpg
   bio: Campaign director of Fight for the Future and internationally touring queer riot-folk singer/songwriter.
   url: http://evangreer.org/
-asili:
-  filename: asili.jpg
-  name: Taina Asili
+- name: Taina Asili
+  portrait: asili.jpg
   bio: Internationally known Puerto Rican vocalist and leader of social justice infused Afro-Latin reggae rock troupe La Banda Rebelde.
   url: http://tainaasili.com/
-harvey:
-  filename: harvey.jpg
-  name: Ryan Harvey
+- name: Ryan Harvey
+  portrait: harvey.jpg
   bio: Baltimore-based activist folksinger and co-founder of Firebrand Records.
   url: http://ryanharveymusic.com/
-son-of-nun:
-  filename: son-of-nun.jpg
-  name: Son of Nun
+- name: Son of Nun
+  portrait: son-of-nun.jpg
   bio: Activist, organizer, and hip hop MC who doesn’t just entertain, he empowers. “More than relevant” according to Chuck D of Public Enemy.
   url: http://sonofnun.net/
-rose:
-  filename: rose.jpg
-  name: Lia Rose
+- name: Lia Rose
+  portrait: rose.jpg
   bio: Of critically acclaimed Bay Area electro-indie-rock act Built for the Sea
   url: http://www.liarose.com/
+- name: Bonfire Madigan
+  portrait: madigan.jpg
+  bio: Legendary riot-grrrrl singing cellist with albums out on Kill Rockstars and K Records.
+  url: http://bonfiremadigan.com/
+- name: bell’s roar
+  portrait: roar.jpg
+  bio: NY-based Firebrand Records multi-instrumentalist and producer blending synth-pop, rock, and soul.
+  url: http://bellsroarmusic.com/

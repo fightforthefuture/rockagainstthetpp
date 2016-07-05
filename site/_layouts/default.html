@@ -17,7 +17,7 @@
 
   {% if page.layout == 'event' %}
     <section>
-      {% include form.html action='https://actionnetwork.org/petitions/rock-against-the-tpp-tour-kick-off/signatures' %}
+      {% include form.html action=page.action_network_form %}
       <p class="disclaimer no-pad">
         You are signing <a href="https://actionnetwork.org/petitions/rock-against-the-tpp-tour-kick-off">this petition</a> telling Congress to stop the TPP.
         <a href="https://www.fightforthefuture.org">Fight for the Future</a> will send you campaign updates.
@@ -108,7 +108,7 @@
 
 <div class="share-this">
   <p><a id="share-button" href="https://facebook.com/sharer.php?u={{ page.share_url | default: share_url | cgi_escape }}" class="facebook">Share</a></p>
-  <p><a id="tweet-button" href="https://twitter.com/intent/tweet?text={{ page.twittertext | default: site.tweet | cgi_escape }}" class="twitter">Tweet</a></p>
+  <p><a id="tweet-button" href="https://twitter.com/intent/tweet?text={{ page.twittertext | default: site.twittertext | cgi_escape }}" class="twitter">Tweet</a></p>
 </div>
 
 {% include scripts.html %}

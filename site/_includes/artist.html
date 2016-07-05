@@ -1,6 +1,10 @@
-<li class="{% if include.featured %}featured-{% endif %}artist">
+<li class="{% if page.headliners contains include.artist.name %}featured-{% endif %}artist{% if page.concealed contains include.artist.name or include.concealed %} concealed end{% endif %}">
   <div class="artist-photo">
-    <img src="/images/artists/{{ include.artist.filename }}" alt="{{ include.artist.name }}" />
+    {% if page.headliners contains include.artist.name %}
+    <img src="/images/artists/{{ include.artist.landscape }}" alt="{{ include.artist.name }}" />
+    {% else %}
+    <img src="/images/artists/{{ include.artist.portrait }}" alt="{{ include.artist.name }}" />
+    {% endif %}
     <div class="artist-bio">
       {{ include.artist.bio }}
       <span class="artist-website">

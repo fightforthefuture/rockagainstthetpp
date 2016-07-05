@@ -1,6 +1,5 @@
 ---
 page: home
-location: Denver, CO
 share_image: home.png
 share_image_dims: 1300 x 670
 social_title: 'Rock Against the TPP!'
@@ -16,24 +15,32 @@ header_content: |+
   **Sign the petition telling Congress to “Vote NO on the TPP” and we’ll update
   you as tour dates are announced!**
 signup_button_text: "Sign now!"
+action_network_form: https://actionnetwork.org/petitions/take-action-now-to-stop-the-tpp/signatures
+headliners: ['Tom Morello', 'Talib Kweli']
+concealed: ['Bonfire Madigan', 'bell’s roar', 'Ryan Harvey', 'Taina Asili', 'Evan Greer', 'Son of Nun', 'Lia Rose']
 ---
 
 <section>
-  <h2 id="lineup">
+  <h2>
     BREAKING: Line-up announced for Rock Against the TPP kick-off in Denver July
     23rd!
   </h2>
-  <a class="button" href="/denver-co">Get tickets now</a><br/><br/>
+  <a class="button" href="/denver-co/">Get tickets now</a>
+</section>
 
-  {% for post in site.posts %}
-  {% if post.location == page.location %}
+<section>
+  <h2 id="lineup">The following artists are participating in Rock Against The TPP:</h2>
+
+  <p>
+    <small>Line-ups at each stop vary, scroll down for a list of dates.</small>
+  </p>
+
   <ul class="artists">
-    {% assign artist=site.data.artists[post.headliner] %}
-    {% include artist.html artist=artist featured=true %}
-    {% for performer in post.performers %}{% assign artist=site.data.artists[performer] %}
-    {% include artist.html artist=artist %}{% endfor %}
+    {% for performer in site.data.artists %}
+    {% include artist.html artist=performer %}
+    {% endfor %}
   </ul>
-  {% endif %}{% endfor %}
+  <button id="see-full-list" class="button">See full list</button>
 </section>
 {% include twitter-signup.html %}
 <section id="learn-more">
@@ -111,19 +118,9 @@ signup_button_text: "Sign now!"
   <h2 id="tour-dates">Tour dates</h2>
 
   <p>
-    Details for the following Rock Against the TPP tour stops are still TOP
-    SECRET. Line-ups and venues will vary in each city. Check back soon for
-    updates!
+    Just announced! Rock Against the TPP West Coast tour dates. Click for more
+    details. Stay tuned for more dates TBA soon!
   </p>
 
-  <dl class="dates">
-    <dt><time datetime="2016-07-30">July 30-31</time></dt>
-    <dd>???</dd>
-    <dt><time datetime="2016-08-06">August 6-7</time></dt>
-    <dd>???</dd>
-    <dt><time datetime="2016-08-19">August 19-20</time></dt>
-    <dd>???</dd>
-    <dt><time datetime="2016-08-20">August 20-21</time></dt>
-    <dd>???</dd>
-  </dl>
+  {% include dates.html %}
 </section>
