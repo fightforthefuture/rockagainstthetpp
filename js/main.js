@@ -7,10 +7,9 @@
     tweetButton = doc.getElementById('tweet-button'),
     shareButton = doc.getElementById('share-button'),
     concealedArtists = doc.getElementsByClassName('concealed'),
-    artistsToggle = doc.getElementById('see-full-list');
-  // ,
-  //   endorsements = doc.getElementById('endorsements'),
-  //   endorsementToggle = doc.getElementById('toggle-list');
+    artistsToggle = doc.getElementById('see-full-list'),
+    endorsements = doc.getElementById('endorsements'),
+    endorsementToggle = doc.getElementById('toggle-list');
 
   tweetButton.addEventListener('click', function (e) {
     e.preventDefault();
@@ -36,12 +35,12 @@
     artistsToggle.remove();
   });
 
-  // endorsementToggle.addEventListener('click', function (e) {
-  //   e.preventDefault();
-  //
-  //   endorsements.classList.toggle('hidden');
-  //   endorsementToggle.remove();
-  // });
+  endorsementToggle.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    endorsements.classList.toggle('hidden');
+    endorsementToggle.remove();
+  });
 
   var util = {
 
@@ -79,7 +78,7 @@
   }
 
   var twitterConnectButtons = document.querySelectorAll('a[href="#twitter"]');
-  for (var i = 0; i < twitterConnectButtons.length; i++) {
+  for (i = 0; i < twitterConnectButtons.length; i++) {
     twitterConnectButtons[i].addEventListener('click', function(e) {
       e.preventDefault();
       var url = 'https://mothership-js.fightforthefuture.org/connect/twitter?tag=tpp';

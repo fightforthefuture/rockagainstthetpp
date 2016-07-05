@@ -77,7 +77,6 @@
 </section>
 
 <section>
-  {% comment %}
   {% assign sorted_orgs = site.data.affiliated_orgs.endorse %}
   {% for org in site.data.affiliated_orgs.support %}
   {% assign sorted_orgs = sorted_orgs | push: org %}
@@ -95,10 +94,8 @@
     <li>{{ org }}</li>
     {% endfor %}
   </ul>
-  {% endcomment %}
 
   <p>
-    Full list of endorsing organizations coming soon.
     <a href="mailto:team@fightforthefuture.org">Email us</a> to get involved in
     Rock Against the TPP!
   </p>
