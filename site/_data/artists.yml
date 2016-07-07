@@ -17,18 +17,14 @@
   bio: Legendary political punk band serving high-energy, fist pumping sing-along anthems. Equal parts circle pit and picket line.
   url: http://www.anti-flag.com/
 - name: Jolie Holland
-  portrait: holland.jpg
+  portrait: holland-portrait.jpg
+  landscape: holland-landscape.jpg
   bio: Beloved style-blending singer/songwriter on ANTI Records.
   url: http://joliehollandmusic.com/
 - name: Jonny 5 and Brer Rabbit of Flobots
   portrait: flobots.jpg
   bio: Denver, Colorado’s revolutionary hip-hop act Flobots bring it on real with their signature anthems dedicated to creating a better world.
   url: http://flobots.com/
-- name: Las Cafeteras
-  portrait: las-cafeteras-portrait.jpg
-  landscape: las-cafeteras-landscape.jpg
-  bio: LA Weekly’s “Best Latin Alternative Band” Las Cafeteras seamlessly fuse traditional Afro-Mexican music from Veracruz, Mexico with modern rhythms and lyrically rich storytelling to create a fresh Urban Folk​ sound from the streets of East Los Angeles.
-  url: http://lascafeteras.com/
 - name: Downtown Boys
   portrait: downtown-boys.jpg
   bio: Bilingual saxophone fueled radical dance party from Providence. “America’s most exciting punk band,” according to Rolling Stone.
