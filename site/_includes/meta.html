@@ -1,5 +1,5 @@
 {% assign dims = page.share_image_dims | default: site.share_image_dims | split: ' x ' %}
-{% capture share_url %}{{ site.url }}{{ page.url }}{% endcapture %}
+{% capture share_url %}https://{{ site.url }}{{ page.url }}{% endcapture %}
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -26,7 +26,7 @@
 <meta name="twitter:site" content="{{ site.author.twitter }}">
 <meta name="twitter:title" content="{{ page.social_title | default: site.social_title }}">
 <meta name="twitter:description" content="{{ page.social_description | default: site.social_description }}"/>
-<meta name="twitter:domain" content="{{ site.url | remove:'http://' | remove:'https://' }}">
+<meta name="twitter:domain" content="{{ site.url }}">
 <meta name="twitter:account_id" content="{{ site.author.twitterid }}"/>
 <meta name="twitter:text" content="{{ page.twittertext | default: site.twittertext }}" />
 <meta name="twitter:image" content="https://s3.fightforthefuture.org/rockagainstthetpp/images/share/{{ page.share_image | default: site.share_image }}">

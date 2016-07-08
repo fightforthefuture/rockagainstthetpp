@@ -4,7 +4,7 @@
   {% include meta.html %}
 </head>
 <body>
-{% capture share_url %}{{ site.url }}{{ page.url }}{% endcapture %}
+{% capture share_url %}https://{{ site.url }}{{ page.url }}{% endcapture %}
 
 <header{% unless page.page == 'home' %} class="subpage"{% endunless %}>
   {% if page.page == 'home' %}

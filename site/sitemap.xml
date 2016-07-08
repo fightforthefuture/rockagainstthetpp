@@ -4,7 +4,7 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>{{ site.url }}</loc>
+    <loc>https://{{ site.url }}</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1</priority>
@@ -12,7 +12,7 @@ layout: null
   {% for page in site.documents %}
   {% unless site.data.disallow contains page.url or page.published == false %}
   <url>
-    <loc>{{ site.url }}{{ page.url | remove:'index.html' }}</loc>
+    <loc>https://{{ site.url }}{{ page.url | remove:'index.html' }}</loc>
     <lastmod>{{ page.sitemap.lastmod | default: site.time | date_to_xmlschema }}</lastmod>
     <changefreq>{{ page.sitemap.changefreq | default: 'weekly' }}</changefreq>
     <priority>1</priority>
