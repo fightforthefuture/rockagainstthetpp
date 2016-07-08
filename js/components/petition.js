@@ -45,7 +45,7 @@
     formData.append('guard', '');
     formData.append('hp_enabled', true);
     formData.append('org', 'fftf');
-    formData.append('tag', 'tpp');
+    formData.append('tag', actionNetworkForm.dataset.mothershipTag);
     formData.append('an_tags', JSON.stringify(tags));
     formData.append('an_url', win.location.href);
     formData.append('an_petition', actionNetworkForm.action.replace(/\/signatures\/?/, ''));
