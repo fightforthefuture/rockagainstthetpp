@@ -29,14 +29,14 @@
   portrait: downtown-boys.jpg
   bio: Bilingual saxophone fueled radical dance party from Providence. “America’s most exciting punk band,” according to Rolling Stone.
   url: https://downtownboys.bandcamp.com/
-- name: Evan Greer
-  portrait: greer.jpg
-  bio: Campaign director of Fight for the Future and internationally touring queer riot-folk singer/songwriter.
-  url: http://evangreer.org/
 - name: Taina Asili
   portrait: asili.jpg
   bio: Internationally known Puerto Rican vocalist and leader of social justice infused Afro-Latin reggae rock troupe La Banda Rebelde.
   url: http://tainaasili.com/
+- name: Sihasin
+  portrait: sihasin.jpg
+  bio: Brother and sister duo known as the drummer and bassist of legendary indigenous Navajo Nation punk band Blackfire.
+  url: http://sihasin.com/
 - name: Ryan Harvey
   portrait: harvey.jpg
   bio: Baltimore-based activist folksinger and co-founder of Firebrand Records.
@@ -57,3 +57,7 @@
   portrait: roar.jpg
   bio: NY-based Firebrand Records multi-instrumentalist and producer blending synth-pop, rock, and soul.
   url: http://bellsroarmusic.com/
+- name: Evan Greer
+  portrait: greer.jpg
+  bio: Campaign director of Fight for the Future and internationally touring queer riot-folk singer/songwriter.
+  url: http://evangreer.org/
