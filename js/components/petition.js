@@ -128,7 +128,7 @@
       return;
     }
 
-    if (actionNetworkForm['member[phone_number]'].value === '') {
+    if (actionNetworkForm['member[phone_number]'] && actionNetworkForm['member[phone_number]'].value !== '') {
       preSubmit();
     }
 
@@ -171,7 +171,7 @@
        * */
 
       if (submission.status >= 200 && submission.status < 400) {
-        if (actionNetworkForm['member[phone_number]'].value === '') {
+        if (actionNetworkForm['member[phone_number]'] && actionNetworkForm['member[phone_number]'].value !== '') {
           fireThankYouModal();
         } else {
           confirmSMSSubmission();
