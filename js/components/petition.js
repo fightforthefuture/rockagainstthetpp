@@ -77,7 +77,6 @@
 
     tweetButton.classList.add('share-icon');
     shareButton.classList.add('share-icon');
-    phoneSignUp.classList.add('visible');
 
     shareHeadline.textContent = 'Great! We just sent you ' + (doc.querySelector('body').classList.contains('event') ? 'your ticket' : 'an email') + '.';
     shareCopy.textContent = 'Now can you help spread the word?';
@@ -92,7 +91,12 @@
     thankYou.classList.add('thanks');
 
     shareContent.appendChild(shareHeadline);
-    shareContent.appendChild(phoneSignUp);
+
+    if (phoneSignUp) {
+      phoneSignUp.classList.add('visible');
+      shareContent.appendChild(phoneSignUp);
+    }
+
     shareContent.appendChild(shareCopy);
     shareContent.appendChild(shareThis);
     shareContent.appendChild(donateCopy);
@@ -128,7 +132,7 @@
       return;
     }
 
-    if (actionNetworkForm['member[phone_number]'] && actionNetworkForm['member[phone_number]'].value !== '') {
+    if (!actionNetworkForm['member[phone_number]'] || actionNetworkForm['member[phone_number]'].value === '') {
       preSubmit();
     }
 
@@ -172,9 +176,9 @@
 
       if (submission.status >= 200 && submission.status < 400) {
         if (actionNetworkForm['member[phone_number]'] && actionNetworkForm['member[phone_number]'].value !== '') {
-          fireThankYouModal();
-        } else {
           confirmSMSSubmission();
+        } else {
+          fireThankYouModal();
         }
       } else {
         handleHelperError(submission);
