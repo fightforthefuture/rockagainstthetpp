@@ -91,14 +91,14 @@
     thankYou.classList.add('thanks');
 
     shareContent.appendChild(shareHeadline);
+    shareContent.appendChild(shareCopy);
+    shareContent.appendChild(shareThis);
 
     if (phoneSignUp) {
       phoneSignUp.classList.add('visible');
       shareContent.appendChild(phoneSignUp);
     }
 
-    shareContent.appendChild(shareCopy);
-    shareContent.appendChild(shareThis);
     shareContent.appendChild(donateCopy);
 
     actionNetworkForm.commit.removeAttribute('disabled');
