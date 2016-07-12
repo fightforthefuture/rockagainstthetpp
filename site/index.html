@@ -14,7 +14,15 @@ header_content: |+
 signup_button_text: "Sign now!"
 action_network_form: https://actionnetwork.org/petitions/take-action-now-to-stop-the-tpp/signatures
 headliners: ['Tom Morello', 'Talib Kweli']
-concealed: ['Bonfire Madigan', 'bell’s roar', 'Ryan Harvey', 'Taina Asili', 'Evan Greer', 'Son of Nun', 'Lia Rose']
+performers:
+  - Tom Morello
+  - Talib Kweli
+  - Evangeline Lilly
+  - Anti-Flag (acoustic)
+  - Jolie Holland
+  - Jonny 5 and Brer Rabbit of Flobots
+  - Downtown Boys
+  - Sihasin
 ---
 
 <section>
@@ -34,7 +42,11 @@ concealed: ['Bonfire Madigan', 'bell’s roar', 'Ryan Harvey', 'Taina Asili', 'E
 
   <ul class="artists">
     {% for performer in site.data.artists %}
+    {% if page.performers contains performer.name %}
     {% include artist.html artist=performer %}
+    {% else %}
+    {% include artist.html artist=performer concealed=true %}
+    {% endif %}
     {% endfor %}
   </ul>
   <button id="see-full-list" class="button">See full list</button>

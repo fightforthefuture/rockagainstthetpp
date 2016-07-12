@@ -92,6 +92,7 @@
   height: ~'calc(51.875vw + 14.8rem)';
   line-height: 1;
   margin: 2rem 0 2rem;
+  max-height: ~'calc(51.875vw + 14.8rem)';
   max-width: 27rem;
   order: 2;
   overflow: hidden;
@@ -100,6 +101,7 @@
 
   @media screen and (min-width: @small-phone) {
     height: 38rem;
+    max-height: 38rem;
   }
 
   @media screen and (min-width: @large-phone) {
@@ -124,7 +126,6 @@
   }
 
   &.end {
-    max-height: 100rem;
     order: 3;
   }
 

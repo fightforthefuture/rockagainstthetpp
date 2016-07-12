@@ -1,4 +1,4 @@
-<li class="{% if page.headliners contains include.artist.name %}featured-{% endif %}artist{% if page.concealed contains include.artist.name or include.concealed %} concealed end{% endif %}">
+<li class="{% if page.headliners contains include.artist.name %}featured-{% endif %}artist{% if include.concealed %} concealed end{% endif %}">
   <div class="artist-photo">
     {% if page.headliners contains include.artist.name %}
     <img src="/images/artists/{{ include.artist.landscape }}" alt="{{ include.artist.name }}" />
