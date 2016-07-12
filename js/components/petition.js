@@ -27,7 +27,6 @@
       disableOverlayClick: true
     });
 
-    // actionNetworkForm.classList.add('submitted');
     actionNetworkForm.commit.setAttribute('disabled', true);
   }
 
@@ -54,7 +53,62 @@
     formData.append('member[postcode]', actionNetworkForm['signature[zip_code]'].value);
     formData.append('member[country]', 'US');
 
+    if (actionNetworkForm['member[phone_number]'] && actionNetworkForm['member[phone_number]'].value !== '') {
+      formData.append('member[phone_number]', actionNetworkForm['member[phone_number]'].value);
+    }
+
     return formData;
+  }
+
+  function fireThankYouModal() {
+
+    var
+      shareContent = doc.createElement('div'),
+      shareHeadline = doc.createElement('h3'),
+      shareCopy = doc.createElement('h4'),
+      shareThis = doc.createElement('div'),
+      donateCopy = doc.createElement('p'),
+      thankYou = doc.createElement('p'),
+      tweetButton = doc.getElementById('tweet-button').cloneNode(),
+      shareButton = doc.getElementById('share-button').cloneNode(),
+      phoneSignUp = doc.getElementById('phone-number-modal');
+
+    win.modals.dismissModal();
+
+    tweetButton.classList.add('share-icon');
+    shareButton.classList.add('share-icon');
+    phoneSignUp.classList.add('visible');
+
+    shareHeadline.textContent = 'Great! We just sent you ' + (doc.querySelector('body').classList.contains('event') ? 'your ticket' : 'an email') + '.';
+    shareCopy.textContent = 'Now can you help spread the word?';
+
+    shareThis.classList.add('share-icons');
+    shareThis.appendChild(tweetButton);
+    shareThis.appendChild(shareButton);
+
+    donateCopy.innerHTML = '&hellip;or, <a href="https://donate.fightforthefuture.org/campaigns/rock-against-tpp/?amount=5&frequency=just-once">chip in $5</a> to help us spread the message.';
+
+    thankYou.textContent = 'Thanks for signing!';
+    thankYou.classList.add('thanks');
+
+    shareContent.appendChild(shareHeadline);
+    shareContent.appendChild(phoneSignUp);
+    shareContent.appendChild(shareCopy);
+    shareContent.appendChild(shareThis);
+    shareContent.appendChild(donateCopy);
+
+    actionNetworkForm.commit.removeAttribute('disabled');
+
+    win.modals.generateModal({contents: shareContent});
+
+    actionNetworkForm.parentNode.insertBefore(thankYou, actionNetworkForm);
+  }
+
+  function confirmSMSSubmission() {
+    actionNetworkForm.reset();
+    doc.getElementById('form-phone_number').setAttribute('value', 'Check your phone!');
+    doc.getElementById('form-phone_number').setAttribute('disabled', true);
+    doc.getElementById('submit-phone').setAttribute('disabled', true);
   }
 
   function submitForm(event) {
@@ -74,7 +128,9 @@
       return;
     }
 
-    preSubmit();
+    if (actionNetworkForm['member[phone_number]'].value === '') {
+      preSubmit();
+    }
 
     function handleHelperError(e) {
       /**
@@ -115,46 +171,11 @@
        * */
 
       if (submission.status >= 200 && submission.status < 400) {
-
-        var
-          shareContent = doc.createElement('div'),
-          shareHeadline = doc.createElement('h3'),
-          shareCopy = doc.createElement('p'),
-          shareThis = doc.createElement('div'),
-          donateCopy = doc.createElement('p'),
-          thankYou = doc.createElement('p'),
-          tweetButton = doc.getElementById('tweet-button').cloneNode(),
-          shareButton = doc.getElementById('share-button').cloneNode();
-
-        win.modals.dismissModal();
-
-        tweetButton.classList.add('share-icon');
-        shareButton.classList.add('share-icon');
-
-        shareHeadline.textContent = 'Great! We just sent you ' + (doc.querySelector('body').classList.contains('event') ? 'your ticket' : 'an email') + '.';
-        shareCopy.textContent = 'Now can you help spread the word?';
-
-        shareThis.classList.add('share-icons');
-        shareThis.appendChild(tweetButton);
-        shareThis.appendChild(shareButton);
-
-        donateCopy.innerHTML = '&hellip;or, <a href="https://donate.fightforthefuture.org/campaigns/rock-against-tpp/?amount=5&frequency=just-once">chip in $5</a> to help us spread the message.';
-
-        thankYou.textContent = 'Thanks for signing!';
-        thankYou.classList.add('thanks');
-
-        shareContent.appendChild(shareHeadline);
-        shareContent.appendChild(shareCopy);
-        shareContent.appendChild(shareThis);
-        shareContent.appendChild(donateCopy);
-
-        actionNetworkForm.reset();
-        actionNetworkForm.commit.removeAttribute('disabled');
-
-        win.modals.generateModal({contents: shareContent});
-
-        actionNetworkForm.parentNode.insertBefore(thankYou, actionNetworkForm);
-
+        if (actionNetworkForm['member[phone_number]'].value === '') {
+          fireThankYouModal();
+        } else {
+          confirmSMSSubmission();
+        }
       } else {
         handleHelperError(submission);
       }
