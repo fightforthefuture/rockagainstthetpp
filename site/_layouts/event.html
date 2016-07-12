@@ -52,3 +52,21 @@ layout: default
   </ul>
   <button id="see-full-list" class="button">See full list</button>
 </section>
+
+
+<div id="phone-number-modal">
+  <h4>Get mobile alerts</h4>
+  <p>Sign up to get exclusive updates from the tour!</p>
+
+  <input type="hidden" id="form-extra_checkbox" name="extra_checkbox" value="sms-{{ page.tag }}" form="action-network-form"/>
+  <label class="visually-hidden" for="form-phone_number">Phone number:</label>
+  <input type="text" id="form-phone_number" name="member[phone_number]" class="phone" placeholder="Phone (optional)" form="action-network-form"/>
+  <input type="submit" name="submit" value="{{ page.signup_button_text | default: site.signup_button_text }}" class="submit" form="action-network-form" id="submit-phone"/>
+
+  <p class="disclaimer no-pad">
+    Get mobile alerts and periodic messages from Fight for the Future. Msg &amp;
+    data rates may apply. Text STOP to 384387 (FT4FTR) to stop receiving
+    messages. (<a href="https://www.fightforthefuture.org/privacy/">Privacy
+    Policy</a> | <a href="https://fightforthefuture.org/sms-tos/">SMS Terms</a>)
+  </p>
+</div>
