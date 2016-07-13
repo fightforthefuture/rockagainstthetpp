@@ -1,16 +1,27 @@
 {
   "name": "rockagainstthetpp",
-  "description": "",
-  "scripts": {
-  },
+  "description": "A nationwide tour to stop the biggest corporate power grab in history: the Trans-Pacific Partnership. Organized by Fight for the Future and Rage Against the Machine guitarist Tom Morello’s new label, Firebrand Records.",
+  "website": "https://www.rockagainstthetpp.org/",
+  "success_url": "/",
+  "scripts": {},
   "env": {
+    "FP_DOMAIN_SECURITY_TOKEN": {
+      "description": "Free progress token",
+      "value": "b10864d4b424b78968d8364525f6ad4188cb93b0"
+    },
+    "AWS_S3_BUCKET": {
+      "description": "Where the images we snag from tumblr go",
+      "value": "s3.fightforthefuture.org"
+    }
   },
-  "formation": {
-  },
+  "formation": {},
   "addons": ["papertrail:choklad"],
   "buildpacks": [
     {
       "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
     }
   ]
 }
