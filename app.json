@@ -12,13 +12,20 @@
     "AWS_S3_BUCKET": {
       "description": "Where the images we snag from tumblr go",
       "value": "s3.fightforthefuture.org"
+    },
+    "GEM_PATH": {
+      "description": "where to find bundle gems",
+      "value": "vendor/bundle/2.3"
     }
   },
   "formation": {},
   "addons": ["papertrail:choklad"],
   "buildpacks": [
     {
-      "url": "gcko/heroku-buildpack-ruby-nodejs-jekyll"
+      "url": "heroku/ruby"
+    },
+    {
+      "url": "heroku/nodejs"
     }
   ]
 }
