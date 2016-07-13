@@ -13,8 +13,6 @@ install:
 - npm install
 script:
 - npm run-script build
-after_success:
-- npm run-script deploy
 env:
 - CXX=g++-4.8 AWS_S3_BUCKET=s3.fightforthefuture.org
 addons:
@@ -26,6 +24,9 @@ addons:
 branches:
   only:
   - production
+before_deploy:
+- node scripts/generate_fp_token.js
+- scripts/deploy-ghpages.sh
 deploy:
   provider: s3
   access_key_id: AKIAI467SJF233XDFZZA
