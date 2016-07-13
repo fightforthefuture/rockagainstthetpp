@@ -22,6 +22,9 @@
   "addons": ["papertrail:choklad"],
   "buildpacks": [
     {
+      "url": "heroku/ruby"
+    },
+    {
       "url": "heroku/nodejs"
     }
   ]
