@@ -5,7 +5,8 @@ Habitat.load('.env');
 
 var
   env = new Habitat('', {
-    aws_s3_bucket: 's3.fightforthefuture.org'
+    aws_s3_bucket: 's3.fightforthefuture.org',
+    port: '9292'
   });
 
 module.exports = function (grunt) {
@@ -16,7 +17,7 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     site: {
-      port: '9292',
+      port: env.get('port'),
       app: 'site',
       assets: 'assets',
       dist: 'public',
