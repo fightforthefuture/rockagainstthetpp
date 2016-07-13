@@ -18,10 +18,7 @@
   "addons": ["papertrail:choklad"],
   "buildpacks": [
     {
-      "url": "heroku/nodejs"
-    },
-    {
-      "url": "heroku/ruby"
+      "url": "gcko/heroku-buildpack-ruby-nodejs-jekyll"
     }
   ]
 }
