@@ -4,24 +4,10 @@
   var
     i,
     form = doc.getElementById('petition-form'),
-    tweetButton = doc.getElementById('tweet-button'),
-    shareButton = doc.getElementById('share-button'),
     concealedArtists = doc.getElementsByClassName('concealed'),
     artistsToggle = doc.getElementById('see-full-list'),
     endorsements = doc.getElementById('endorsements'),
     endorsementToggle = doc.getElementById('toggle-list');
-
-  tweetButton.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    // win.open(tweetButton.getAttribute('href'), 'Tweet this', 'width=550,height=420,resizable=1')
-  });
-
-  shareButton.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    // win.open(shareButton.getAttribute('href'), 'Share this', 'width=581,height=614,resizable=1')
-  });
 
   artistsToggle.addEventListener('click', function (e) {
     e.preventDefault();
@@ -87,8 +73,5 @@
       window.open(url, 'idl_connect', properties);
     });
   }
-
-
-
 
 })(document, window);

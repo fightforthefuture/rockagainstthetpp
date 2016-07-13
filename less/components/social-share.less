@@ -1,77 +1,102 @@
-/*
-* Everything is relative.
-*
-* Including this component. To resize, overwrite the font-size of
-* div.share, button.social somewhere in your code.
-*
-* *****************
-* Don't touch this.
-* *****************
-*/
+/************************************************
+*   Fixed Social Container          *
+************************************************/
 
-div.share, button.social {
-  font-size: 1.4rem;
-}
+#fixed-side-social-container {
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 39.7rem;
+  left: -6rem;
+  padding: 0 5px;
+  transition: left 300ms;
+  width: 5rem;
+  z-index: 10;
 
-div.share {
-  border-radius: 7.142857143em;
-  display: inline-block;
-  text-align: center;
+  @media screen and (min-width: @small-laptop) {
+    left: 0;
+  }
 
-  @media screen and (min-width: @small-phone) {
-    padding: 1rem;
-    background: rgba(0, 0, 0, .1);
+  a {
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .social-icon {
+    .ir();
+    background-image: url('/images/share/social-media.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    float: left;
+    height: 4.9rem;
+    margin-bottom: 1rem;
+    opacity: 0.75;
+    transition: opacity 200ms, left 200ms;
+    width: 5rem;
+
+    &:hover {
+      opacity: 0.99;
+    }
+  }
+
+  .twitter-icon {
+    background-position: 0 -5.1rem;
+  }
+
+  .facebook-icon {
+    background-position: 0 -10.2rem;
   }
 }
 
-button.social {
-  border: 0;
-  border-radius: 7.142857143em;
-  box-sizing: border-box;
-  color: white;
-  cursor: pointer;
+.share-button {
+  border-radius: 5px;
+  color: @white;
   display: inline-block;
-  font-family: @body-font;
-  font-weight: bold;
-  height: 2.142857143em;
-  line-height: 2;
-  margin-left: 0.357142857em;
-  margin-right: 0.357142857em;
-  padding: 0 1em 0 2.857142857em;
-  position: relative;
+  font-size: 1.4rem;
+  font-weight: 400;
+  height: 3.6rem;
+  line-height: 2.571428571;
+  margin: 1rem;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  transition: box-shadow 200ms ease-in-out;
+  width: 12.6rem;
 
-  &::before {
-    content: '';
-    display: block;
-    left: 1em;
-    position: absolute;
-    top: 0.357142857em;
+  &.facebook, &.twitter, &.donate {
+    background-repeat: no-repeat;
+    padding-left: 2.5rem;
+
+    &:hover {
+      box-shadow: inset 0 0 10rem 10rem rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &.twitter, &.facebook {
+    background-size: 2.2rem auto;
   }
 
   &.twitter {
-    background: #17a1ce;
-
-    &::before {
-      .renderTwitter(1.428571429em; auto; 1.42857143em);
-    }
+    background-color: @twitter-blue;
+    background-image: url('/images/share/tweet.png');
+    background-position: 0.8rem 1rem;
   }
-  &.facebook {
-    background: #3b5a95;
 
-    @media screen and (min-width: @small-phone) {
-      margin-bottom: 0;
-    }
-    &::before {
-      .renderFacebook(1.428571429em; auto; 1.42857143em);
-      background-position: 100% 0;
-    }
+  &.facebook {
+    background-color: @facebook-blue;
+    background-image: url('/images/share/facebook.png');
+    background-position: 0.5rem 0.6rem;
   }
 
   &.donate {
-    padding-left: 1em;
-    background: #e6b520;
+    background-color: #FC3660;
+    background-image: url('/images/share/donate.png');
+    background-position: 1rem 0.9rem;
   }
-
 }
+
+
+
+

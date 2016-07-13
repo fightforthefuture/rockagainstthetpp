@@ -53,6 +53,16 @@
 </main>
 
 <section>
+  <p>
+    <a id="footer-share" href="https://facebook.com/sharer.php?u={{ page.share_url | default: share_url | cgi_escape }}" class="share-button facebook" target="_blank">Share
+      this</a>
+    <a id="footer-tweet" href="https://twitter.com/intent/tweet?text={{ page.twittertext | default: site.twittertext | cgi_escape }}" class="share-button twitter" target="_blank">Tweet
+      this</a>
+    <a id="footer-donate" href="https://donate.fightforthefuture.org/campaigns/rock-against-tpp" class="share-button donate" target="_blank">Donate</a>
+  </p>
+</section>
+
+<section>
   <h2 id="organized-by">Rock Against the TPP is organized by:</h2>
 
   <ul class="organized-by">
@@ -103,10 +113,11 @@
 
 {% include footer.html %}
 
-<div class="share-this">
-  <p><a id="share-button" href="https://facebook.com/sharer.php?u={{ page.share_url | default: share_url | cgi_escape }}" class="facebook">Share</a></p>
-  <p><a id="tweet-button" href="https://twitter.com/intent/tweet?text={{ page.twittertext | default: site.twittertext | cgi_escape }}" class="twitter">Tweet</a></p>
+<div id="fixed-side-social-container">
+  <a id="tweet-button" class="social-icon twitter-icon twitter" title="Tweet this" href="https://twitter.com/intent/tweet?text={{ page.twittertext | default: site.twittertext | cgi_escape }}" target="_blank">Tweet</a>
+  <a id="share-button" class="social-icon facebook-icon facebook" title="Share this" href="https://facebook.com/sharer.php?u={{ page.share_url | default: share_url | cgi_escape }}" target="_blank">Share</a>
 </div>
+
 
 {% include scripts.html %}
 
