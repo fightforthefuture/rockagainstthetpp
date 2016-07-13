@@ -16,6 +16,10 @@
     "GEM_PATH": {
       "description": "where to find bundle gems",
       "value": "vendor/bundle/2.3"
+    },
+    "PORT": {
+      "description": "bind…to…port?",
+      "value": "80"
     }
   },
   "formation": {},
