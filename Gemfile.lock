@@ -151,7 +151,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  github-pages
+  github-pages (>= 80)
   json (= 1.8.3)
   travis (>= 1.8.2)
 
