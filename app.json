@@ -7,9 +7,7 @@
   },
   "formation": {
   },
-  "addons": [
-
-  ],
+  "addons": ["papertrail:choklad"],
   "buildpacks": [
     {
       "url": "heroku/nodejs"
