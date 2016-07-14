@@ -7,7 +7,18 @@
     concealedArtists = doc.getElementsByClassName('concealed'),
     artistsToggle = doc.getElementById('see-full-list'),
     endorsements = doc.getElementById('endorsements'),
-    endorsementToggle = doc.getElementById('toggle-list');
+    endorsementToggle = doc.getElementById('toggle-list'),
+    sideShareButtons = doc.getElementById('fixed-side-social-container');
+
+  function toggleSideShareButtons(e) {
+    if (win.scrollY > document.getElementsByTagName('main')[0].offsetTop) {
+      sideShareButtons.classList.add('fade-in');
+    } else {
+      sideShareButtons.classList.remove('fade-in')
+    }
+  }
+
+  win.addEventListener('scroll', toggleSideShareButtons);
 
   artistsToggle.addEventListener('click', function (e) {
     e.preventDefault();

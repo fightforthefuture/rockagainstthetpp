@@ -12,8 +12,11 @@
   width: 5rem;
   z-index: 10;
 
-  @media screen and (min-width: @small-laptop) {
-    left: 0;
+
+  &.fade-in {
+    @media screen and (min-width: @large-phone) {
+      left: 0;
+    }
   }
 
   a {
