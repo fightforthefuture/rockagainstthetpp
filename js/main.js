@@ -11,7 +11,7 @@
     sideShareButtons = doc.getElementById('fixed-side-social-container');
 
   function toggleSideShareButtons(e) {
-    if (win.scrollY > document.getElementsByTagName('main')[0].offsetTop) {
+    if (win.scrollY > doc.querySelector('header > p').offsetTop) {
       sideShareButtons.classList.add('fade-in');
     } else {
       sideShareButtons.classList.remove('fade-in')
