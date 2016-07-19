@@ -52,18 +52,6 @@ body > nav {
         content: none;
       }
     }
-
-    &:last-child {
-      @media screen and (min-width: @large-phone) {
-        padding: 0;
-      }
-
-      &::before {
-        @media screen and (min-width: @large-phone) {
-          content: none;
-        }
-      }
-    }
   }
 
   a {
@@ -77,26 +65,6 @@ body > nav {
 
     &:hover, &:active, &:focus {
       transform: scale(1.05);
-    }
-  }
-
-  .donate {
-    color: @red-800;
-
-    @media screen and (min-width: @large-phone) {
-      color: @white;
-      background-color: @red-800;
-      border: 1px solid #fff;
-      border-radius: 2rem;
-      display: block;
-      height: 4rem;
-      padding: 0.9rem 2rem;
-    }
-
-    &:hover, &:active {
-      @media screen and (min-width: @large-phone) {
-        text-decoration: none;
-      }
     }
   }
 }
