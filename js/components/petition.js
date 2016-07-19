@@ -131,7 +131,7 @@
         tweetButton.classList.add('share-icon');
         shareButton.classList.add('share-icon');
 
-        shareHeadline.textContent = 'Nice! We’re sending you your ticket.';
+        shareHeadline.textContent = 'Great! We just sent you an email.';
         shareCopy.textContent = 'Now can you help spread the word?';
 
         shareThis.classList.add('share-icons');
