@@ -16,7 +16,7 @@
       loadingSpinner = doc.createElement('div');
 
     loadingSpinner.classList.add('circle-spinner', 'large');
-    loadingCopy.textContent = 'Hang on a tick, reticulating splines…';
+    loadingCopy.textContent = 'Please wait one moment…';
 
     loadingContainer.classList.add('loading');
     loadingContainer.appendChild(loadingCopy);
