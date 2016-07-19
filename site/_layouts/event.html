@@ -66,7 +66,9 @@ layout: default
 
   <p class="disclaimer no-pad">
     Get mobile alerts and periodic messages from Fight for the Future. Msg &amp;
-    data rates may apply.
+    data rates may apply. Text STOP to
+    <a href="sms:{{ page.sms_unsubscribe | remove: '(' | remove: ')' | remove: '-' }}">{{ page.sms_unsubscribe }}</a>
+    to stop receiving messages.
     (<a href="https://www.fightforthefuture.org/privacy/">Privacy Policy</a>)
   </p>
 </div>
