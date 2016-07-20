@@ -10,7 +10,7 @@
     <label class="visually-hidden" for="form-zip_code">ZIP code:</label>
     <input type="text" id="form-zip_code" name="signature[zip_code]" class="zip" placeholder="ZIP code" required/>
 
-    <input type="submit" name="commit" value="{{ page.signup_button_text | default: site.signup_button_text }}" class="submit"/>
+    <input type="submit" name="commit" value="{% if page.layout == 'event' %}Sign & RSVP{% else %}{{ page.signup_button_text | default: site.signup_button_text }}{% endif %}" class="submit"/>
   </div>
 
   <input type="hidden" name="utf8" value="✓">

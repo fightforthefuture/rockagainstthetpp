@@ -7,11 +7,12 @@
 {% capture share_url %}https://{{ site.url }}{{ page.url }}{% endcapture %}
 
 <header{% unless page.page == 'home' %} class="subpage"{% endunless %}>
-  {% if page.page == 'home' %}
-  <h1>Rock Against <span>the TPP</span></h1>
+  {% if page.layout == 'event' %}
+  <h1><a href="/">{{ page.page_title | uppercase }}</a></h1>
   {% else %}
-  <h1><a href="/">Rock Against the TPP</a></h1>
-  {% endif %}
+  <h1>Rock Against <span>the TPP</span></h1>
+   {% endif %}
+
 
   {{ page.header_content | default: '' | markdownify }}
 
@@ -41,6 +42,9 @@
 
 <nav>
   <ul>
+    {% if page.layout == 'event' %}
+  <li><a href="/">Home</a></li>
+  {% endif %}  
     <li><a href="/#schedule">Schedule</a></li>
     <li><a href="/#lineup">Line up</a></li>
     <li><a href="/#learn-more">Learn more</a></li>
