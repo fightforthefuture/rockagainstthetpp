@@ -132,7 +132,8 @@ p {
 }
 
 .box {
-  background: @black;
+  background-color: @black; // fallback
+  background-color: @transparent-black;
   border: 0.5rem solid rgba(111, 111, 111, 0.68);
   padding: 2rem;
 
