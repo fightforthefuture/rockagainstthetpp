@@ -1,3 +1,7 @@
+.modal-present {
+  overflow: hidden;
+}
+
 .overlay {
   background: fade(@black, 50%);
   opacity: 0;
@@ -31,10 +35,12 @@
   color: @black;
   display: block;
   margin: 0 auto;
+  max-height: 80vh;
   max-width: 60rem;
+  overflow-y: scroll;
   padding: 2rem;
-  position: absolute;
-  top: 5rem;
+  position: fixed;
+  top: 3rem;
   right: 5%;
   left: 5%;
   text-align: center;
@@ -42,8 +48,13 @@
   width: 90%;
   z-index: 9002;
 
+
   @media screen and (min-width: @large-phone) {
     margin: 5rem auto 0;
+  }
+
+  @media screen and (min-width: @small-tablet) {
+    top: 5rem;
   }
 
   &.visible {
@@ -56,13 +67,16 @@
 
   h3 {
     font-size: 4.5rem;
-    line-height: 1.4;
     text-align: center;
     color: @grey-450;
     font-weight: 600;
 
     @media screen and (min-width: @large-phone) {
       font-size: 5rem;
+    }
+
+    @media screen and (min-width: @small-tablet) {
+      line-height: 1.4;
     }
   }
 

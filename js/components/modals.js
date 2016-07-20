@@ -14,6 +14,7 @@
 
     overlay.classList.remove('visible');
     modal.classList.remove('visible');
+    doc.querySelector('body').classList.remove('modal-present');
 
     win.setTimeout(function () {
       while (modal.firstChild) {
@@ -70,6 +71,7 @@
 
     body.appendChild(overlay);
     body.appendChild(modal);
+    doc.querySelector('body').classList.add('modal-present');
 
     win.setTimeout(function () {
       overlay.classList.add('visible');
