@@ -1,9 +1,13 @@
 {
   "name": "rockagainstthetpp",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "license": "GPL-3.0",
   "description": "Website for the Rock Against the TPP concert series",
   "repo": "fightforthefuture/rockagainstthetpp",
+  "cacheDirectories": [
+    "node_modules",
+    "./vendor"
+  ],
   "authors": [
     "Aki Rose <aki@fightforthefuture.org> (https://github.com/gesa/)",
     "Jeff Lyon",
@@ -12,8 +16,8 @@
   ],
   "private": true,
   "engines": {
-    "node": "^5",
-    "npm": "^3.4"
+    "node": "6.2.0",
+    "npm": "3.10.5"
   },
   "scripts": {
     "preinstall": "gem install bundler",
@@ -25,16 +29,18 @@
   },
   "dependencies": {
     "autoprefixer": "^6.1.0",
-    "cssnano": "^3.3.2",
+    "cssnano": "^3.7",
     "grunt": "^0",
     "grunt-cdnify": "^1.0.2",
     "grunt-cli": "^1.2.0",
     "grunt-concurrent": "^2.1.0",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-less": "^1.2.0",
     "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
     "grunt-jekyll": "^0.4.2",
     "grunt-postcss": "^0.8.0",
     "habitat": "^3.1.2",
@@ -43,8 +49,5 @@
     "time-grunt": "^1.1.0",
     "uglify-save-license": "^0.4.1"
   },
-  "devDependencies": {
-    "grunt-contrib-connect": "^1.0.1",
-    "grunt-contrib-watch": "^1.0.0"
-  }
+  "devDependencies": {}
 }

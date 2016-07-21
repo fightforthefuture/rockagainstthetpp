@@ -80,6 +80,10 @@
     }
   }
 
+  h4 {
+    font-size: 2.4rem;
+  }
+
   p {
     line-height: 1.375;
     margin-bottom: 1.5rem;
@@ -107,6 +111,16 @@
   .share-this-button-links {
     margin-bottom: 1.5rem;
   }
+
+  .disclaimer {
+    color: @black;
+
+    a {
+      &:link, &:visited, &:hover, &:active {
+        color: @black;
+      }
+    }
+  }
 }
 
 .close-modal {
@@ -120,4 +134,31 @@
   right: 0.5rem;
   text-decoration: none;
   top: 0;
+
+  &:hover {
+    background-color: @white;
+    opacity: 1;
+  }
+}
+
+#phone-number-modal {
+  display: none;
+
+  &.visible {
+    display: block;
+  }
+
+  hr {
+    margin: 4rem auto;
+    width: 75%;
+  }
+}
+
+.phone {
+  font-size: 2rem;
+  padding: 1.7rem 0.8rem;
+
+  &::placeholder {
+    text-transform: uppercase;
+  }
 }
