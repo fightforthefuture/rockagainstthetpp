@@ -8,17 +8,31 @@
     artistsToggle = doc.getElementById('see-full-list'),
     endorsements = doc.getElementById('endorsements'),
     endorsementToggle = doc.getElementById('toggle-list'),
-    sideShareButtons = doc.getElementById('fixed-side-social-container');
+    sideShareButtons = doc.getElementById('fixed-side-social-container'),
+    navigationMenu = doc.querySelector('nav'),
+    menuExpand = doc.getElementById('menu-expand');
 
-  function toggleSideShareButtons(e) {
+  win.addEventListener('scroll', function () {
     if (win.scrollY > doc.querySelector('header > p').offsetTop) {
       sideShareButtons.classList.add('fade-in');
     } else {
       sideShareButtons.classList.remove('fade-in')
     }
-  }
+  });
 
-  win.addEventListener('scroll', toggleSideShareButtons);
+  win.addEventListener('resize', function () {
+    if (win.innerWidth >= 640) {
+      navigationMenu.classList.remove('menu-open');
+    }
+  });
+
+  menuExpand.addEventListener('click', function () {
+    navigationMenu.classList.toggle('menu-open');
+  });
+
+  doc.getElementById('nav-items').addEventListener('click', function () {
+    navigationMenu.classList.remove('menu-open');
+  });
 
   artistsToggle.addEventListener('click', function (e) {
     e.preventDefault();

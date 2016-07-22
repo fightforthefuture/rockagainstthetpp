@@ -42,10 +42,13 @@
 </header>
 
 <nav>
-  <ul>
+  <button class="menu-expand" id="menu-expand">
+    <span class="menu-text">Menu</span>
+  </button>
+  <ul id="nav-items">
     {% if page.layout == 'event' %}
-  <li><a href="/">Home</a></li>
-  {% endif %}
+    <li><a href="/">Home</a></li>
+    {% endif %}
     <li><a href="/#schedule">Schedule</a></li>
     <li><a href="/#lineup">Line up</a></li>
     <li><a href="/#learn-more">Learn more</a></li>
