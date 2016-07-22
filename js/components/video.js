@@ -22,14 +22,15 @@
   shareItems.appendChild(facebookShareLink);
   shareItems.appendChild(twitterShareLink);
 
+  video.setAttribute('id', 'yt-video');
+  vidContainer.appendChild(video);
+  vidContainer.classList.add('hidden', 'video');
+
   function playOnLoad(e) {
     e.target.playVideo();
   }
 
   function launchModalPlayVideo() {
-    video.setAttribute('id', 'yt-video');
-    vidContainer.appendChild(video);
-    vidContainer.classList.add('hidden', 'video');
     body.appendChild(vidContainer);
 
     win.videoObject = new YT.Player('yt-video', {

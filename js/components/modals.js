@@ -3,6 +3,13 @@
 
   win.modals = win.modals || {};
 
+  function detectEscKey(e) {
+    if (e.code === 'Escape' || e.which === 27) {
+      dismissModal();
+      win.removeEventListener('keyup', detectEscKey)
+    }
+  }
+
   function dismissModal() {
     /**
      * Removes modal from DOM
@@ -82,6 +89,8 @@
     win.setTimeout(function () {
       overlay.classList.add('visible');
     }, 50);
+
+    win.addEventListener('keyup', detectEscKey);
   }
 
   win.modals.dismissModal = dismissModal;
