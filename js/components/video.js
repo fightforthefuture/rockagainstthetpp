@@ -10,7 +10,7 @@
     facebookShareLink = doc.createElement('a');
 
   twitterShareLink.classList.add('share-button', 'twitter');
-  twitterShareLink.setAttribute('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('') + 'url=' + youtubeLink);
+  twitterShareLink.setAttribute('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('The #TPP isn’t about trade: it’s about taking away our rights to life and liberty—it’s a trap! Watch:') + '&amp;url=' + youtubeLink);
   twitterShareLink.setAttribute('target', '_blank');
   twitterShareLink.textContent = 'Tweet';
 
