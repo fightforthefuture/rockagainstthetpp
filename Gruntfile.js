@@ -26,6 +26,7 @@ module.exports = function (grunt) {
         'js/components/modals.js',
         'js/components/petition.js',
         'js/components/sticky-nav.js',
+        'js/components/video.js',
         'js/main.js'
       ]
     },

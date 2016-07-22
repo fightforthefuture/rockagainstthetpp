@@ -10,38 +10,7 @@
     endorsementToggle = doc.getElementById('toggle-list'),
     sideShareButtons = doc.getElementById('fixed-side-social-container'),
     navigationMenu = doc.querySelector('nav'),
-    menuExpand = doc.getElementById('menu-expand'),
-    video = doc.createElement('iframe'),
-    vidContainer = doc.createElement('div');
-
-
-  doc.getElementById('video-play-button').addEventListener('click', function () {
-
-    var
-      shareItems = doc.createElement('p'),
-      twitterShareLink = doc.createElement('a'),
-      facebookShareLink = doc.createElement('a');
-
-    twitterShareLink.classList.add('share-button', 'twitter');
-    twitterShareLink.setAttribute('href', doc.getElementById('footer-tweet').getAttribute('href'));
-    twitterShareLink.setAttribute('target', '_blank');
-    twitterShareLink.textContent = 'Tweet';
-
-    facebookShareLink.classList.add('share-button', 'facebook');
-    facebookShareLink.setAttribute('href', doc.getElementById('footer-share').getAttribute('href'));
-    facebookShareLink.setAttribute('target', '_blank');
-    facebookShareLink.textContent = 'Share';
-
-    shareItems.appendChild(facebookShareLink);
-    shareItems.appendChild(twitterShareLink);
-
-    win.modals.generateModal({
-      contents: [vidContainer, shareItems],
-      noFrame: true
-    });
-
-    vidContainer.classList.remove('hidden');
-  });
+    menuExpand = doc.getElementById('menu-expand');
 
   win.addEventListener('scroll', function () {
     if (win.scrollY > doc.querySelector('header > p').offsetTop) {
@@ -129,20 +98,5 @@
       window.open(url, 'idl_connect', properties);
     });
   }
-
-  function preloadVideoFrame() {
-    video.setAttribute('src', 'https://www.youtube-nocookie.com/embed/jKGRYypHogo?rel=0');
-    video.setAttribute('width', 640);
-    video.setAttribute('height', 360);
-    video.setAttribute('frameborder', 0);
-    video.setAttribute('allowfullscreen', true);
-
-    vidContainer.classList.add('video', 'hidden');
-    vidContainer.appendChild(video);
-
-    doc.querySelector('body').appendChild(vidContainer)
-  }
-
-  win.addEventListener('DOMContentLoaded', preloadVideoFrame)
 
 })(document, window);
