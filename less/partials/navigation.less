@@ -15,13 +15,17 @@ nav {
     font-size: 1.4rem;
   }
 
+  @media screen and (min-width: @large-phone) {
+    background-color: transparent;
+  }
+
   ul, li {
     margin: 0;
     padding: 0;
   }
 
   ul {
-    background: fade(@black, 90%);
+    background-color: fade(@black, 90%);
     overflow: auto;
     padding: 5rem 0;
     position: fixed;
@@ -35,12 +39,29 @@ nav {
 
     @media screen and (min-width: @large-phone) {
       align-items: center;
+      background-color: transparent;
       display: flex;
       height: auto;
       justify-content: center;
       padding: 0;
       position: static;
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
+      transition: background-color 300ms;
+    }
+
+    &.scrolled {
+      @media screen and (min-width: @large-phone) {
+        background-color: fade(@black, 90%);
+        position: fixed;
+        top: -6.5rem;
+        bottom: auto;
+        transition: transform 300ms;
+      }
+    }
+    &.stuck {
+      @media screen and (min-width: @large-phone) {
+        transform: translate3d(0, 100%, 0);
+      }
     }
   }
 
@@ -50,7 +71,11 @@ nav {
 
   li {
     @media screen and (min-width: @large-phone) {
+      padding: 0 3rem;
       position: relative;
+    }
+
+    @media screen and (min-width: @small-tablet) {
       padding: 0 4rem;
     }
 
@@ -69,6 +94,7 @@ nav {
         content: none;
       }
     }
+
     &:last-child {
       @media screen and (min-width: @large-phone) {
         padding: 1.1rem 0 1.3rem;
