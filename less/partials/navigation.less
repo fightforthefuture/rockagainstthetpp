@@ -1,7 +1,6 @@
-body > nav {
-  font-family: @heading-font;
-  font-size: 1.2rem;
-  font-weight: 100;
+nav {
+  background-color: @black;
+  min-height: 5rem;
   position: absolute;
   top: 0;
   right: 0;
@@ -9,8 +8,8 @@ body > nav {
   text-align: center;
   z-index: 10;
 
-  @media screen and (min-width: @small-phone) {
-    font-size: 1.4rem;
+  @media screen and (min-width: @large-phone) {
+    background-color: transparent;
   }
 
   ul, li {
@@ -19,22 +18,62 @@ body > nav {
   }
 
   ul {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
+    background-color: fade(@black, 90%);
+    font-family: @heading-font;
+    font-size: 1.8rem;
+    font-weight: 100;
+    overflow: auto;
+    padding: 5rem 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-100%);
+    transition: transform 400ms;
+    z-index: 2;
 
     @media screen and (min-width: @large-phone) {
+      align-items: center;
+      background-color: transparent;
+      display: flex;
+      font-size: 1.4rem;
+      height: auto;
       justify-content: center;
+      padding: 0;
+      position: static;
+      transform: translate3d(0, 0, 0);
+      transition: background-color 300ms;
+    }
+
+    &.scrolled {
+      @media screen and (min-width: @large-phone) {
+        background-color: fade(@black, 90%);
+        position: fixed;
+        top: -6.5rem;
+        bottom: auto;
+        transition: transform 300ms;
+      }
+    }
+    &.stuck {
+      @media screen and (min-width: @large-phone) {
+        transform: translate3d(0, 100%, 0);
+      }
     }
   }
 
-  li {
-    position: relative;
-    width: 25%;
+  &.menu-open ul {
+    transform: translateY(0);
+  }
 
+  li {
     @media screen and (min-width: @large-phone) {
+      padding: 0 3rem;
+      position: relative;
+    }
+
+    @media screen and (min-width: @small-tablet) {
       padding: 0 4rem;
-      width: auto;
     }
 
     &::before {
@@ -52,9 +91,10 @@ body > nav {
         content: none;
       }
     }
+
     &:last-child {
       @media screen and (min-width: @large-phone) {
-        padding: 0;
+        padding: 1.1rem 0 1.3rem;
       }
 
       &::before {
@@ -75,7 +115,9 @@ body > nav {
     transition: transform 200ms;
 
     &:hover, &:active, &:focus {
-      transform: scale(1.05);
+      @media screen and (min-width: @large-phone) {
+        transform: scale(1.05);
+      }
     }
   }
   .donate {
@@ -92,6 +134,72 @@ body > nav {
       @media screen and (min-width: @large-phone) {
         text-decoration: none;
       }
+    }
+  }
+}
+
+.menu-expand {
+  background-color: lighten(@black, 18.75%);
+  border: none;
+  color: @white;
+  cursor: pointer;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  text-decoration: none;
+  width: 5rem;
+  z-index: 5;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media screen and (min-width: @large-phone) {
+    display: none;
+  }
+}
+
+.menu-text {
+  .ir();
+  background-color: @white;
+  display: inline-block;
+  height: 2px;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  transition: background-color 300ms;
+  width: 1.8rem;
+
+  &::before, &::after {
+    background-color: @white;
+    content: '';
+    height: 100%;
+    position: absolute;
+    right: 0;
+    transition: transform 300ms, top 300ms, background-color 0s;
+    width: 100%;
+  }
+
+  &::before {
+    top: -0.5rem;
+  }
+
+  &::after {
+    top: 0.5rem;
+  }
+
+  .menu-open & {
+    background-color: fade(@white, 0);
+
+    &::before {
+      top: 0;
+      transform: rotate(135deg);
+    }
+
+    &::after {
+      top: 0;
+      transform: rotate(225deg);
     }
   }
 }
