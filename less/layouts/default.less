@@ -134,10 +134,34 @@ p {
 
 .box {
   background-color: @transparent-black;
-  border: 0.5rem solid rgba(111, 111, 111, 0.68);
+  border: 0.1rem solid rgba(111, 111, 111, 0.68);
   padding: 2rem;
 
   @media screen and (max-width: @small-tablet) {
     margin: 2rem;
   }
 }
+
+.play-button {
+  font-family:@strong-font;
+  text-shadow: 1px 1px 5px @black;
+  background-color: @grey-200;
+  border: 1px solid @black;
+  border-radius: .5rem;
+  height: 5.1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+
+
+  &:hover, &:active {
+    background-color: @grey-100;
+  }
+}
+.play-circle {
+  width: 3rem;
+  float: left;
+  margin-right: 1rem;
+}
+
+
