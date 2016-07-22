@@ -41,7 +41,7 @@
 
   {% endif %}
 
-{% comment %}<button class="play-button animated pulse"><p><img class="play-circle" src="/images/play-button.png"> WATCH VIDEO</p></button>{% endcomment %}
+{% comment %}<button class="play-button {% unless page.layout == 'event' %}animated pulse{% endunless%}"><p><img class="play-circle" src="/images/play-button.png"> WATCH VIDEO</p></button>{% endcomment %}
 
 </header>
 
