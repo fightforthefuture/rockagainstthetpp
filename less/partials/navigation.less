@@ -1,8 +1,5 @@
 nav {
   background-color: @black;
-  font-family: @heading-font;
-  font-size: 1.2rem;
-  font-weight: 100;
   min-height: 5rem;
   position: absolute;
   top: 0;
@@ -10,10 +7,6 @@ nav {
   left: 0;
   text-align: center;
   z-index: 10;
-
-  @media screen and (min-width: @small-phone) {
-    font-size: 1.4rem;
-  }
 
   @media screen and (min-width: @large-phone) {
     background-color: transparent;
@@ -26,6 +19,9 @@ nav {
 
   ul {
     background-color: fade(@black, 90%);
+    font-family: @heading-font;
+    font-size: 1.8rem;
+    font-weight: 100;
     overflow: auto;
     padding: 5rem 0;
     position: fixed;
@@ -41,6 +37,7 @@ nav {
       align-items: center;
       background-color: transparent;
       display: flex;
+      font-size: 1.4rem;
       height: auto;
       justify-content: center;
       padding: 0;
