@@ -17,12 +17,30 @@
 
   doc.getElementById('video-play-button').addEventListener('click', function () {
 
+    var
+      shareItems = doc.createElement('p'),
+      twitterShareLink = doc.createElement('a'),
+      facebookShareLink = doc.createElement('a');
+
+    twitterShareLink.classList.add('share-button', 'twitter');
+    twitterShareLink.setAttribute('href', doc.getElementById('footer-tweet').getAttribute('href'));
+    twitterShareLink.setAttribute('target', '_blank');
+    twitterShareLink.textContent = 'Tweet';
+
+    facebookShareLink.classList.add('share-button', 'facebook');
+    facebookShareLink.setAttribute('href', doc.getElementById('footer-share').getAttribute('href'));
+    facebookShareLink.setAttribute('target', '_blank');
+    facebookShareLink.textContent = 'Share';
+
+    shareItems.appendChild(facebookShareLink);
+    shareItems.appendChild(twitterShareLink);
+
     win.modals.generateModal({
-      contents: vidContainer,
+      contents: [vidContainer, shareItems],
       noFrame: true
     });
 
-    vidContainer.classList.remove('hidden')
+    vidContainer.classList.remove('hidden');
   });
 
   win.addEventListener('scroll', function () {
