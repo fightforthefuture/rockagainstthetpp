@@ -35,6 +35,8 @@
      * @param {boolean} options.disableOverlayClick - if false (or absent),
      * function adds event listener to allow dismissal of modal by clicking on
      * overlay.
+     * @param {boolean} options.noFrame - if true, adds `no-frame` class to
+     * modal content element.
      * */
 
     var
@@ -55,6 +57,10 @@
 
     overlay.classList.add('overlay');
     modal.classList.add('modal-content', 'visible');
+
+    if (options.noFrame) {
+      modal.classList.add('no-frame');
+    }
 
     if (!options.disableOverlayClick) {
       closeModal = doc.createElement('button');

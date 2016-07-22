@@ -10,7 +10,20 @@
     endorsementToggle = doc.getElementById('toggle-list'),
     sideShareButtons = doc.getElementById('fixed-side-social-container'),
     navigationMenu = doc.querySelector('nav'),
-    menuExpand = doc.getElementById('menu-expand');
+    menuExpand = doc.getElementById('menu-expand'),
+    video = doc.createElement('iframe'),
+    vidContainer = doc.createElement('div');
+
+
+  doc.getElementById('video-play-button').addEventListener('click', function () {
+
+    win.modals.generateModal({
+      contents: vidContainer,
+      noFrame: true
+    });
+
+    vidContainer.classList.remove('hidden')
+  });
 
   win.addEventListener('scroll', function () {
     if (win.scrollY > doc.querySelector('header > p').offsetTop) {
@@ -98,5 +111,20 @@
       window.open(url, 'idl_connect', properties);
     });
   }
+
+  function preloadVideoFrame() {
+    video.setAttribute('src', 'https://www.youtube-nocookie.com/embed/jKGRYypHogo?rel=0');
+    video.setAttribute('width', 640);
+    video.setAttribute('height', 360);
+    video.setAttribute('frameborder', 0);
+    video.setAttribute('allowfullscreen', true);
+
+    vidContainer.classList.add('video', 'hidden');
+    vidContainer.appendChild(video);
+
+    doc.querySelector('body').appendChild(vidContainer)
+  }
+
+  win.addEventListener('DOMContentLoaded', preloadVideoFrame)
 
 })(document, window);
