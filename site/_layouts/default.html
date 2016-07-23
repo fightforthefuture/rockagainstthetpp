@@ -9,7 +9,7 @@
 <header{% unless page.page == 'home' %} class="subpage"{% endunless %}>
   {% if page.layout == 'event' %}
   {% assign city=page.location | split: ',' %}
-  <h1><a href="/">{{  city[0] }}</a></h1>
+  <h1><a href="{{ share.url }}">{{  city[0] }}</a></h1>
   {% else %}
   <h1>Rock Against <span>the TPP</span></h1>
    {% endif %}
@@ -22,10 +22,10 @@
       {% include form.html action=page.action_network_form %}
       <p class="disclaimer no-pad">
         You are signing <a href="https://actionnetwork.org/petitions/rock-against-the-tpp-tour-kick-off">this petition</a> telling Congress to stop the TPP.
-        <a href="https://www.fightforthefuture.org">Fight for the Future</a> will send you campaign updates.
+        <a href="https://www.fightforthefuture.org" target="_blank">Fight for the Future</a> and <a href="http://www.citizenstrade.org/ctc/" target="_blank">Citizens Trade Campaign</a> will send you campaign updates. You can unsubscribe at any time.
         {{ page.extra_disclosure | default: '' | markdownify | replace: '<p>', '' | replace: '</p>', '' }}
         Ticket is required for entry but does not guarantee it. First come first serve. We suggest arriving early in case the event sells out, and to join us for a rally to stop the TPP!
-        <a href="https://www.fightforthefuture.org/privacy">Privacy Policy</a>
+        (<a href="https://www.fightforthefuture.org/privacy">Privacy Policy</a>)
       </p>
     </section>
   {% else %}
@@ -33,9 +33,9 @@
       {% include form.html action="https://actionnetwork.org/petitions/take-action-now-to-stop-the-tpp/signatures" %}
       <p class="disclaimer no-pad">
         You are signing <a href="https://actionnetwork.org/petitions/rock-against-the-tpp-tour-kick-off">this petition</a> telling Congress to stop the TPP.
-        <a href="https://www.fightforthefuture.org">Fight for the Future</a> will send you campaign updates.
+        <a href="https://www.fightforthefuture.org" target="_blank">Fight for the Future</a> and <a href="http://www.citizenstrade.org/ctc/" target="_blank">Citizens Trade Campaign</a> will send you campaign updates. You can unsubscribe at any time.
 
-        <a href="https://www.fightforthefuture.org/privacy">Privacy Policy</a>
+        (<a href="https://www.fightforthefuture.org/privacy">Privacy Policy</a>)
       </p>
     </section>
 
