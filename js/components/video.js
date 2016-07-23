@@ -37,7 +37,7 @@
       height: '360',
       width: '640',
       videoId: 'jKGRYypHogo',
-      rel: 0,
+      playerVars: {rel: 0},
       showinfo: 0,
       events: {
         'onReady': playOnLoad
