@@ -3,6 +3,13 @@
 
   win.modals = win.modals || {};
 
+  function detectEscKey(e) {
+    if (e.code === 'Escape' || e.which === 27) {
+      dismissModal();
+      win.removeEventListener('keyup', detectEscKey)
+    }
+  }
+
   function dismissModal() {
     /**
      * Removes modal from DOM
@@ -35,6 +42,8 @@
      * @param {boolean} options.disableOverlayClick - if false (or absent),
      * function adds event listener to allow dismissal of modal by clicking on
      * overlay.
+     * @param {boolean} options.noFrame - if true, adds `no-frame` class to
+     * modal content element.
      * */
 
     var
@@ -56,6 +65,10 @@
     overlay.classList.add('overlay');
     modal.classList.add('modal-content', 'visible');
 
+    if (options.noFrame) {
+      modal.classList.add('no-frame');
+    }
+
     if (!options.disableOverlayClick) {
       closeModal = doc.createElement('button');
       closeModal.classList.add('close-modal');
@@ -76,6 +89,8 @@
     win.setTimeout(function () {
       overlay.classList.add('visible');
     }, 50);
+
+    win.addEventListener('keyup', detectEscKey);
   }
 
   win.modals.dismissModal = dismissModal;

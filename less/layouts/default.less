@@ -143,25 +143,31 @@ p {
 }
 
 .play-button {
-  font-family:@strong-font;
-  text-shadow: 1px 1px 5px @black;
+  .header-p();
   background-color: @grey-200;
   border: 1px solid @black;
-  border-radius: .5rem;
-  height: 5.1rem;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  border-radius: 0.5rem;
   cursor: pointer;
+  font-family: @strong-font;
+  height: 5.1rem;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+  text-shadow: 1px 1px 0.5rem @black;
+  text-transform: uppercase;
 
+  &::before {
+    background-image: url('/images/play-button.png');
+    background-size: contain;
+    content: '';
+    float: left;
+    height: 3rem;
+    margin-right: 1rem;
+    width: 3rem;
+  }
 
   &:hover, &:active {
     background-color: @grey-100;
   }
-}
-.play-circle {
-  width: 3rem;
-  float: left;
-  margin-right: 1rem;
 }
 
 

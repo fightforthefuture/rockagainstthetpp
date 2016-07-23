@@ -37,7 +37,8 @@
   margin: 0 auto;
   max-height: 80vh;
   max-width: 60rem;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding: 2rem;
   position: fixed;
   top: 3rem;
@@ -47,7 +48,6 @@
   transition: opacity 400ms ease-in-out;
   width: 90%;
   z-index: 9002;
-
 
   @media screen and (min-width: @large-phone) {
     margin: 5rem auto 0;
@@ -120,6 +120,24 @@
         color: @black;
       }
     }
+  }
+
+  &.no-frame {
+    background-color: @black;
+    padding: 0;
+
+    .close-modal {
+      color: @white;
+      z-index: 100;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .share-button {
+    color: @white;
   }
 }
 
