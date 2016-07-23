@@ -231,6 +231,60 @@
   }
 }
 
+.announcement {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: ~'calc(4vw + 3px)';
+  margin: 0 auto;
+
+  @media screen and (min-width: @large-phone) {
+    font-size: 3rem;
+  }
+
+  dd, dt {
+    text-align: right;
+  }
+
+  dt {
+    color: @white;
+    width: 55%;
+  }
+
+  dd {
+    width: 45%;
+    margin-top: -.5rem;
+
+  }
+
+  a {
+    color: @white;
+  }
+
+  .button {
+    background-color: @grey-200;
+    border: 1px solid @black;
+    border-radius:.5rem;
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 0.3rem 0.6rem;
+
+    &:hover {
+    background-color: @grey-100;
+    }
+
+    @media screen and (min-width: @small-phone) {
+      font-size: 1.4rem;
+      padding: 0.7rem 1.2rem;
+       margin-top: 0;
+    }
+
+    @media screen and (min-width: @large-phone) {
+      font-size: 1.6rem;
+      padding: 1rem 2rem;
+    }
+  }
+}
+
 .organized-by {
   align-items: center;
   color: transparent;

@@ -138,7 +138,20 @@ p {
   padding: 2rem;
 
   @media screen and (max-width: @small-tablet) {
-    margin: 2rem;
+    margin: 1rem;
+
+  }
+}
+
+.announcement-box {
+  background-color: @transparent-black;
+  border: 0.1rem solid rgba(111, 111, 111, 0.68);
+  padding: 2rem;
+  width: 70%;
+  transition: background-color 250ms;
+
+  @media screen and (max-width: @small-tablet) {
+    width:90%;
   }
 }
 
