@@ -7,6 +7,10 @@
 {% capture share_url %}https://{{ site.url }}{{ page.url }}{% endcapture %}
 
 <header{% unless page.page == 'home' %} class="subpage"{% endunless %}>
+      <section class="share-this-mobile">
+      <a class="share-this-mobile-fb facebook" href="https://facebook.com/sharer.php?u={{ page.share_url | default: share_url | cgi_escape }}">Share this</a>
+       <a class="share-this-mobile-tw twitter" href="https://twitter.com/intent/tweet?text={{ page.twittertext | default: site.twittertext | cgi_escape }}" target="_blank">Tweet this</a>
+      </section>
   {% if page.layout == 'event' %}
   {% assign city=page.location | split: ',' %}
   <h1><a href="{{ share.url }}">{{  city[0] }}</a></h1>
