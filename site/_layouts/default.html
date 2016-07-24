@@ -13,11 +13,11 @@
       </section>
   {% if page.layout == 'event' %}
   {% assign city=page.location | split: ',' %}
-  <h1><a href="{{ share.url }}">{{  city[0] }}</a></h1>
+  <h1><a href="{{ share.url }}">Rock Against the TPP</a></h1>
+  <p class="subheadline">{{  city[0] }} ・ {{ page.dates }} ・ {{ page.time }}</p>
   {% else %}
   <h1>Rock Against <span>the TPP</span></h1>
    {% endif %}
-
 
   {{ page.header_content | default: '' | markdownify }}
 
