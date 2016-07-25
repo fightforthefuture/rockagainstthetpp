@@ -42,9 +42,21 @@ defaults:
     values:
       layout: 'default'
   - scope:
-      path: '_posts'
+      path: '_shows'
     values:
       layout: 'event'
+  - scope:
+      path: '_media'
+    values:
+      layout: 'media'
+
+collections:
+  shows:
+    output: true
+    permalink: /:path/
+  media:
+    output: true
+    permalink: /:path/media/
 
 #############
 # Compiling #
@@ -58,5 +70,3 @@ markdown: kramdown
 kramdown:
   input: GFM
   smart_quotes: ["apos", "apos", "quot", "quot"]
-
-gems: []

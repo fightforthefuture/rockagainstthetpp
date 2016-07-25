@@ -3,21 +3,28 @@
 <head>
   {% include meta.html %}
 </head>
-<body class="{{ page.layout }}">
+
+<body class="{{ page.collection }}">
+
 {% capture share_url %}https://{{ site.url }}{{ page.url }}{% endcapture %}
 
-<header{% unless page.page == 'home' %} class="subpage"{% endunless %}>
-      <section class="share-this-mobile">
-      <a class="share-this-mobile-fb facebook" href="https://facebook.com/sharer.php?u={{ page.share_url | default: share_url | cgi_escape }}">Share this</a>
-       <a class="share-this-mobile-tw twitter" href="https://twitter.com/intent/tweet?text={{ page.twittertext | default: site.twittertext | cgi_escape }}" target="_blank">Tweet this</a>
-      </section>
-  {% if page.layout == 'event' %}
-  {% assign city=page.location | split: ',' %}
-  <h1><a href="{{ share.url }}">Rock Against the TPP</a></h1>
-  <p class="subheadline">{{  city[0] }} ・ {{ page.dates }} ・ {{ page.time }}</p>
+<header{% unless page.page == 'home' %} class="{{ page.collection }}"{% endunless %}>
+  <section class="share-this-mobile">
+    <a class="share-this-mobile-fb facebook" href="https://facebook.com/sharer.php?u={{ page.share_url | default: share_url | cgi_escape }}">Share this</a>
+    <a class="share-this-mobile-tw twitter" href="https://twitter.com/intent/tweet?text={{ page.twittertext | default: site.twittertext | cgi_escape }}" target="_blank">Tweet this</a>
+  </section>
+  {% if page.location %}
+  {% assign city=page.location | split: ', ' %}
+  <h1>
+    <a href="{{ share.url }}">Rock Against the TPP</a>
+  </h1>
+
+  <p class="subheadline">
+    {{  city[0] }}{% if page.layout == 'event' %} ・ {{ page.dates }} ・ {{ page.time }}{% endif %}
+  </p>
   {% else %}
-  <h1>Rock Against <span>the TPP</span></h1>
-   {% endif %}
+  <h1>Rock Against the TPP</h1>
+  {% endif %}
 
   {{ page.header_content | default: '' | markdownify }}
 
@@ -32,7 +39,7 @@
         (<a href="https://www.fightforthefuture.org/privacy">Privacy Policy</a>)
       </p>
     </section>
-  {% else %}
+  {% elsif page.page == 'home' %}
     <section>
       {% include form.html action="https://actionnetwork.org/petitions/take-action-now-to-stop-the-tpp/signatures" %}
       <p class="disclaimer no-pad">
@@ -42,13 +49,13 @@
         (<a href="https://www.fightforthefuture.org/privacy">Privacy Policy</a>)
       </p>
     </section>
-
   {% endif %}
 
+{% unless page.collection == 'media' %}
 <button id="video-play-button" class="play-button {% unless page.layout == 'event' %}animated pulse{% endunless%}">
   Watch video
 </button>
-
+{% endunless %}
 </header>
 
 <nav>
@@ -56,7 +63,7 @@
     <span class="menu-text">Menu</span>
   </button>
   <ul id="nav-items">
-    {% if page.layout == 'event' %}
+    {% if page.page != 'home' %}
     <li><a href="/">Home</a></li>
     {% endif %}
     <li><a href="/#schedule">Schedule</a></li>
@@ -132,7 +139,6 @@
   <a id="tweet-button" class="social-icon twitter-icon twitter" title="Tweet this" href="https://twitter.com/intent/tweet?text={{ page.twittertext | default: site.twittertext | cgi_escape }}" target="_blank">Tweet</a>
   <a id="share-button" class="social-icon facebook-icon facebook" title="Share this" href="https://facebook.com/sharer.php?u={{ page.share_url | default: share_url | cgi_escape }}" target="_blank">Share</a>
 </div>
-
 
 {% include scripts.html %}
 
