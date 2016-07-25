@@ -53,10 +53,10 @@ defaults:
 collections:
   shows:
     output: true
-    permalink: :path/
+    permalink: /:path/
   media:
     output: true
-    permalink: :path/media/
+    permalink: /:path/media/
 
 #############
 # Compiling #
