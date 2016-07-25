@@ -46,9 +46,9 @@ defaults:
     values:
       layout: 'event'
   - scope:
-      path: '_press'
+      path: '_media'
     values:
-      layout: 'press'
+      layout: 'media'
 
 collections:
   shows:
