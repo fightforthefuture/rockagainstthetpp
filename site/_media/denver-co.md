@@ -4,14 +4,15 @@ location: Denver, CO
 
 ## PHOTOS & VIDEO: Massive crowd at Rock Against the TPP kick-off event in Denver
 
-A huge crowd of music fans and activists from across the political spectrum came
-together last night in Denver for the kick-of of the [**Rock Against the
-TPP**](https://www.rocokagainstthetpp.org/){: target="_blank"} tour to sound the
-alarm about the toxic Trans-Pacific Partnership deal.
+A huge crowd of music fans and activists from across the political
+spectrum came together last night in Denver for the kick-of of the
+[**Rock Against the TPP**](/){: target="_blank"} tour to sound the alarm
+about the toxic Trans-Pacific Partnership deal.
 
-Check back here for more photos soon. These are available for use by press,
-credit “Courtesy: Fight for the Future.” There is a gallery of larger versions
-availble on [imgur](https://imgur.com/gallery/t2DeH){: target="_blank"}.
+Check back here for more photos soon. These are available for use by
+press, credit “Courtesy: Fight for the Future.” There is a gallery of
+larger versions availble on
+[imgur](https://imgur.com/gallery/t2DeH){: target="_blank"}.
 
 ![](https://67.media.tumblr.com/331f618065f8dcf0a363df57a806540f/tumblr_inline_oatrlmrNMb1ri3xd7_540.jpg)
 
@@ -27,8 +28,8 @@ availble on [imgur](https://imgur.com/gallery/t2DeH){: target="_blank"}.
 
 ![](https://65.media.tumblr.com/e4eb70919d269ae05a34082134584ef3/tumblr_inline_oatt5b3MvY1ri3xd7_540.jpg)
 
-We held a rally outside the venue on an awesome truck with a stage that the
-Teamsters provided.
+We held a rally outside the venue on an awesome truck with a stage that
+the Teamsters provided.
 
 ![](https://67.media.tumblr.com/27906455d962a29159f95664ee4b8d74/tumblr_inline_oattb2skxC1ri3xd7_540.jpg)
 
@@ -40,8 +41,8 @@ Teamsters provided.
 
 {% embed_video video_id='kkREpAAJY80' video_provider='youtube' %}
 
-We flew a 25 foot blimp over the venue ahead of the rally to make our message
-clear.
+We flew a 25 foot blimp over the venue ahead of the rally to make our
+message clear.
 
 ![](https://67.media.tumblr.com/f40bc5aa1473739eb234cbdaf936e6cd/tumblr_inline_oatr6kDhpq1ri3xd7_540.jpg)
 
@@ -52,8 +53,9 @@ clear.
 
 ![](https://66.media.tumblr.com/ed1bc5c9514612e890b08f0757659d1b/tumblr_inline_oattqfFFzL1ri3xd7_540.jpg)
 
-Check back soon for more photos and video. These are available for use by press,
-credit “Courtesy: Fight for the Future.” Stay tuned for additional [**Rock
-Against the TPP**](/){: target="_blank"} tour dates: [July 30 in San
-Diego](/san-diego-ca/), [August 19 in Seattle](/seattle-wa/), and [August 20 in
-Portland](/portland-or/). More TBA.
+Check back soon for more photos and video. These are available for use
+by press, credit “Courtesy: Fight for the Future.” Stay tuned for
+additional [**Rock Against the TPP**](/){: target="_blank"} tour dates:
+[July 30 in San Diego](/san-diego-ca/), [August 19 in
+Seattle](/seattle-wa/), and [August 20 in Portland](/portland-or/). More
+TBA.
