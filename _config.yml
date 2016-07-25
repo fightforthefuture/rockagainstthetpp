@@ -45,6 +45,10 @@ defaults:
       path: '_shows'
     values:
       layout: 'event'
+  - scope:
+      path: '_press'
+    values:
+      layout: 'press'
 
 collections:
   shows:

@@ -2,7 +2,7 @@
   "use strict";
 
   var
-    actionNetworkForm = doc.getElementById('action-network-form');
+    actionNetworkForm = doc.getElementById('action-network-form') || doc.createElement('div');
 
   function preSubmit() {
     /**

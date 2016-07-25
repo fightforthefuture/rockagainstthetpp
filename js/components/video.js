@@ -53,6 +53,6 @@
     vidContainer.classList.remove('hidden');
   }
 
-  doc.getElementById('video-play-button').addEventListener('click', launchModalPlayVideo);
+  (doc.getElementById('video-play-button') || doc.createElement('button')).addEventListener('click', launchModalPlayVideo);
 
 }(document, window));

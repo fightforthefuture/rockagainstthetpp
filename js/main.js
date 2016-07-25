@@ -5,9 +5,9 @@
     i,
     form = doc.getElementById('petition-form'),
     concealedArtists = doc.getElementsByClassName('concealed'),
-    artistsToggle = doc.getElementById('see-full-list'),
+    artistsToggle = doc.getElementById('see-full-list') || doc.createElement('button'),
     endorsements = doc.getElementById('endorsements'),
-    endorsementToggle = doc.getElementById('toggle-list'),
+    endorsementToggle = doc.getElementById('toggle-list') || doc.createElement('button'),
     sideShareButtons = doc.getElementById('fixed-side-social-container'),
     navigationMenu = doc.querySelector('nav'),
     menuExpand = doc.getElementById('menu-expand');
