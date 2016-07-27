@@ -58,14 +58,6 @@ collections:
     output: true
     permalink: /:path/media/
 
-collections:
-  shows:
-    output: true
-    permalink: :path/
-  press:
-    output: true
-    permalink: :path/press/
-
 #############
 # Compiling #
 #############
