@@ -1,0 +1,42 @@
+{% assign city=page.city | split: ', ' %}
+{% assign start_time_minutes = page.start | date: '%M' %}
+{% assign show_time_minutes = page.show | date: '%M' %}
+{% assign end_time_minutes = page.end | date: '%M' %}
+<section class="show-page-header box">
+  <h2 class="highlighted">
+    Events in {{ city[0] }},
+    <time datetime="{{ page.start }}">{{ page.start | date: '%A %B %-d'}}</time>
+  </h2>
+
+  <p>
+    {{ page.location }} {{ page.address }}
+    (<a href="{{ page.map_url }}">Map</a>)
+  </p>
+
+  <p>
+    <strong><time datetime="{{ page.start }}">{{ page.start | date: '%I' | times: 1 }}{% unless start_time_minutes == '00' %}{{ page.start | date: '%M' | prepend: ':' }}{% endunless %}{{ page.start | date: '%p' }}</time>
+      How to Fight the TPP: Teach-In &amp; Training</strong> hosted by
+    Evangeline Lilly
+  </p>
+
+  <p>
+    <strong><time datetime="{{ page.show }}">{{ page.show | date: '%I' | times: 1 }}{% unless show_time_minutes == '00' %}{{ page.show | date: '%M' | prepend: ':' }}{% endunless %}{{ page.show | date: '%p' }}</time>
+      -
+      <time datetime="{{ page.end }}">{{ page.end | date: '%I' | times: 1 }}{% unless end_time_minutes == '00' %}{{ page.end | date: '%M' | prepend: ':' }}{% endunless %}{{ page.end | date: '%p' }}</time>
+      Rock Against the TPP concert</strong> {{ page.concert_teaser }}
+  </p>
+
+  <p>
+    All events are free{% unless page.min_age %}, all ages,{% endunless %} and
+    wheelchair accessible. {% if page.min_age %}{{ page.location }} is
+    {{ page.min_age }}+. All ages protest event to be announced soon.{% endif %}
+    Contact
+    <a href="mailto:team@fightforthefuture.org">team@fightforthefuture.org</a>
+    with any questions.
+  </p>
+
+  <p class="volunteer">
+    Want to volunteer?
+    <a href="{{ page.volunteer_url }}">Click here</a>.
+  </p>
+</section>

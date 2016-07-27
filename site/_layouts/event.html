@@ -2,6 +2,10 @@
 layout: default
 ---
 
+{% if page.show %}
+{% include show-details.html %}
+{% endif %}
+
 {{ content }}
 
 <section>

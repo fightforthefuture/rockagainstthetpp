@@ -13,20 +13,32 @@
     <a class="share-this-mobile-fb facebook" href="https://facebook.com/sharer.php?u={{ page.share_url | default: share_url | cgi_escape }}">Share this</a>
     <a class="share-this-mobile-tw twitter" href="https://twitter.com/intent/tweet?text={{ page.twittertext | default: site.twittertext | cgi_escape }}" target="_blank">Tweet this</a>
   </section>
-  {% if page.location %}
-  {% assign city=page.location | split: ', ' %}
+  {% if page.city %}
+  {% assign city=page.city | split: ', ' %}
   <h1>
     <a href="{{ share.url }}">Rock Against the TPP</a>
   </h1>
 
+{% assign start_time_minutes = page.start | date: '%M' %}
+{% assign show_time_minutes = page.show | date: '%M' %}
+{% assign end_time_minutes = page.end | date: '%M' %}
+
   <p class="subheadline">
-    {{  city[0] }}{% if page.layout == 'event' %} ・ {{ page.dates }} ・ {{ page.time }}{% endif %}
+    {{  city[0] }} ・ {{ page.start | date: '%B %-d' }} ・ {{ page.start | date: '%I' | times: 1 }}{% unless start_time_minutes == '00' %}{{ page.start | date: '%M' | prepend: ':' }}{% endunless %}{{ page.start | date: '%p' }}-{{ page.end | date: '%I' | times: 1 }}{% unless end_time_minutes == '00' %}{{ page.end | date: '%M' | prepend: ':' }}{% endunless %}{{ page.end | date: '%p' }}
   </p>
   {% else %}
   <h1>Rock Against the TPP</h1>
   {% endif %}
 
+  {% if page.collection == 'shows' %}
+  <p>
+    Free concert and rally to protest the Trans-Pacific Partnership at
+    {{ page.location }} featuring {{ page.header_content }} Sign the petition
+    &amp; RSVP to get your FREE ticket.
+  </p>
+  {% else %}
   {{ page.header_content | default: '' | markdownify }}
+  {% endif %}
 
   {% if page.layout == 'event' %}
     <section>
