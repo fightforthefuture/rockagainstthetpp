@@ -14,6 +14,7 @@
   url: https://twitter.com/EvangelineLilly
 - name: Anti-Flag (acoustic)
   portrait: anti-flag.jpg
+  landscape: anti-flag-landscape.jpg
   bio: Legendary political punk band serving high-energy, fist pumping sing-along anthems. Equal parts circle pit and picket line.
   url: http://www.anti-flag.com/
 - name: Jolie Holland
@@ -25,6 +26,10 @@
   portrait: flobots.jpg
   bio: Denver, Colorado’s revolutionary hip-hop act Flobots bring it on real with their signature anthems dedicated to creating a better world.
   url: http://flobots.com/
+- name: Danbert Nobacon of Chumbawamba
+  portrait: danbert-nobacon.jpg
+  bio: Founding member of Chumbawamba continuing the punk folk tradition as singer, performer and author for most of the last decade in the Pacific North West.
+  url: http://danbertnobacon.com/
 - name: Downtown Boys
   portrait: downtown-boys.jpg
   bio: Bilingual saxophone fueled radical dance party from Providence. “America’s most exciting punk band,” according to Rolling Stone.
