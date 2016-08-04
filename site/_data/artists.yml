@@ -30,6 +30,11 @@
   portrait: flobots.jpg
   bio: Denver, Colorado’s revolutionary hip-hop act Flobots bring it on real with their signature anthems dedicated to creating a better world.
   url: http://flobots.com/
+- name: Jello Biafra
+  portrait: jello-biafra-portrait.jpg
+  landscape: jello-biafra-landscape.jpg
+  bio: Legendary punk singer and spoken word artist, ex-Dead Kennedys, co-founder of Alternative Tentacles.
+  url: http://www.alternativetentacles.com/bandinfo.php?band=jello
 - name: Danbert Nobacon of Chumbawamba
   portrait: danbert-nobacon.jpg
   bio: Founding member of Chumbawamba continuing the punk folk tradition as singer, performer and author for most of the last decade in the Pacific North West.
@@ -70,6 +75,10 @@
   portrait: rose.jpg
   bio: Of critically acclaimed Bay Area electro-indie-rock act Built for the Sea
   url: http://www.liarose.com/
+- name: La Santa Cecelia
+  portrait: la-santa-cecilia.jpg
+  bio: Grammy award winning LA-based band exemplifying a modern-day creative hybrid of Latin culture, rock and world music.
+  url: http://lasantacecilia.com/
 - name: Bonfire Madigan
   portrait: madigan.jpg
   bio: Legendary riot-grrrrl singing cellist with albums out on Kill Rockstars and K Records.

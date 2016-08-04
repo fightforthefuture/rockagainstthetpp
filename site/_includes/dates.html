@@ -33,4 +33,12 @@
     <a href="/portland-or/" class="button">Free tickets!</a>
   </dd>
   {% endunless %}
+  {% assign datetime = '1473465600' | date: '%s' %}
+  {% unless now > datetime %}
+  <dt><time datetime="2016-09-09">September 9</time></dt>
+  <dd>
+    San Francisco, CA<br>
+    <a href="/san-francisco-ca/" class="button">Free tickets!</a>
+  </dd>
+  {% endunless %}
 </dl>

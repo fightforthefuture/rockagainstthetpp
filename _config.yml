@@ -66,6 +66,7 @@ keep_files: ['images', 'css', 'js']
 
 highlighter: rouge
 
+gems: ['jekyll-redirect-from']
 markdown: kramdown
 kramdown:
   input: GFM
