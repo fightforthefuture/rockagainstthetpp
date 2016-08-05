@@ -1,7 +1,7 @@
 (function (doc, win) {
 
   var
-    youtubeLink = encodeURIComponent('https://youtube.com/watch?v=jKGRYypHogo'),
+    youtubeLink = encodeURIComponent('https://youtube.com/watch?v=kA9nIeVvcMw'),
     body = doc.querySelector('body'),
     video = doc.createElement('div'),
     vidContainer = doc.createElement('div'),
