@@ -32,7 +32,7 @@
 
   {% if page.collection == 'shows' %}
   <p>
-    Free concert and rally to protest the Trans-Pacific Partnership at
+    {% if page.city == 'Portland, OR' %}Free rally and acoustic concert{% else %}Free concert and rally{% endif %} to protest the Trans-Pacific Partnership at
     {{ page.location }} featuring {{ page.header_content }} Sign the petition
     &amp; RSVP to get your FREE ticket.
   </p>
