@@ -16,7 +16,7 @@
   <p>
     <strong><time datetime="{{ page.start }}">{{ page.start | date: '%I' | times: 1 }}{% unless start_time_minutes == '00' %}{{ page.start | date: '%M' | prepend: ':' }}{% endunless %}{{ page.start | date: '%p' }}</time>
       How to Fight the TPP: Teach-In &amp; Training</strong> hosted by
-    Evangeline Lilly. <a href="{{ teachin_url}}">RSVP here</a>, and don't forget to <a href="{{ share_url }}">share the event on Facebook</a>!
+    Evangeline Lilly. <a href="{{ page.teachin_url }}" target="_blank">RSVP here</a>, and don't forget to <a href="{{ page.share_url }}" target="_blank">share the event on Facebook</a>!
   </p>
 
   <p>
@@ -37,6 +37,6 @@
 
   <p class="volunteer">
     Want to volunteer?
-    <a href="{{ page.volunteer_url }}">Click here</a>.
+    <a href="{{ page.volunteer_url }}" target="_blank">Click here</a>.
   </p>
 </section>
