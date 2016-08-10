@@ -53,6 +53,10 @@
     vidContainer.classList.remove('hidden');
   }
 
+  if(window.location.href.indexOf("video=true") > -1) {
+      window.onload = launchModalPlayVideo;
+}  
+
   (doc.getElementById('video-play-button') || doc.createElement('button')).addEventListener('click', launchModalPlayVideo);
 
 }(document, window));
