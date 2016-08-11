@@ -110,7 +110,7 @@
 
   function confirmSMSSubmission() {
     actionNetworkForm.reset();
-    doc.getElementById('form-phone_number').setAttribute('value', 'Check your phone!');
+    doc.getElementById('form-phone_number').setAttribute('value', 'All set!');
     doc.getElementById('form-phone_number').setAttribute('disabled', true);
     doc.getElementById('submit-phone').setAttribute('disabled', true);
   }
