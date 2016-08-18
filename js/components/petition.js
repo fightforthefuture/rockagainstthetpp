@@ -66,6 +66,7 @@
       shareContent = doc.createElement('div'),
       shareHeadline = doc.createElement('h3'),
       shareCopy = doc.createElement('h4'),
+      shareTicket = doc.createElement('div'),
       shareThis = doc.createElement('div'),
       donateCopy = doc.createElement('p'),
       thankYou = doc.createElement('p'),
@@ -78,8 +79,27 @@
     tweetButton.classList.add('share-icon');
     shareButton.classList.add('share-icon');
 
-    shareHeadline.textContent = 'Great! We just sent you ' + (doc.querySelector('body').classList.contains('event') ? 'your ticket' : 'an email') + '.';
+    
+    if(window.location.href.indexOf("seattle") > -1) {
+    shareHeadline.textContent = "You're all set!";
+    shareTicket.innerHTML = '<h4>1. Dont forget to grab your ticket:</h4><a href="http://bit.ly/2bd8t00" target="_blank"><button class="download-ticket">Download Ticket!</button></a><br><span style="font-size: 1.5rem;">(We also sent a copy to your email.)</span><br>';
+    shareCopy.textContent = '2. Can you help spread the word?';
+
+  } else if (window.location.href.indexOf("portland") > -1) {
+    shareHeadline.textContent = "You're all set!";
+    shareTicket.innerHTML = '<h4>1. Dont forget to grab your ticket:</h4><a href="http://bit.ly/2bsGo2B" target="_blank"><button class="download-ticket">Download Ticket!</button></a><br><span style="font-size: 1.5rem;">(We also sent a copy to your email.)</span><br>';
+    shareCopy.textContent = '2. Can you help spread the word?';
+
+  } else if (window.location.href.indexOf("san-francisco") > -1) {
+    shareHeadline.textContent = "You're all set!";
+    shareTicket.innerHTML = '<h4>1. Dont forget to grab your ticket:</h4><a href="http://bit.ly/2bnSehk" target="_blank"><button class="download-ticket">Download Ticket!</button></a><br><span style="font-size: 1.5rem;">(We also sent a copy to your email.)</span><br>';
+    shareCopy.textContent = '2. Can you help spread the word?';
+
+     } else { 
+    shareHeadline.textContent = "You're all set! We sent you an email.";  
     shareCopy.textContent = 'Now can you help spread the word?';
+    } 
+    
 
     shareThis.classList.add('share-icons');
     shareThis.appendChild(tweetButton);
@@ -91,6 +111,7 @@
     thankYou.classList.add('thanks');
 
     shareContent.appendChild(shareHeadline);
+    shareContent.appendChild(shareTicket);
     shareContent.appendChild(shareCopy);
     shareContent.appendChild(shareThis);
 
