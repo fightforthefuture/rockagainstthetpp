@@ -13,6 +13,6 @@
     </div>
   </div>
   <p class="artist-name">
-    <a target="_blank" href="{{ include.artist.url }}">{{ include.artist.name }}</a>
+    <a target="_blank" href="{{ include.artist.url }}">{% if include.artist.name contains "Bells" %}Bell's Roar{% else %}{{ include.artist.name }}{% endif %}</a>
   </p>
 </li>
