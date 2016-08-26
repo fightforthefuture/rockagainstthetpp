@@ -34,6 +34,11 @@
   portrait: flobots.jpg
   bio: Denver, Colorado’s revolutionary hip-hop act Flobots bring it on real with their signature anthems dedicated to creating a better world.
   url: http://flobots.com/
+- name: Dead Prez
+  portrait: dead-prez-portrait.jpg
+  landscape: dead-prez-landscape.jpg
+  bio: Legendary revolutionary hip hop group from New York.
+  url: https://deadprezblog.wordpress.com/
 - name: Jello Biafra
   portrait: jello-biafra-portrait.jpg
   landscape: jello-biafra-landscape.jpg
