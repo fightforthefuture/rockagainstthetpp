@@ -24,21 +24,29 @@ performers:
   - Dead Prez
   - Jello Biafra
 ---
-
-<section class="announcement-box">
+{% comment %}
+<!--<section class="announcement-box">
 <dl class="announcement">
 <dt> <span class="highlighted">Up Next:</span></dt>
  <dt>San Francisco ・ 9/9</dt>
   <dd>
     <a class="button" href="/san-francisco-ca">Free tickets</a>
-  </dd>
- 
+  </dd> 
    {% comment %} <span class="view-more"><a href="#schedule">View other cities</a></span>{% endcomment %}
 </dt>
 </dl>
+</section> -->
+{% endcomment %}
 
-
+<section id="schedule" class="box">
+  <h2 id="tour-dates">Tour dates</h2>
+  {% include dates.html %}
+ <br/>
+  <p>
+   Check back soon for new Rock Against the TPP tour dates!
+  </p>
 </section>
+
 
 <section>
   <h2 id="lineup">Featuring</h2>
@@ -110,15 +118,4 @@ performers:
     <a href="http://firebrandrecords.com/">Firebrand Records</a>, the new
     freedom fighting record label co-founded by Ryan Harvey and Tom Morello.
   </p>
-</section>
-
-<section id="schedule" class="box">
-  <h2 id="tour-dates">Tour dates</h2>
-
-  <p>
-    Just announced! Rock Against the TPP West Coast tour dates. Click for more
-    details. Stay tuned for more dates TBA soon!
-  </p>
-
-  {% include dates.html %}
 </section>
