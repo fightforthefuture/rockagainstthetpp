@@ -39,6 +39,20 @@
   landscape: dead-prez-landscape.jpg
   bio: Legendary revolutionary hip hop group from New York.
   url: http://deadprezblog.wordpress.com/
+- name: Mirah
+  portrait: mirah-portrait.jpg 
+  landscape: mirah-landscape.jpg
+  bio: Incorruptible independent pop songwriter with albums out on K Records and Kill Rock Stars.
+  url: http://www.mirahmusic.com/
+- name: Debo Band
+  portrait: debo-band-portrait.jpg
+  landscape: debo-band-landscape.jpg
+  bio: Boston's beloved danceable Ethiopian pop ensemble.
+  url: http://www.deboband.com/
+- name: Foundation Movement
+  portrait: foundation-movement-portrait.jpg
+  bio: Boston revolutionary hip hop legends.
+  url: https://www.facebook.com/Foundation-Movement-132109103527204/
 - name: Jello Biafra
   portrait: jello-biafra-portrait.jpg
   landscape: jello-biafra-landscape.jpg
