@@ -95,6 +95,11 @@
     shareTicket.innerHTML = '<h4>1. Dont forget to grab your ticket:</h4><a href="http://bit.ly/2bnSehk" target="_blank"><button class="download-ticket">Download Ticket!</button></a><br><span style="font-size: 1.5rem;">(We also sent a copy to your email.)</span><br>';
     shareCopy.textContent = '2. Can you help spread the word?';
 
+     } else if (window.location.href.indexOf("boston") > -1) {
+    shareHeadline.textContent = "You're all set!";
+    shareTicket.innerHTML = '<h4>1. Dont forget to grab your ticket:</h4><a href="http://bit.ly/2cBAcpW" target="_blank"><button class="download-ticket">Download Ticket!</button></a><br><span style="font-size: 1.5rem;">(We also sent a copy to your email.)</span><br>';
+    shareCopy.textContent = '2. Can you help spread the word?';
+
      } else { 
     shareHeadline.textContent = "You're all set! We sent you an email.";  
     shareCopy.textContent = 'Now can you help spread the word?';
