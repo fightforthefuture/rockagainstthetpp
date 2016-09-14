@@ -193,6 +193,7 @@
 <div id="fixed-side-social-container">
   <a id="tweet-button" class="social-icon twitter-icon twitter" title="Tweet this" href="https://twitter.com/intent/tweet?text={{ page.twittertext | default: site.twittertext | cgi_escape }}" target="_blank">Tweet</a>
   <a id="share-button" class="social-icon facebook-icon facebook" title="Share this" href="https://facebook.com/sharer.php?u={{ page.share_url | default: share_url | cgi_escape }}" target="_blank">Share</a>
+  <a id="share-button" class="social-icon calling-icon toggle-alert" title="Call Congress Today!" href="javascript:;">Call now!</a>
 </div>
 
 {% include scripts.html %}

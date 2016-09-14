@@ -1,4 +1,6 @@
 <script async src="https://www.google-analytics.com/analytics.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
 <script>
   window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
   ga('create', '{{ site.googleanalytics }}', '{{ site.url }}');
@@ -18,4 +20,15 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1762844240629117');
 fbq('track', "PageView");
 }
+</script>
+<script language="javascript"> 
+/* $(".hidden-alert").hide(); */
+$(".hidden-alert").trigger("click");
+$("div.trigger-alert").show();
+$("div.trigger-alert").click(function () {
+    $(this).next(".hidden-alert").slideToggle("slow");
+});
+$("a.toggle-alert").click(function () {
+    $(".hidden-alert").slideToggle("slow")
+});
 </script>
