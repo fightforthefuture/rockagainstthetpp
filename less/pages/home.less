@@ -384,13 +384,13 @@
 }
 
 
-.action_bar {
+  .action_bar {
     bottom: 0;
     left: 0;
     padding: 0.3rem 0.1rem 0.4rem 0.1rem;
     position: fixed;
     width: 100%;
-    border-top: 1rem solid black;
+    border-top: 1rem solid #791017;
     background: #ab151e;
     z-index: 9001;
     font-weight: 600;
@@ -398,6 +398,9 @@
   }
   .action_bar a {    
     text-decoration: none;
+  }
+  .action_bar .close-modal:hover {
+    background: #791017;
   }
   .underline h3 { 
     border-bottom: 5px solid #000;
@@ -411,13 +414,11 @@
     font-style: italic;
   }
    .trigger-alert {
-      margin-left: 25px;
+
   }
 
   .hidden-alert {
-      display: block;
-      padding-left: 24px;
-      margin-right: 15px;
+
   }
 
   .toggle-alert {
@@ -432,4 +433,8 @@
   }
 .close-box a {
   pointer:cursor;
+}
+.call {
+    padding: .5rem;
+    margin: 2rem;
 }
