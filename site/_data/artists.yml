@@ -17,6 +17,10 @@
   landscape: anti-flag-landscape.jpg
   bio: Legendary political punk band serving high-energy, fist pumping sing-along anthems. Equal parts circle pit and picket line.
   url: http://www.anti-flag.com/
+- name: Anne Feeney
+  portrait: anne-feeney.jpg
+  bio: The greatest labor singer in North America --Utah Phillips
+  url: http://www.AnneFeeney.com  
 - name: Hari Kondabolu
   portrait: hari-kondabolu.jpg
   bio: “One of the most exciting political comics in stand-up today.”—New York Times
@@ -126,3 +130,7 @@
   portrait: greer.jpg
   bio: Campaign director of Fight for the Future and internationally touring queer riot-folk singer/songwriter.
   url: http://evangreer.org/
+- name: Tigerman WOAH
+  portrait: tigerman-woah-portrait.jpg
+  bio: Tigerman Woah is a high energy rock n roll band based out of Lynn, MA that uses music for spiritual survival, community building, and fun times pending revolution.
+  url: http://tigermanwoah.com/
