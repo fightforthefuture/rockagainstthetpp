@@ -21,16 +21,10 @@ fbq('init', '1762844240629117');
 fbq('track', "PageView");
 }
 </script>
-{% if page.page == 'home' %}
+
 <script language="javascript"> 
-$(".hidden-alert").trigger("click");
-</script>
-{% else %}
-<script language="javascript">
+/*$(".hidden-alert").trigger("click");*/
 $(".hidden-alert").hide();
-</script>
-{% endif %}
-<script>
 $("div.trigger-alert").show();
 $("div.trigger-alert").click(function () {
 $(this).next(".hidden-alert").slideToggle("slow");
