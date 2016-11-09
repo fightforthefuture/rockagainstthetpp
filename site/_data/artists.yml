@@ -12,6 +12,26 @@
   portrait: lilly.jpg
   bio: Writer, activist, and Golden Globe nominated actress known for her roles in Lost, The Hobbit, The Hurt Locker, and Ant-Man.
   url: https://twitter.com/EvangelineLilly
+- name: Immortal Technique
+  bio: Renowned Peruvian-American rapper and activist.
+  url: https://www.viperrecords.com/artists/immortal-technique/
+  landscape: immortal-technique-landscape.jpg
+  portrait: immortal-technique-portrait.jpg
+- name: Julian Casablancas
+  bio: Of the legendary rock band The Strokes.
+  url: http://juliancasablancas.com/
+  portrait: julian-casablancas-portrait.jpg
+- name: Shailene Woodley
+  url: https://www.facebook.com/ShaileneWoodley/
+  portrait: shailene-woodley-portrait.jpg
+- name: Wil Wheaton
+  bio: Actor, blogger, and activist.
+  url: http://wilwheaton.net/
+  portrait: wil-wheaton-portrait.jpg
+- name: Nahko Bear
+  bio: Frontman of acclaimed music collective Medicine for the People.
+  url: http://nahko.com/
+  portrait: nahko-bear-portrait.jpg
 - name: Anti-Flag
   portrait: anti-flag.jpg
   landscape: anti-flag-band-landscape.jpg
@@ -134,3 +154,11 @@
   portrait: tigerman-woah-portrait.jpg
   bio: Tigerman Woah is a high energy rock n roll band based out of Lynn, MA that uses music for spiritual survival, community building, and fun times pending revolution.
   url: http://tigermanwoah.com/
+- name: The Last Internationale
+  bio: Political rock band on Firebrand Records.
+  portrait: the-last-internationale.jpg
+  url: http://www.tlinyc.com/ 
+- name: Ike Reilly
+  bio: Rock singer/songwriter on Firebrand Records.
+  portrait: ike-reilly.jpg
+  url: http://www.ikereilly.net/
