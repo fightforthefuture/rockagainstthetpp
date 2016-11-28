@@ -12,26 +12,6 @@
   portrait: lilly.jpg
   bio: Writer, activist, and Golden Globe nominated actress known for her roles in Lost, The Hobbit, The Hurt Locker, and Ant-Man.
   url: https://twitter.com/EvangelineLilly
-- name: Immortal Technique
-  bio: Renowned Peruvian-American rapper and activist.
-  url: https://www.viperrecords.com/artists/immortal-technique/
-  landscape: immortal-technique-landscape.jpg
-  portrait: immortal-technique-portrait.jpg
-- name: Julian Casablancas
-  bio: Of the legendary rock band The Strokes.
-  url: http://juliancasablancas.com/
-  portrait: julian-casablancas-portrait.jpg
-- name: Shailene Woodley
-  url: https://www.facebook.com/ShaileneWoodley/
-  portrait: shailene-woodley-portrait.jpg
-- name: Wil Wheaton
-  bio: Actor, blogger, and activist.
-  url: http://wilwheaton.net/
-  portrait: wil-wheaton-portrait.jpg
-- name: Nahko Bear
-  bio: Frontman of acclaimed music collective Medicine for the People.
-  url: http://nahko.com/
-  portrait: nahko-bear-portrait.jpg
 - name: Anti-Flag
   portrait: anti-flag.jpg
   landscape: anti-flag-band-landscape.jpg
@@ -40,7 +20,7 @@
 - name: Anne Feeney
   portrait: anne-feeney.jpg
   bio: The greatest labor singer in North America --Utah Phillips
-  url: http://www.AnneFeeney.com  
+  url: http://www.AnneFeeney.com
 - name: Hari Kondabolu
   portrait: hari-kondabolu.jpg
   bio: “One of the most exciting political comics in stand-up today.”—New York Times
@@ -64,7 +44,7 @@
   bio: Legendary revolutionary hip hop group from New York.
   url: http://deadprezblog.wordpress.com/
 - name: Mirah
-  portrait: mirah-portrait.jpg 
+  portrait: mirah-portrait.jpg
   landscape: mirah-landscape.jpg
   bio: Incorruptible independent pop songwriter with albums out on K Records and Kill Rock Stars.
   url: http://www.mirahmusic.com/
@@ -113,7 +93,7 @@
 - name: Built for the Sea
   portrait: built-for-the-sea.jpg
   bio: Firebrand Records' beloved Bay Area indie rock project from Lia Rose and Daniel McKenzie.
-  url: http://firebrandrecords.com/artists/built-for-the-sea/ 
+  url: http://firebrandrecords.com/artists/built-for-the-sea/
 - name: Taina Asili
   portrait: asili.jpg
   bio: Internationally known Puerto Rican vocalist and leader of social justice infused Afro-Latin reggae rock troupe La Banda Rebelde.
@@ -137,7 +117,7 @@
 - name: Jeff Rosenstock
   portrait: jeff-rosenstock.jpg
   bio: DIY punk underdogs from New York and California. (Bomb the Music Industry, ASOB, more).
-  url: https://jeffrosenstock.bandcamp.com/  
+  url: https://jeffrosenstock.bandcamp.com/
 - name: Bells Roar
   portrait: roar.jpg
   bio: NY-based Firebrand Records multi-instrumentalist and producer blending synth-pop, rock, and soul.
@@ -154,11 +134,4 @@
   portrait: tigerman-woah-portrait.jpg
   bio: Tigerman Woah is a high energy rock n roll band based out of Lynn, MA that uses music for spiritual survival, community building, and fun times pending revolution.
   url: http://tigermanwoah.com/
-- name: The Last Internationale
-  bio: Political rock band on Firebrand Records.
-  portrait: the-last-internationale.jpg
-  url: http://www.tlinyc.com/ 
-- name: Ike Reilly
-  bio: Rock singer/songwriter on Firebrand Records.
-  portrait: ike-reilly.jpg
-  url: http://www.ikereilly.net/
+
